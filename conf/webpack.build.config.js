@@ -15,6 +15,5 @@ module.exports = new WebpackConfig()
     plugins: [
       new ExtractTextPlugin('app-[hash].css'),
       new WebpackCleanupPlugin(),
-      new webpack.optimize.UglifyJsPlugin({ minimize: true })
     ]
   });
