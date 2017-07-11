@@ -2,6 +2,8 @@
 ## A Library of AngularJS Components Implementing Boostrap 4
 ### _Tomorrow's Library with Yesterday's Framework_
 
+See it in action - https://idanco.github.io/ng1bs4/
+
 Just because you use AngularJS and not Angular like all
 the cool kids, does'nt mean you can't look good!
 Enjoy the robust styling architecture of
