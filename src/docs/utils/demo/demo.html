@@ -1,0 +1,23 @@
+<hr/>
+<div class="row">
+    <div class="col-4">
+        <div ng-transclude="ng-transclude"></div>
+    </div>
+    <div class="col-2"></div>
+    <div class="col-6">
+        <pre ng-if="vm.md"><code prism="prism" ng-bind="vm.md" class="language-markdown"></code></pre>
+    </div>
+</div>
+<hr/>
+<div class="row">
+    <div class="col-12 mb-5">
+        <ngbs-tabs>
+            <ngbs-pane title="Jade" ng-if="vm.jade">
+                <pre><code prism="prism" ng-bind="vm.jade" class="language-jade"></code></pre>
+            </ngbs-pane>
+            <ngbs-pane title="Javascript" ng-if="vm.js">
+                <pre><code prism="prism" ng-bind="vm.js" class="language-javascript"></code></pre>
+            </ngbs-pane>
+        </ngbs-tabs>
+    </div>
+</div>

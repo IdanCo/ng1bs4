@@ -1,0 +1,50 @@
+{
+  "name": "bs4ng1",
+  "version": "0.0.1",
+  "description": "A Library of AngularJS Components Implementing Boostrap 4",
+  "main": "library/library.js",
+  "scripts": {
+    "serve": "node tasks.js",
+    "build": "node tasks.js",
+    "library": "node tasks.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IdanCo/bs4ng1.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "angularJS",
+    "frontend"
+  ],
+  "author": "Idan Cohen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IdanCo/webpack-modular/issues"
+  },
+  "homepage": "https://github.com/IdanCo/webpack-modular#readme",
+  "dependencies": {
+    "angular": "^1.6.3",
+    "angular-sanitize": "^1.6.4",
+    "bootstrap": "^4.0.0-alpha.6"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^0.27.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "html-loader": "^0.4.5",
+    "html-webpack-plugin": "^2.28.0",
+    "node-sass": "^4.5.0",
+    "postcss-flexbugs-fixes": "^3.0.0",
+    "postcss-loader": "^2.0.6",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.5.0",
+    "webpack-cleanup-plugin": "^0.5.1",
+    "webpack-config": "^7.0.0",
+    "webpack-dev-server": "^2.4.2"
+  }
+}
