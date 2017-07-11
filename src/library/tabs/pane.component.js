@@ -1,6 +1,12 @@
 // Import Template
 import template from './pane.html';
 
+class controller {
+  $onInit() {
+    this.tabsCtrl.addPane(this);
+  };
+}
+
 // Define and export component
 export default {
   transclude: true,
@@ -10,14 +16,14 @@ export default {
   bindings: {
     title: '@'
   },
-  template: template,
-  controller: controller,
-  controllerAs: 'vm'
+  template,
+  controller
 };
-
-function controller() {
-  const vm = this;
-  vm.$onInit = function() {
-    vm.tabsCtrl.addPane(this);
-  };
-}
+//
+// function controller() {
+//   const vm = this;
+//   vm.$onInit = function() {
+//     console.info('adding', this);
+//     vm.tabsCtrl.addPane(this);
+//   };
+// }

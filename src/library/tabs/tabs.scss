@@ -1,18 +1,14 @@
 // Styling for generic component
+ngbs-tabs {
+  .nav-item {
+    margin-right: 5px;
+  }
 
-bp-tabs .nav-item {
-  margin-right: 5px;
-}
+  .tab-pane {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
 
-bp-tabs .nav-link {
-  border-bottom: 5px solid #808080;
-  padding: 5px 20px;
-}
-
-bp-tabs .tab-pane {
-  display: none;
-}
-
-bp-tabs .tab-pane.active {
-  display: block;
 }

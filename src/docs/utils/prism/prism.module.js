@@ -1,6 +1,7 @@
 // import library (can't use npm because JADE is included only in custom build)
 import Prism from './lib/prism.js'
 import './lib/prism.css'
+import './prism.scss'
 
 // Register module, register directive and export name
 export default angular

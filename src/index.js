@@ -6,7 +6,6 @@ import ngSanitize from 'angular-sanitize';
 import 'bootstrap';
 
 // Internal Modules
-import ComponentsModule from './components/components.module';
 import LibraryModule from './library/library.module';
 import DocsModule from './docs/docs.module';
 
@@ -17,7 +16,6 @@ import './index.scss';
 angular
   .module('app', [
     ngSanitize,
-    ComponentsModule,
     LibraryModule,
     DocsModule
   ]);

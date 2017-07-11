@@ -1,9 +1,8 @@
 // Import Template
-import DropdownTemplate from './dropdown.html';
-
+import template from './dropdown.html';
 
 // Set up controller
-class DropdownController {
+class controller {
 
   constructor($element, $timeout) {
     this.$element = $element;
@@ -82,6 +81,6 @@ export default {
   require: {
     ngModel: 'ngModel',
   },
-  template: DropdownTemplate,
-  controller: DropdownController,
+  template,
+  controller
 };
