@@ -18,7 +18,7 @@ exports.paths = {
   tests: 'tests',
   library: 'src/library',
   libraryDist: 'library',
-  dist: 'dist',
+  dist: 'docs',
   tmp: '.tmp',
   conf: 'conf'
 };
