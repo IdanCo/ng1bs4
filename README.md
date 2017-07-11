@@ -1,4 +1,4 @@
-# bs4ng1
+# ng1bs4
 ## A Library of AngularJS Components Implementing Boostrap 4
 ### _Tomorrow's Library with Yesterday's Framework_
 
