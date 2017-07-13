@@ -14,3 +14,24 @@ See it in action - https://idanco.github.io/ng1bs4/
 * Still used to bootstrap 3.x? Use [UI Bootstrap](https://angular-ui.github.io/bootstrap/)
 * Finally upgraded to Angular? Use [NG Bootstrap](https://ng-bootstrap.github.io/#/home)
 * None of the above? You belong with us!
+
+## Philosophy
+**No Styling**
+
+We believe you should be able to customize as much as you want, and with bootstrap 4 theming is easy! That is why all components include minimal styling, and rely heavily on bootstrap's variables.
+
+**Simple Code**
+
+We strive to keep all components as simple yet robust as possible. Hence, rewiring them to fit your need should be easy as pie.
+
+## Contribute
+§!@#$%^ **HELP NEEDED!** ^%$#@!§
+
+We're a brand new library, trying to make its way in this crazy javascript world. There's tons of work to be done and any effort will be appreciated. We need your help in -
+- Building new components and imporving existing ones
+- Coming up with ideas for new components or new features
+- Documentation
+- Stack, build, deploy and all that jazz
+- Staring, sharing, forking and most of all - using
+- Testing (unit, integration and pregnancy)
+- Setting up coding standards and linting

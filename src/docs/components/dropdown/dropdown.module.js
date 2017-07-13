@@ -9,7 +9,7 @@ import Controller from './dropdown.controller.js';
 
 // manipulate controller to pass raw files to demo
 Controller.prototype.$onInit = function() {
-  this.demo.jade = TemplateRaw;
+  this.demo.html = TemplateRaw;
   this.demo.js = ControllerRaw;
   this.demo.md = MarkdownRaw;
 };

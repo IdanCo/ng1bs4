@@ -8,7 +8,7 @@ import Controller from './tabs.controller.js';
 
 // manipulate controller to pass raw files to demo
 Controller.prototype.$onInit = function() {
-  this.demo.jade = TemplateRaw;
+  this.demo.html = TemplateRaw;
   this.demo.md = MarkdownRaw;
 };
 

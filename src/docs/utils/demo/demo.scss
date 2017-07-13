@@ -1,0 +1,16 @@
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/_mixins.scss";
+
+demo {
+  .live-example {
+    @include media-breakpoint-down(sm) {
+      border-bottom: 1px solid silver;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .md, .html, .javascript {
+    max-height: 500px;
+  }
+}

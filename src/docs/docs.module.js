@@ -4,10 +4,11 @@
 import Docs from './docs.component';
 import './docs.scss';
 
-// Modules
+// Utilities
 import Prism from './utils/prism/prism.module';
 import Demo from './utils/demo/demo.module';
 
+// Demos
 import DropdownDemo from './components/dropdown/dropdown.module';
 import TabsDemo from './components/tabs/tabs.module';
 

@@ -1,4 +1,4 @@
-<ul class="nav">
+<ul class="nav nav-tabs">
     <li ng-repeat="pane in $ctrl.panes" class="nav-item"><a href="" ng-click="$ctrl.select(pane)" ng-class="{active:pane.selected}" class="nav-link">{{pane.title}}</a></li>
 </ul>
 <div ng-transclude="" class="tab-content"></div>
