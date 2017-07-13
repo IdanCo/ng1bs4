@@ -45614,8 +45614,6 @@ var controller = function () {
   return controller;
 }();
 
-/*@ngInject*/
-
 // Define and export component
 
 
@@ -49452,7 +49450,7 @@ module.exports = "<hr/>\n<div class=\"row\">\n    <div class=\"col-md-6 col-xl-4
 /* 35 */
 /***/ (function(module, exports) {
 
-module.exports = "<div data-toggle=\"dropdown\" class=\"dropdown-trigger form-control dropdown-toggle\">\n    <div ng-show=\"!$ctrl.displayValue\" class=\"placeholder\">{{ ::$ctrl.dropdownPlaceholder }}</div>\n    <div ng-show=\"!!$ctrl.displayValue\" ng-bind-html=\"$ctrl.displayValue\" class=\"value\"></div>\n</div>\n\n<div class=\"dropdown-menu\">\n    <div ng-show=\"$ctrl.dropdownEnableSearch\" class=\"dropdown-search dropdown-header\">\n        <input type=\"text\" placeholder=\"Search...\" ng-model=\"$ctrl.dropdownQuery\" ng-change=\"$ctrl.filterOptions()\" class=\"form-control\"/>\n        <!--<i ng-click=\"vm.clickClearSearch($event)\" ng-show=\"vm.dropdownQuery\" class=\"input-suffix bp-icon-remove\"></i>-->\n    </div>\n    <div class=\"dropdown-menu-inner\">\n        <a ng-repeat=\"option in $ctrl.filteredOptions\" ng-click=\"$ctrl.setValue(option)\" ng-class=\"{ 'selected': $ctrl.isSelected(option) }\" href=\"\" ng-bind-html=\"option[$ctrl.dropdownDisplayProperty]\" class=\"dropdown-item\"></a>\n        <a ng-if=\"!$ctrl.filteredOptions.length\" class=\"dropdown-item\">No results found...</a></div>\n</div>";
+module.exports = "<button type=\"button\" data-toggle=\"dropdown\" class=\"dropdown-toggle btn btn-secondary\">\n    <span ng-show=\"!$ctrl.displayValue\" class=\"placeholder\">{{ ::$ctrl.dropdownPlaceholder }}</span>\n    <span ng-show=\"!!$ctrl.displayValue\" ng-bind-html=\"$ctrl.displayValue\" class=\"value\"></span>\n</button>\n\n<div class=\"dropdown-menu\">\n    <div ng-show=\"$ctrl.dropdownEnableSearch\" class=\"dropdown-header\">\n        <input type=\"text\" placeholder=\"Search...\" ng-model=\"$ctrl.dropdownQuery\" ng-change=\"$ctrl.filterOptions()\" class=\"form-control\"/>\n        <!--<i ng-click=\"vm.clickClearSearch($event)\" ng-show=\"vm.dropdownQuery\" class=\"input-suffix bp-icon-remove\"></i>-->\n    </div>\n    <div class=\"dropdown-menu-inner\">\n        <a ng-repeat=\"option in $ctrl.filteredOptions\" ng-click=\"$ctrl.setValue(option)\" ng-class=\"{ 'selected': $ctrl.isSelected(option) }\" href=\"\" ng-bind-html=\"option[$ctrl.dropdownDisplayProperty]\" class=\"dropdown-item\"></a>\n        <a ng-if=\"!$ctrl.filteredOptions.length\" class=\"dropdown-item\">No results found...</a></div>\n</div>";
 
 /***/ }),
 /* 36 */

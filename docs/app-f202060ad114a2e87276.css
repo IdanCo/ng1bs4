@@ -5987,32 +5987,13 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   .hidden-print {
     display: none !important; } }
 ngbs-dropdown {
-  display: block;
-  background: #fff; }
-  ngbs-dropdown .dropdown-trigger {
-    padding-right: 2rem;
-    position: relative; }
-  ngbs-dropdown .value, ngbs-dropdown .placeholder {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; }
-  ngbs-dropdown .dropdown-toggle::after {
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    margin-top: -2px;
-    margin-right: -5px; }
-  ngbs-dropdown .dropdown-menu {
-    width: 100%; }
+  display: block; }
   ngbs-dropdown .dropdown-menu-inner {
     max-height: 290px;
     overflow-y: auto;
     overflow-x: hidden; }
-  ngbs-dropdown .dropdown-item {
-    text-overflow: ellipsis;
-    overflow: hidden; }
-    ngbs-dropdown .dropdown-item.selected {
-      font-weight: bold; }
+  ngbs-dropdown .selected {
+    font-weight: bold; }
 ngbs-tabs .tab-pane {
   display: none; }
   ngbs-tabs .tab-pane.active {
