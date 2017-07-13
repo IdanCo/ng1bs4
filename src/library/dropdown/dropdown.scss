@@ -4,30 +4,6 @@ $white:  #000 !default;
 
 ngbs-dropdown {
   display: block;
-  background: $white;
-
-  .dropdown-trigger {
-    padding-right: 2rem;
-    position: relative;
-  }
-
-  .value, .placeholder {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .dropdown-toggle::after {
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    margin-top: -2px;
-    margin-right: -5px;
-  }
-
-  .dropdown-menu {
-    width: 100%;
-  }
 
   .dropdown-menu-inner {
     max-height: 290px;
@@ -35,12 +11,7 @@ ngbs-dropdown {
     overflow-x: hidden;
   }
 
-
-  .dropdown-item {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    &.selected {
-      font-weight: bold;
-    }
+  .selected {
+    font-weight: bold;
   }
 }

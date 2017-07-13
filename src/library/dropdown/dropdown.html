@@ -1,10 +1,10 @@
-<div data-toggle="dropdown" class="dropdown-trigger form-control dropdown-toggle">
-    <div ng-show="!$ctrl.displayValue" class="placeholder">{{ ::$ctrl.dropdownPlaceholder }}</div>
-    <div ng-show="!!$ctrl.displayValue" ng-bind-html="$ctrl.displayValue" class="value"></div>
-</div>
+<button type="button" data-toggle="dropdown" class="dropdown-toggle btn btn-secondary">
+    <span ng-show="!$ctrl.displayValue" class="placeholder">{{ ::$ctrl.dropdownPlaceholder }}</span>
+    <span ng-show="!!$ctrl.displayValue" ng-bind-html="$ctrl.displayValue" class="value"></span>
+</button>
 
 <div class="dropdown-menu">
-    <div ng-show="$ctrl.dropdownEnableSearch" class="dropdown-search dropdown-header">
+    <div ng-show="$ctrl.dropdownEnableSearch" class="dropdown-header">
         <input type="text" placeholder="Search..." ng-model="$ctrl.dropdownQuery" ng-change="$ctrl.filterOptions()" class="form-control"/>
         <!--<i ng-click="vm.clickClearSearch($event)" ng-show="vm.dropdownQuery" class="input-suffix bp-icon-remove"></i>-->
     </div>

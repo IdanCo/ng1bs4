@@ -66,8 +66,6 @@ class controller {
 
 }
 
-/*@ngInject*/
-
 // Define and export component
 export default {
   bindings: {
