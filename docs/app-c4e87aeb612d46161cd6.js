@@ -49426,7 +49426,7 @@ var Popover = function ($) {
 /* 31 */
 /***/ (function(module, exports) {
 
-module.exports = "<form name=\"form\">\n  <div class=\"form-group\">\n    <label>Check out this lovely title</label>\n    <ngbs-dropdown\n            name=\"bpDropdown\"\n            ng-model=\"vm.dropdownValue\"\n            ng-change=\"vm.valueChanged()\"\n            dropdown-placeholder=\"Choose a life\"\n            dropdown-options=\"vm.dropdownOptions\"\n            dropdown-display-property=\"name\"\n            dropdown-key-property=\"id\"\n            dropdown-enable-search=\"true\"\n            dropdown-direction=\"down\"\n    ></ngbs-dropdown><small class=\"form-text form-control-feedback\"> This is some description that no one reads</small>\n  </div>\n</form>\n<p class=\"mt-4\">dropdown value:</p>\n<p>{{ vm.dropdownValue }}</p>\n<div class=\"mt-4\">\n  <button class=\"btn btn-outline-primary\" ng-click=\"vm.switchArray()\">Switch Array</button>\n</div>";
+module.exports = "<form name=\"form\">\n  <div class=\"form-group\">\n    <label>Check out this lovely title</label>\n    <ngbs-dropdown\n            name=\"ngbsDropdown\"\n            ng-model=\"vm.dropdownValue\"\n            ng-change=\"vm.valueChanged()\"\n            dropdown-placeholder=\"Choose a life\"\n            dropdown-options=\"vm.dropdownOptions\"\n            dropdown-display-property=\"name\"\n            dropdown-key-property=\"id\"\n            dropdown-enable-search=\"true\"\n            dropdown-direction=\"down\"\n    ></ngbs-dropdown><small class=\"form-text form-control-feedback\"> This is some description that no one reads</small>\n  </div>\n</form>\n<p class=\"mt-4\">dropdown value:</p>\n<p>{{ vm.dropdownValue }}</p>\n<div class=\"mt-4\">\n  <button class=\"btn btn-outline-primary\" ng-click=\"vm.switchArray()\">Switch Array</button>\n</div>";
 
 /***/ }),
 /* 32 */
@@ -49438,7 +49438,7 @@ module.exports = "<ngbs-tabs>\n    <ngbs-pane title=\"First Pane\">\n        <p>
 /* 33 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"col-12 text-center py-5\">\n        <logo></logo>\n        <h1 class=\"display-1 py-3\">ng1bs4</h1>\n        <p class=\"lead mb-5\">Tomorrow's Library with Yesterday's Framework</p>\n        <p>A collection of UI components build with Bootstrap 4 & AngularJS (1.x)</p>\n        <!-- Place this tag where you want the button to render. -->\n        <a class=\"github-button\" href=\"https://github.com/idanco/ng1bs4\" data-size=\"large\" aria-label=\"Star idanco/ng1bs4 on GitHub\">Star</a>\n    </div>\n</div>\n<div class=\"row\">\n    <div class=\"col-12\">\n        <h1>Form Elements</h1>\n        <h2>Dropdown</h2>\n        <demo>\n            <dropdown-demo></dropdown-demo>\n        </demo>\n        <h1>Navigation</h1>\n        <h2>Tabs</h2>\n        <demo>\n            <tabs-demo></tabs-demo>\n        </demo>\n    </div>\n</div>\n\n<!-- Place this tag in your head or just before your close body tag. -->\n<script async defer src=\"https://buttons.github.io/buttons.js\"></script>";
+module.exports = "<div class=\"row\">\n    <div class=\"col-12 text-center py-5\">\n        <logo></logo>\n        <h1 class=\"display-1 py-3\">ng1bs4</h1>\n        <p class=\"lead mb-5\">Tomorrow's Library with Yesterday's Framework</p>\n        <p>A collection of UI components built with Bootstrap 4 & AngularJS (1.x)</p>\n        <!-- Place this tag where you want the button to render. -->\n        <a class=\"github-button\" href=\"https://github.com/idanco/ng1bs4\" data-size=\"large\" aria-label=\"Star idanco/ng1bs4 on GitHub\">Star</a>\n    </div>\n</div>\n<div class=\"row\">\n    <div class=\"col-12\">\n        <h1>Form Elements</h1>\n        <h2>Dropdown</h2>\n        <demo>\n            <dropdown-demo></dropdown-demo>\n        </demo>\n        <h1>Navigation</h1>\n        <h2>Tabs</h2>\n        <demo>\n            <tabs-demo></tabs-demo>\n        </demo>\n    </div>\n</div>\n\n<!-- Place this tag in your head or just before your close body tag. -->\n<script async defer src=\"https://buttons.github.io/buttons.js\"></script>";
 
 /***/ }),
 /* 34 */
@@ -49474,13 +49474,13 @@ module.exports = "function controller() {\n  const vm = this;\n  const longArray
 /* 39 */
 /***/ (function(module, exports) {
 
-module.exports = "<form name=\"form\">\n  <div class=\"form-group\">\n    <label>Check out this lovely title</label>\n    <ngbs-dropdown\n            name=\"bpDropdown\"\n            ng-model=\"vm.dropdownValue\"\n            ng-change=\"vm.valueChanged()\"\n            dropdown-placeholder=\"Choose a life\"\n            dropdown-options=\"vm.dropdownOptions\"\n            dropdown-display-property=\"name\"\n            dropdown-key-property=\"id\"\n            dropdown-enable-search=\"true\"\n            dropdown-direction=\"down\"\n    ></ngbs-dropdown><small class=\"form-text form-control-feedback\"> This is some description that no one reads</small>\n  </div>\n</form>\n<p class=\"mt-4\">dropdown value:</p>\n<p>{{ vm.dropdownValue }}</p>\n<div class=\"mt-4\">\n  <button class=\"btn btn-outline-primary\" ng-click=\"vm.switchArray()\">Switch Array</button>\n</div>"
+module.exports = "<form name=\"form\">\n  <div class=\"form-group\">\n    <label>Check out this lovely title</label>\n    <ngbs-dropdown\n            name=\"ngbsDropdown\"\n            ng-model=\"vm.dropdownValue\"\n            ng-change=\"vm.valueChanged()\"\n            dropdown-placeholder=\"Choose a life\"\n            dropdown-options=\"vm.dropdownOptions\"\n            dropdown-display-property=\"name\"\n            dropdown-key-property=\"id\"\n            dropdown-enable-search=\"true\"\n            dropdown-direction=\"down\"\n    ></ngbs-dropdown><small class=\"form-text form-control-feedback\"> This is some description that no one reads</small>\n  </div>\n</form>\n<p class=\"mt-4\">dropdown value:</p>\n<p>{{ vm.dropdownValue }}</p>\n<div class=\"mt-4\">\n  <button class=\"btn btn-outline-primary\" ng-click=\"vm.switchArray()\">Switch Array</button>\n</div>"
 
 /***/ }),
 /* 40 */
 /***/ (function(module, exports) {
 
-module.exports = "## bp-dropdown\n\n**dropdown-placeholder** (*string*) - The text which appears when no value is selected\n\n**dropdown-options** (*array of objects*) - Each object in the array represents an option in the dropdown, and must include a display value (which appears in the dropdown options) and a key value (which is binded to the ng-model).\n\n**dropdown-display-property** (*string*) - The name of the display value property in the option object\n\n**dropdown-key-property** (*string*) - The name of the unique key property in the option object. The value of this field will be binded to 'ng-modal'.\n\n**dropdown-direction** (*string*) - accepted values are 'up' or 'down'.\n\n**dropdown-enable-search** (*boolean*) - whether or not to show the search field at the top of the dropdown menu."
+module.exports = "## ngbs-dropdown\n\n**dropdown-placeholder** (*string*) - The text which appears when no value is selected\n\n**dropdown-options** (*array of objects*) - Each object in the array represents an option in the dropdown, and must include a display value (which appears in the dropdown options) and a key value (which is binded to the ng-model).\n\n**dropdown-display-property** (*string*) - The name of the display value property in the option object\n\n**dropdown-key-property** (*string*) - The name of the unique key property in the option object. The value of this field will be binded to 'ng-modal'.\n\n**dropdown-direction** (*string*) - accepted values are 'up' or 'down'.\n\n**dropdown-enable-search** (*boolean*) - whether or not to show the search field at the top of the dropdown menu."
 
 /***/ }),
 /* 41 */
@@ -49492,7 +49492,7 @@ module.exports = "<ngbs-tabs>\n    <ngbs-pane title=\"First Pane\">\n        <p>
 /* 42 */
 /***/ (function(module, exports) {
 
-module.exports = "## bp-tabs\n\nUse beatiful tabs to show a lot of content in a small space.\nnotice the structure of the mark up: `bp-tab` as the wrapper, and `bp-pane` for every tab. Put the tab content under `bp-pane`\n\n**title** (*string*) - The text which appears on the tab\n"
+module.exports = "## ngbs-tabs\n\nUse beatiful for packing a lot of content in a small space.\nnotice the structure of the mark up: `ngbs-tab` as the wrapper, and `ngbs-pane` for every tab. Put the tab content under `ngbs-pane`\n\n**title** (*string*) - The text which appears on the tab\n"
 
 /***/ }),
 /* 43 */

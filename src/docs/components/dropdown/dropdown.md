@@ -1,4 +1,4 @@
-## bp-dropdown
+## ngbs-dropdown
 
 **dropdown-placeholder** (*string*) - The text which appears when no value is selected
 

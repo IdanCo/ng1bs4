@@ -1,6 +1,6 @@
-## bp-tabs
+## ngbs-tabs
 
-Use beatiful tabs to show a lot of content in a small space.
-notice the structure of the mark up: `bp-tab` as the wrapper, and `bp-pane` for every tab. Put the tab content under `bp-pane`
+Use beatiful for packing a lot of content in a small space.
+notice the structure of the mark up: `ngbs-tab` as the wrapper, and `ngbs-pane` for every tab. Put the tab content under `ngbs-pane`
 
 **title** (*string*) - The text which appears on the tab
