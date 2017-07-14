@@ -15,6 +15,30 @@ See it in action - https://idanco.github.io/ng1bs4/
 * Finally upgraded to Angular? Use [NG Bootstrap](https://ng-bootstrap.github.io/#/home)
 * None of the above? You belong with us!
 
+## Intsall
+
+install ng1bs4:
+
+```sh
+npm install ng1bs4 --save
+```
+import ng1bs4 module and styling into your project:
+```js
+import ng1bs4 from 'ng1bs4';
+import 'ng1bs4/library/library.css'
+```
+inject ng1bs4 module into your app:
+```js
+angular
+  .module('myApp', [
+    ...,
+    ng1bs4
+  ]);
+```
+test by adding this directive anywhere in your markup
+```html
+<ngbs-test></ngbs-test>
+```
 ## Philosophy
 **No Styling**
 
