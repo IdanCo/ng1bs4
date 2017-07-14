@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 45);
+/******/ 	return __webpack_require__(__webpack_require__.s = 49);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -44186,7 +44186,7 @@ var _angularSanitize = __webpack_require__(5);
 
 var _angularSanitize2 = _interopRequireDefault(_angularSanitize);
 
-__webpack_require__(22);
+__webpack_require__(24);
 
 var _library = __webpack_require__(18);
 
@@ -44196,7 +44196,7 @@ var _docs = __webpack_require__(11);
 
 var _docs2 = _interopRequireDefault(_docs);
 
-__webpack_require__(27);
+__webpack_require__(29);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45103,19 +45103,19 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _dropdown = __webpack_require__(39);
+var _dropdown = __webpack_require__(43);
 
 var _dropdown2 = _interopRequireDefault(_dropdown);
 
-var _dropdownController = __webpack_require__(38);
+var _dropdownController = __webpack_require__(42);
 
 var _dropdownController2 = _interopRequireDefault(_dropdownController);
 
-var _dropdown3 = __webpack_require__(40);
+var _dropdown3 = __webpack_require__(44);
 
 var _dropdown4 = _interopRequireDefault(_dropdown3);
 
-var _dropdown5 = __webpack_require__(31);
+var _dropdown5 = __webpack_require__(34);
 
 var _dropdown6 = _interopRequireDefault(_dropdown5);
 
@@ -45174,15 +45174,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _tabs = __webpack_require__(41);
+var _tabs = __webpack_require__(45);
 
 var _tabs2 = _interopRequireDefault(_tabs);
 
-var _tabs3 = __webpack_require__(42);
+var _tabs3 = __webpack_require__(46);
 
 var _tabs4 = _interopRequireDefault(_tabs3);
 
-var _tabs5 = __webpack_require__(32);
+var _tabs5 = __webpack_require__(35);
 
 var _tabs6 = _interopRequireDefault(_tabs5);
 
@@ -45226,7 +45226,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _docs = __webpack_require__(33);
+var _docs = __webpack_require__(36);
 
 var _docs2 = _interopRequireDefault(_docs);
 
@@ -45264,7 +45264,7 @@ var _docs = __webpack_require__(10);
 
 var _docs2 = _interopRequireDefault(_docs);
 
-__webpack_require__(24);
+__webpack_require__(26);
 
 var _prism = __webpack_require__(15);
 
@@ -45307,7 +45307,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _demo = __webpack_require__(34);
+var _demo = __webpack_require__(37);
 
 var _demo2 = _interopRequireDefault(_demo);
 
@@ -45334,7 +45334,7 @@ var _demo = __webpack_require__(12);
 
 var _demo2 = _interopRequireDefault(_demo);
 
-__webpack_require__(25);
+__webpack_require__(27);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45480,7 +45480,7 @@ Prism.languages.javascript = Prism.languages.extend("clike", { keyword: /\b(as|a
   }e.languages.insertBefore("jade", "filter", a);
 }(Prism);
 Prism.languages.markdown = Prism.languages.extend("markup", {}), Prism.languages.insertBefore("markdown", "prolog", { blockquote: { pattern: /^>(?:[\t ]*>)*/m, alias: "punctuation" }, code: [{ pattern: /^(?: {4}|\t).+/m, alias: "keyword" }, { pattern: /``.+?``|`[^`\n]+`/, alias: "keyword" }], title: [{ pattern: /\w+.*(?:\r?\n|\r)(?:==+|--+)/, alias: "important", inside: { punctuation: /==+$|--+$/ } }, { pattern: /(^\s*)#+.+/m, lookbehind: !0, alias: "important", inside: { punctuation: /^#+|#+$/ } }], hr: { pattern: /(^\s*)([*-])([\t ]*\2){2,}(?=\s*$)/m, lookbehind: !0, alias: "punctuation" }, list: { pattern: /(^\s*)(?:[*+-]|\d+\.)(?=[\t ].)/m, lookbehind: !0, alias: "punctuation" }, "url-reference": { pattern: /!?\[[^\]]+\]:[\t ]+(?:\S+|<(?:\\.|[^>\\])+>)(?:[\t ]+(?:"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\((?:\\.|[^)\\])*\)))?/, inside: { variable: { pattern: /^(!?\[)[^\]]+/, lookbehind: !0 }, string: /(?:"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\((?:\\.|[^)\\])*\))$/, punctuation: /^[\[\]!:]|[<>]/ }, alias: "url" }, bold: { pattern: /(^|[^\\])(\*\*|__)(?:(?:\r?\n|\r)(?!\r?\n|\r)|.)+?\2/, lookbehind: !0, inside: { punctuation: /^\*\*|^__|\*\*$|__$/ } }, italic: { pattern: /(^|[^\\])([*_])(?:(?:\r?\n|\r)(?!\r?\n|\r)|.)+?\2/, lookbehind: !0, inside: { punctuation: /^[*_]|[*_]$/ } }, url: { pattern: /!?\[[^\]]+\](?:\([^\s)]+(?:[\t ]+"(?:\\.|[^"\\])*")?\)| ?\[[^\]\n]*\])/, inside: { variable: { pattern: /(!?\[)[^\]]+(?=\]$)/, lookbehind: !0 }, string: { pattern: /"(?:\\.|[^"\\])*"(?=\)$)/ } } } }), Prism.languages.markdown.bold.inside.url = Prism.util.clone(Prism.languages.markdown.url), Prism.languages.markdown.italic.inside.url = Prism.util.clone(Prism.languages.markdown.url), Prism.languages.markdown.bold.inside.italic = Prism.util.clone(Prism.languages.markdown.italic), Prism.languages.markdown.italic.inside.bold = Prism.util.clone(Prism.languages.markdown.bold);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(44)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(48)))
 
 /***/ }),
 /* 15 */
@@ -45497,9 +45497,9 @@ var _prism = __webpack_require__(14);
 
 var _prism2 = _interopRequireDefault(_prism);
 
-__webpack_require__(23);
+__webpack_require__(25);
 
-__webpack_require__(26);
+__webpack_require__(28);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45529,7 +45529,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); // Import Template
 
 
-var _dropdown = __webpack_require__(35);
+var _dropdown = __webpack_require__(38);
 
 var _dropdown2 = _interopRequireDefault(_dropdown);
 
@@ -45648,7 +45648,7 @@ var _dropdown = __webpack_require__(16);
 
 var _dropdown2 = _interopRequireDefault(_dropdown);
 
-__webpack_require__(28);
+__webpack_require__(30);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45667,7 +45667,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-__webpack_require__(29);
+__webpack_require__(31);
+
+var _test = __webpack_require__(23);
+
+var _test2 = _interopRequireDefault(_test);
 
 var _dropdown = __webpack_require__(17);
 
@@ -45680,13 +45684,13 @@ var _tabs2 = _interopRequireDefault(_tabs);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Register module, inject components and export name
-
-
-// Component Modules
-exports.default = angular.module('ng1bs4.library', [_dropdown2.default, _tabs2.default]).name; // Main entry point for library
+// Main entry point for library
 // Here all library resources are imported, and all component modules are injected
 
 // General Styling
+exports.default = angular.module('ng1bs4.library', [_test2.default, _dropdown2.default, _tabs2.default]).name;
+
+// Component Modules
 
 /***/ }),
 /* 19 */
@@ -45702,7 +45706,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); // Import Template
 
 
-var _pane = __webpack_require__(36);
+var _pane = __webpack_require__(39);
 
 var _pane2 = _interopRequireDefault(_pane);
 
@@ -45762,7 +45766,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); // Import Template
 
 
-var _tabs = __webpack_require__(37);
+var _tabs = __webpack_require__(40);
 
 var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -45825,7 +45829,7 @@ var _pane = __webpack_require__(19);
 
 var _pane2 = _interopRequireDefault(_pane);
 
-__webpack_require__(30);
+__webpack_require__(32);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45834,6 +45838,62 @@ exports.default = angular.module('ng1bs4.library.tabs', []).component('ngbsTabs'
 
 /***/ }),
 /* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _test = __webpack_require__(41);
+
+var _test2 = _interopRequireDefault(_test);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } } // Import Template
+
+
+var controller = function controller() {
+  _classCallCheck(this, controller);
+
+  this.text = 'ng1bs4 is working!';
+};
+// Define and export component
+
+
+exports.default = {
+  template: _test2.default,
+  controller: controller
+};
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _test = __webpack_require__(22);
+
+var _test2 = _interopRequireDefault(_test);
+
+__webpack_require__(33);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// Register module, register component and export name
+// Import Resources
+exports.default = angular.module('ng1bs4.library.test', []).component('ngbsTest', _test2.default).name;
+
+/***/ }),
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery, Tether) {/*!
@@ -49372,19 +49432,7 @@ var Popover = function ($) {
 
 }();
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(43)))
-
-/***/ }),
-/* 23 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(47)))
 
 /***/ }),
 /* 25 */
@@ -49426,76 +49474,100 @@ var Popover = function ($) {
 /* 31 */
 /***/ (function(module, exports) {
 
-module.exports = "<form name=\"form\">\n  <div class=\"form-group\">\n    <label>Check out this lovely title</label>\n    <ngbs-dropdown\n            name=\"ngbsDropdown\"\n            ng-model=\"vm.dropdownValue\"\n            ng-change=\"vm.valueChanged()\"\n            dropdown-placeholder=\"Choose a life\"\n            dropdown-options=\"vm.dropdownOptions\"\n            dropdown-display-property=\"name\"\n            dropdown-key-property=\"id\"\n            dropdown-enable-search=\"true\"\n            dropdown-direction=\"down\"\n    ></ngbs-dropdown><small class=\"form-text form-control-feedback\"> This is some description that no one reads</small>\n  </div>\n</form>\n<p class=\"mt-4\">dropdown value:</p>\n<p>{{ vm.dropdownValue }}</p>\n<div class=\"mt-4\">\n  <button class=\"btn btn-outline-primary\" ng-click=\"vm.switchArray()\">Switch Array</button>\n</div>";
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 32 */
 /***/ (function(module, exports) {
 
-module.exports = "<ngbs-tabs>\n    <ngbs-pane title=\"First Pane\">\n        <p>I'm happy!</p>\n    </ngbs-pane>\n    <ngbs-pane title=\"Second Pane\">\n        <p>I'm also happy!</p>\n    </ngbs-pane>\n    <ngbs-pane title=\"Last Pane\">\n        <p>I'm last but not least!</p>\n    </ngbs-pane>\n</ngbs-tabs>";
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 33 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"col-12 text-center py-5\">\n        <logo></logo>\n        <h1 class=\"display-1 py-3\">ng1bs4</h1>\n        <p class=\"lead mb-5\">Tomorrow's Library with Yesterday's Framework</p>\n        <p>A collection of UI components built with Bootstrap 4 & AngularJS (1.x)</p>\n        <!-- Place this tag where you want the button to render. -->\n        <a class=\"github-button\" href=\"https://github.com/idanco/ng1bs4\" data-size=\"large\" aria-label=\"Star idanco/ng1bs4 on GitHub\">Star</a>\n    </div>\n</div>\n<div class=\"row\">\n    <div class=\"col-12\">\n        <h1>Form Elements</h1>\n        <h2>Dropdown</h2>\n        <demo>\n            <dropdown-demo></dropdown-demo>\n        </demo>\n        <h1>Navigation</h1>\n        <h2>Tabs</h2>\n        <demo>\n            <tabs-demo></tabs-demo>\n        </demo>\n    </div>\n</div>\n\n<!-- Place this tag in your head or just before your close body tag. -->\n<script async defer src=\"https://buttons.github.io/buttons.js\"></script>";
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 34 */
 /***/ (function(module, exports) {
 
-module.exports = "<hr/>\n<div class=\"row\">\n    <div class=\"col-md-6 col-xl-4\">\n        <div ng-transclude class=\"live-example\"></div>\n    </div>\n    <div class=\"col\">\n        <pre ng-if=\"$ctrl.md\" class=\"md\"><code prism=\"prism\" ng-bind=\"$ctrl.md\" class=\"language-markdown\"></code></pre>\n    </div>\n</div>\n<div class=\"row\">\n    <div class=\"col-12 mb-5\">\n        <ngbs-tabs>\n            <ngbs-pane title=\"HTML\" ng-if=\"$ctrl.html\">\n                <pre class=\"html\"><code prism=\"prism\" ng-bind=\"$ctrl.html\" class=\"language-html\"></code></pre>\n            </ngbs-pane>\n            <ngbs-pane title=\"Javascript\" ng-if=\"$ctrl.js\">\n                <pre class=\"javascript\"><code prism=\"prism\" ng-bind=\"$ctrl.js\" class=\"language-javascript\"></code></pre>\n            </ngbs-pane>\n        </ngbs-tabs>\n    </div>\n</div>";
+module.exports = "<form name=\"form\">\n  <div class=\"form-group\">\n    <label>Check out this lovely title</label>\n    <ngbs-dropdown\n            name=\"ngbsDropdown\"\n            ng-model=\"vm.dropdownValue\"\n            ng-change=\"vm.valueChanged()\"\n            dropdown-placeholder=\"Choose a life\"\n            dropdown-options=\"vm.dropdownOptions\"\n            dropdown-display-property=\"name\"\n            dropdown-key-property=\"id\"\n            dropdown-enable-search=\"true\"\n            dropdown-direction=\"down\"\n    ></ngbs-dropdown><small class=\"form-text form-control-feedback\"> This is some description that no one reads</small>\n  </div>\n</form>\n<p class=\"mt-4\">dropdown value:</p>\n<p>{{ vm.dropdownValue }}</p>\n<div class=\"mt-4\">\n  <button class=\"btn btn-outline-primary\" ng-click=\"vm.switchArray()\">Switch Array</button>\n</div>";
 
 /***/ }),
 /* 35 */
 /***/ (function(module, exports) {
 
-module.exports = "<button type=\"button\" data-toggle=\"dropdown\" class=\"dropdown-toggle btn btn-secondary\">\n    <span ng-show=\"!$ctrl.displayValue\" class=\"placeholder\">{{ ::$ctrl.dropdownPlaceholder }}</span>\n    <span ng-show=\"!!$ctrl.displayValue\" ng-bind-html=\"$ctrl.displayValue\" class=\"value\"></span>\n</button>\n\n<div class=\"dropdown-menu\">\n    <div ng-show=\"$ctrl.dropdownEnableSearch\" class=\"dropdown-header\">\n        <input type=\"text\" placeholder=\"Search...\" ng-model=\"$ctrl.dropdownQuery\" ng-change=\"$ctrl.filterOptions()\" class=\"form-control\"/>\n        <!--<i ng-click=\"vm.clickClearSearch($event)\" ng-show=\"vm.dropdownQuery\" class=\"input-suffix bp-icon-remove\"></i>-->\n    </div>\n    <div class=\"dropdown-menu-inner\">\n        <a ng-repeat=\"option in $ctrl.filteredOptions\" ng-click=\"$ctrl.setValue(option)\" ng-class=\"{ 'selected': $ctrl.isSelected(option) }\" href=\"\" ng-bind-html=\"option[$ctrl.dropdownDisplayProperty]\" class=\"dropdown-item\"></a>\n        <a ng-if=\"!$ctrl.filteredOptions.length\" class=\"dropdown-item\">No results found...</a></div>\n</div>";
+module.exports = "<ngbs-tabs>\n    <ngbs-pane title=\"First Pane\">\n        <p>I'm happy!</p>\n    </ngbs-pane>\n    <ngbs-pane title=\"Second Pane\">\n        <p>I'm also happy!</p>\n    </ngbs-pane>\n    <ngbs-pane title=\"Last Pane\">\n        <p>I'm last but not least!</p>\n    </ngbs-pane>\n</ngbs-tabs>";
 
 /***/ }),
 /* 36 */
 /***/ (function(module, exports) {
 
-module.exports = "<div ng-class=\"{active:$ctrl.selected}\" ng-transclude=\"\" class=\"tab-pane\"></div>";
+module.exports = "<div class=\"row\">\n    <div class=\"col-12 text-center py-5\">\n        <h1 class=\"display-1 py-3\">ng1bs4</h1>\n        <p class=\"lead mb-5\">Tomorrow's Library with Yesterday's Framework</p>\n        <p>A collection of UI components built with Bootstrap 4 & AngularJS (1.x)</p>\n        <!-- Place this tag where you want the button to render. -->\n        <a class=\"github-button\" href=\"https://github.com/idanco/ng1bs4\" data-size=\"large\" aria-label=\"Star idanco/ng1bs4 on GitHub\">Star</a>\n    </div>\n</div>\n<div class=\"row\">\n    <div class=\"col-12\">\n        <h1>Form Elements</h1>\n        <h2>Dropdown</h2>\n        <demo>\n            <dropdown-demo></dropdown-demo>\n        </demo>\n        <h1>Navigation</h1>\n        <h2>Tabs</h2>\n        <demo>\n            <tabs-demo></tabs-demo>\n        </demo>\n    </div>\n</div>\n\n<!-- Place this tag in your head or just before your close body tag. -->\n<script async defer src=\"https://buttons.github.io/buttons.js\"></script>";
 
 /***/ }),
 /* 37 */
 /***/ (function(module, exports) {
 
-module.exports = "<ul class=\"nav nav-tabs\">\n    <li ng-repeat=\"pane in $ctrl.panes\" class=\"nav-item\"><a href=\"\" ng-click=\"$ctrl.select(pane)\" ng-class=\"{active:pane.selected}\" class=\"nav-link\">{{pane.title}}</a></li>\n</ul>\n<div ng-transclude=\"\" class=\"tab-content\"></div>";
+module.exports = "<hr/>\n<div class=\"row\">\n    <div class=\"col-md-6 col-xl-4\">\n        <div ng-transclude class=\"live-example\"></div>\n    </div>\n    <div class=\"col\">\n        <pre ng-if=\"$ctrl.md\" class=\"md\"><code prism=\"prism\" ng-bind=\"$ctrl.md\" class=\"language-markdown\"></code></pre>\n    </div>\n</div>\n<div class=\"row\">\n    <div class=\"col-12 mb-5\">\n        <ngbs-tabs>\n            <ngbs-pane title=\"HTML\" ng-if=\"$ctrl.html\">\n                <pre class=\"html\"><code prism=\"prism\" ng-bind=\"$ctrl.html\" class=\"language-html\"></code></pre>\n            </ngbs-pane>\n            <ngbs-pane title=\"Javascript\" ng-if=\"$ctrl.js\">\n                <pre class=\"javascript\"><code prism=\"prism\" ng-bind=\"$ctrl.js\" class=\"language-javascript\"></code></pre>\n            </ngbs-pane>\n        </ngbs-tabs>\n    </div>\n</div>";
 
 /***/ }),
 /* 38 */
 /***/ (function(module, exports) {
 
-module.exports = "function controller() {\n  const vm = this;\n  const longArray = [\n    {\n      name: 'First Option',\n      id: 1\n    },\n    {\n      name: 'Second Option',\n      id: 2\n    },\n    {\n      name: 'Third Option',\n      id: 3\n    },\n    {\n      name: 'Forth Option',\n      id: 4\n    },\n    {\n      name: 'Fifth Option',\n      id: 5\n    },\n    {\n      name: 'Sixth Option',\n      id: 6\n    },\n    {\n      name: 'Seventh Option',\n      id: 7\n    },\n    {\n      name: 'Eighth Option',\n      id: 8\n    },\n    {\n      name: 'Ninth Option',\n      id: 9\n    }\n  ];\n  const shortArray = longArray.slice(0, 4);\n\n  vm.dropdownOptions = longArray;\n  vm.dropdownValue = null;\n\n  vm.valueChanged = function() {\n    console.info('value changed!');\n  };\n\n  vm.switchArray = function () {\n    if (this.dropdownOptions.length === 4) {\n      this.dropdownOptions = longArray;\n    } else {\n      this.dropdownOptions = shortArray;\n    }\n    this.dropdownValue = null;\n  };\n}\n\nexport default controller;"
+module.exports = "<button type=\"button\" data-toggle=\"dropdown\" class=\"dropdown-toggle btn btn-secondary\">\n    <span ng-show=\"!$ctrl.displayValue\" class=\"placeholder\">{{ ::$ctrl.dropdownPlaceholder }}</span>\n    <span ng-show=\"!!$ctrl.displayValue\" ng-bind-html=\"$ctrl.displayValue\" class=\"value\"></span>\n</button>\n\n<div class=\"dropdown-menu\">\n    <div ng-show=\"$ctrl.dropdownEnableSearch\" class=\"dropdown-header\">\n        <input type=\"text\" placeholder=\"Search...\" ng-model=\"$ctrl.dropdownQuery\" ng-change=\"$ctrl.filterOptions()\" class=\"form-control\"/>\n        <!--<i ng-click=\"vm.clickClearSearch($event)\" ng-show=\"vm.dropdownQuery\" class=\"input-suffix bp-icon-remove\"></i>-->\n    </div>\n    <div class=\"dropdown-menu-inner\">\n        <a ng-repeat=\"option in $ctrl.filteredOptions\" ng-click=\"$ctrl.setValue(option)\" ng-class=\"{ 'selected': $ctrl.isSelected(option) }\" href=\"\" ng-bind-html=\"option[$ctrl.dropdownDisplayProperty]\" class=\"dropdown-item\"></a>\n        <a ng-if=\"!$ctrl.filteredOptions.length\" class=\"dropdown-item\">No results found...</a></div>\n</div>";
 
 /***/ }),
 /* 39 */
 /***/ (function(module, exports) {
 
-module.exports = "<form name=\"form\">\n  <div class=\"form-group\">\n    <label>Check out this lovely title</label>\n    <ngbs-dropdown\n            name=\"ngbsDropdown\"\n            ng-model=\"vm.dropdownValue\"\n            ng-change=\"vm.valueChanged()\"\n            dropdown-placeholder=\"Choose a life\"\n            dropdown-options=\"vm.dropdownOptions\"\n            dropdown-display-property=\"name\"\n            dropdown-key-property=\"id\"\n            dropdown-enable-search=\"true\"\n            dropdown-direction=\"down\"\n    ></ngbs-dropdown><small class=\"form-text form-control-feedback\"> This is some description that no one reads</small>\n  </div>\n</form>\n<p class=\"mt-4\">dropdown value:</p>\n<p>{{ vm.dropdownValue }}</p>\n<div class=\"mt-4\">\n  <button class=\"btn btn-outline-primary\" ng-click=\"vm.switchArray()\">Switch Array</button>\n</div>"
+module.exports = "<div ng-class=\"{active:$ctrl.selected}\" ng-transclude=\"\" class=\"tab-pane\"></div>";
 
 /***/ }),
 /* 40 */
 /***/ (function(module, exports) {
 
-module.exports = "## ngbs-dropdown\n\n**dropdown-placeholder** (*string*) - The text which appears when no value is selected\n\n**dropdown-options** (*array of objects*) - Each object in the array represents an option in the dropdown, and must include a display value (which appears in the dropdown options) and a key value (which is binded to the ng-model).\n\n**dropdown-display-property** (*string*) - The name of the display value property in the option object\n\n**dropdown-key-property** (*string*) - The name of the unique key property in the option object. The value of this field will be binded to 'ng-modal'.\n\n**dropdown-direction** (*string*) - accepted values are 'up' or 'down'.\n\n**dropdown-enable-search** (*boolean*) - whether or not to show the search field at the top of the dropdown menu."
+module.exports = "<ul class=\"nav nav-tabs\">\n    <li ng-repeat=\"pane in $ctrl.panes\" class=\"nav-item\"><a href=\"\" ng-click=\"$ctrl.select(pane)\" ng-class=\"{active:pane.selected}\" class=\"nav-link\">{{pane.title}}</a></li>\n</ul>\n<div ng-transclude=\"\" class=\"tab-content\"></div>";
 
 /***/ }),
 /* 41 */
 /***/ (function(module, exports) {
 
-module.exports = "<ngbs-tabs>\n    <ngbs-pane title=\"First Pane\">\n        <p>I'm happy!</p>\n    </ngbs-pane>\n    <ngbs-pane title=\"Second Pane\">\n        <p>I'm also happy!</p>\n    </ngbs-pane>\n    <ngbs-pane title=\"Last Pane\">\n        <p>I'm last but not least!</p>\n    </ngbs-pane>\n</ngbs-tabs>"
+module.exports = "<div>{{ $ctrl.text }}</div>\n<div class=\"css-test\" style=\"color:red\">But you forgot to load css!</div>";
 
 /***/ }),
 /* 42 */
 /***/ (function(module, exports) {
 
-module.exports = "## ngbs-tabs\n\nUse beatiful for packing a lot of content in a small space.\nnotice the structure of the mark up: `ngbs-tab` as the wrapper, and `ngbs-pane` for every tab. Put the tab content under `ngbs-pane`\n\n**title** (*string*) - The text which appears on the tab\n"
+module.exports = "function controller() {\n  const vm = this;\n  const longArray = [\n    {\n      name: 'First Option',\n      id: 1\n    },\n    {\n      name: 'Second Option',\n      id: 2\n    },\n    {\n      name: 'Third Option',\n      id: 3\n    },\n    {\n      name: 'Forth Option',\n      id: 4\n    },\n    {\n      name: 'Fifth Option',\n      id: 5\n    },\n    {\n      name: 'Sixth Option',\n      id: 6\n    },\n    {\n      name: 'Seventh Option',\n      id: 7\n    },\n    {\n      name: 'Eighth Option',\n      id: 8\n    },\n    {\n      name: 'Ninth Option',\n      id: 9\n    }\n  ];\n  const shortArray = longArray.slice(0, 4);\n\n  vm.dropdownOptions = longArray;\n  vm.dropdownValue = null;\n\n  vm.valueChanged = function() {\n    console.info('value changed!');\n  };\n\n  vm.switchArray = function () {\n    if (this.dropdownOptions.length === 4) {\n      this.dropdownOptions = longArray;\n    } else {\n      this.dropdownOptions = shortArray;\n    }\n    this.dropdownValue = null;\n  };\n}\n\nexport default controller;"
 
 /***/ }),
 /* 43 */
+/***/ (function(module, exports) {
+
+module.exports = "<form name=\"form\">\n  <div class=\"form-group\">\n    <label>Check out this lovely title</label>\n    <ngbs-dropdown\n            name=\"ngbsDropdown\"\n            ng-model=\"vm.dropdownValue\"\n            ng-change=\"vm.valueChanged()\"\n            dropdown-placeholder=\"Choose a life\"\n            dropdown-options=\"vm.dropdownOptions\"\n            dropdown-display-property=\"name\"\n            dropdown-key-property=\"id\"\n            dropdown-enable-search=\"true\"\n            dropdown-direction=\"down\"\n    ></ngbs-dropdown><small class=\"form-text form-control-feedback\"> This is some description that no one reads</small>\n  </div>\n</form>\n<p class=\"mt-4\">dropdown value:</p>\n<p>{{ vm.dropdownValue }}</p>\n<div class=\"mt-4\">\n  <button class=\"btn btn-outline-primary\" ng-click=\"vm.switchArray()\">Switch Array</button>\n</div>"
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports) {
+
+module.exports = "## ngbs-dropdown\n\n**dropdown-placeholder** (*string*) - The text which appears when no value is selected\n\n**dropdown-options** (*array of objects*) - Each object in the array represents an option in the dropdown, and must include a display value (which appears in the dropdown options) and a key value (which is binded to the ng-model).\n\n**dropdown-display-property** (*string*) - The name of the display value property in the option object\n\n**dropdown-key-property** (*string*) - The name of the unique key property in the option object. The value of this field will be binded to 'ng-modal'.\n\n**dropdown-direction** (*string*) - accepted values are 'up' or 'down'.\n\n**dropdown-enable-search** (*boolean*) - whether or not to show the search field at the top of the dropdown menu."
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports) {
+
+module.exports = "<ngbs-tabs>\n    <ngbs-pane title=\"First Pane\">\n        <p>I'm happy!</p>\n    </ngbs-pane>\n    <ngbs-pane title=\"Second Pane\">\n        <p>I'm also happy!</p>\n    </ngbs-pane>\n    <ngbs-pane title=\"Last Pane\">\n        <p>I'm last but not least!</p>\n    </ngbs-pane>\n</ngbs-tabs>"
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports) {
+
+module.exports = "## ngbs-tabs\n\nUse beatiful for packing a lot of content in a small space.\nnotice the structure of the mark up: `ngbs-tab` as the wrapper, and `ngbs-pane` for every tab. Put the tab content under `ngbs-pane`\n\n**title** (*string*) - The text which appears on the tab\n"
+
+/***/ }),
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! tether 1.4.0 */
@@ -51316,7 +51388,7 @@ return Tether;
 
 
 /***/ }),
-/* 44 */
+/* 48 */
 /***/ (function(module, exports) {
 
 var g;
@@ -51343,7 +51415,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 45 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(3);
