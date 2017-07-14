@@ -1,0 +1,10 @@
+// Override bootstrap's default variables.
+// To Override these overrides, create your own _variables.scss and load it before ng1bs4
+@import "library/style/variables";
+
+// Load bootstrap
+@import "~bootstrap/scss/bootstrap.scss";
+
+html {
+  font-size: 16px;
+}

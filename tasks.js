@@ -51,14 +51,11 @@ function buildDistFolder() {
 
 // method to build stand-alone library
 function buildLibrary() {
-  console.info(webpackConfig);
-
   const compiler = webpack(webpackConfig);
 
   compiler.run((err, stats) => {
     if (err || stats.hasErrors()) {
-      console.info(stats);
-      console.info(err);
+      console.info('oops, library build failed!');
     }
     console.info('library build finished');
   });

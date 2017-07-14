@@ -15,7 +15,7 @@ module.exports = new WebpackConfig()
   })
   .merge({
     entry: {
-      app: `./${conf.path.library('index')}`
+      app: `./${conf.path.library('library.module')}`
     },
     output: {
       path: conf.absolutePath(conf.paths.libraryDist),

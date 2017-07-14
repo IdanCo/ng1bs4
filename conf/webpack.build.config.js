@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const WebpackConfig = require('webpack-config').default;
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const conf = require('./conf');
 
@@ -14,6 +15,9 @@ module.exports = new WebpackConfig()
     },
     plugins: [
       new ExtractTextPlugin('app-[hash].css'),
+      new HtmlWebpackPlugin({ // inject styles and js to index.html
+        template: conf.path.src('index.html')
+      }),
       new WebpackCleanupPlugin(),
     ]
   });

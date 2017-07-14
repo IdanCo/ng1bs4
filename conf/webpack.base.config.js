@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const WebpackConfig = require('webpack-config').default;
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const conf = require('./conf');
 
@@ -70,9 +69,7 @@ module.exports = new WebpackConfig().merge({
       'window.jQuery': 'jquery',
       Tether: 'tether',
     }),
-    new HtmlWebpackPlugin({ // inject styles and js to index.html
-      template: conf.path.src('index.html')
-    }),
+
     // new webpack.optimize.CommonsChunkPlugin({ // seperate vendor chunks
     //   name: ['vendor', 'manifest']
     // }),
