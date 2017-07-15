@@ -45041,54 +45041,63 @@ module.exports = 'ngSanitize';
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-function controller() {
-  var vm = this;
-  var longArray = [{
-    name: 'First Option',
-    id: 1
-  }, {
-    name: 'Second Option',
-    id: 2
-  }, {
-    name: 'Third Option',
-    id: 3
-  }, {
-    name: 'Forth Option',
-    id: 4
-  }, {
-    name: 'Fifth Option',
-    id: 5
-  }, {
-    name: 'Sixth Option',
-    id: 6
-  }, {
-    name: 'Seventh Option',
-    id: 7
-  }, {
-    name: 'Eighth Option',
-    id: 8
-  }, {
-    name: 'Ninth Option',
-    id: 9
-  }];
-  var shortArray = longArray.slice(0, 4);
 
-  vm.dropdownOptions = longArray;
-  vm.dropdownValue = null;
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-  vm.valueChanged = function () {
-    console.info('value changed!');
-  };
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-  vm.switchArray = function () {
-    if (this.dropdownOptions.length === 4) {
-      this.dropdownOptions = longArray;
-    } else {
-      this.dropdownOptions = shortArray;
+var controller = function () {
+  function controller() {
+    _classCallCheck(this, controller);
+
+    this.longArray = [{
+      name: 'First Option',
+      id: 1
+    }, {
+      name: 'Second Option',
+      id: 2
+    }, {
+      name: 'Third Option',
+      id: 3
+    }, {
+      name: '<b>with</b> <i>html</i>',
+      id: 4
+    }, {
+      name: 'Fifth Option',
+      id: 5
+    }, {
+      name: 'Sixth Option',
+      id: 6
+    }, {
+      name: 'Seventh Option',
+      id: 7
+    }, {
+      name: 'Eighth Option',
+      id: 8
+    }, {
+      name: 'Ninth Option',
+      id: 9
+    }];
+    this.shortArray = this.longArray.slice(0, 4);
+
+    this.dropdownOptions = this.longArray;
+  }
+
+  _createClass(controller, [{
+    key: 'valueChanged',
+    value: function valueChanged() {
+      console.info('value changed!');
     }
-    this.dropdownValue = null;
-  };
-}
+  }, {
+    key: 'switchArray',
+    value: function switchArray() {
+      this.dropdownOptions = this.dropdownOptions.length === 4 ? this.longArray : this.shortArray;
+      this.dropdownValue = null;
+    }
+  }]);
+
+  return controller;
+}();
 
 exports.default = controller;
 
@@ -45103,47 +45112,46 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _dropdown = __webpack_require__(43);
+var _dropdown = __webpack_require__(34);
 
 var _dropdown2 = _interopRequireDefault(_dropdown);
 
-var _dropdownController = __webpack_require__(42);
+var _dropdownController = __webpack_require__(6);
 
 var _dropdownController2 = _interopRequireDefault(_dropdownController);
 
-var _dropdown3 = __webpack_require__(44);
+var _dropdown3 = __webpack_require__(43);
 
 var _dropdown4 = _interopRequireDefault(_dropdown3);
 
-var _dropdown5 = __webpack_require__(34);
-
-var _dropdown6 = _interopRequireDefault(_dropdown5);
-
-var _dropdownController3 = __webpack_require__(6);
+var _dropdownController3 = __webpack_require__(42);
 
 var _dropdownController4 = _interopRequireDefault(_dropdownController3);
 
+var _dropdown5 = __webpack_require__(44);
+
+var _dropdown6 = _interopRequireDefault(_dropdown5);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// manipulate controller to pass raw files to demo
-
-
-// Import Angular Resources
-_dropdownController4.default.prototype.$onInit = function () {
-  this.demo.html = _dropdown2.default;
-  this.demo.js = _dropdownController2.default;
-  this.demo.md = _dropdown4.default;
+// manipulate controller to pass raw files up to demo
+_dropdownController2.default.prototype.$onInit = function () {
+  this.demo.html = _dropdown4.default;
+  this.demo.js = _dropdownController4.default;
+  this.demo.md = _dropdown6.default;
 };
 
 // Component definition
+
+
 // Import Raw Files
+// Import Angular Resources
 var Component = {
   require: {
     demo: '^demo'
   },
-  template: _dropdown6.default,
-  controller: _dropdownController4.default,
-  controllerAs: 'vm'
+  template: _dropdown2.default,
+  controller: _dropdownController2.default
 };
 
 // Register module, register component and export name
@@ -45159,7 +45167,12 @@ exports.default = angular.module('ng1bs4.docs.dropdownDemo', []).component('drop
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-function controller() {}
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var controller = function controller() {
+  _classCallCheck(this, controller);
+};
 
 exports.default = controller;
 
@@ -45174,32 +45187,32 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _tabs = __webpack_require__(45);
+var _tabs = __webpack_require__(35);
 
 var _tabs2 = _interopRequireDefault(_tabs);
-
-var _tabs3 = __webpack_require__(46);
-
-var _tabs4 = _interopRequireDefault(_tabs3);
-
-var _tabs5 = __webpack_require__(35);
-
-var _tabs6 = _interopRequireDefault(_tabs5);
 
 var _tabsController = __webpack_require__(8);
 
 var _tabsController2 = _interopRequireDefault(_tabsController);
 
+var _tabs3 = __webpack_require__(45);
+
+var _tabs4 = _interopRequireDefault(_tabs3);
+
+var _tabs5 = __webpack_require__(46);
+
+var _tabs6 = _interopRequireDefault(_tabs5);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// manipulate controller to pass raw files to demo
+// manipulate controller to pass raw files up to demo
 
 
-// Import Angular Resources
 // Import Raw Files
+// Import Angular Resources
 _tabsController2.default.prototype.$onInit = function () {
-  this.demo.html = _tabs2.default;
-  this.demo.md = _tabs4.default;
+  this.demo.html = _tabs4.default;
+  this.demo.md = _tabs6.default;
 };
 
 // Component definition
@@ -45207,9 +45220,8 @@ var Component = {
   require: {
     demo: '^demo'
   },
-  template: _tabs6.default,
-  controller: _tabsController2.default,
-  controllerAs: 'vm'
+  template: _tabs2.default,
+  controller: _tabsController2.default
 };
 
 // Register module, register component and export name
@@ -49492,7 +49504,7 @@ var Popover = function ($) {
 /* 34 */
 /***/ (function(module, exports) {
 
-module.exports = "<form name=\"form\">\n  <div class=\"form-group\">\n    <label>Check out this lovely title</label>\n    <ngbs-dropdown\n            name=\"ngbsDropdown\"\n            ng-model=\"vm.dropdownValue\"\n            ng-change=\"vm.valueChanged()\"\n            dropdown-placeholder=\"Choose a life\"\n            dropdown-options=\"vm.dropdownOptions\"\n            dropdown-display-property=\"name\"\n            dropdown-key-property=\"id\"\n            dropdown-enable-search=\"true\"\n            dropdown-direction=\"down\"\n    ></ngbs-dropdown><small class=\"form-text form-control-feedback\"> This is some description that no one reads</small>\n  </div>\n</form>\n<p class=\"mt-4\">dropdown value:</p>\n<p>{{ vm.dropdownValue }}</p>\n<div class=\"mt-4\">\n  <button class=\"btn btn-outline-primary\" ng-click=\"vm.switchArray()\">Switch Array</button>\n</div>";
+module.exports = "<form name=\"form\">\n  <div class=\"form-group\">\n    <label>Check out this lovely title</label>\n    <ngbs-dropdown\n            name=\"ngbsDropdown\"\n            ng-model=\"$ctrl.dropdownValue\"\n            ng-change=\"$ctrl.valueChanged()\"\n            dropdown-placeholder=\"Choose a life\"\n            dropdown-options=\"$ctrl.dropdownOptions\"\n            dropdown-display-property=\"name\"\n            dropdown-key-property=\"id\"\n            dropdown-enable-search=\"true\"\n            dropdown-direction=\"down\"\n    ></ngbs-dropdown><small class=\"form-text form-control-feedback\"> This is some description that no one reads</small>\n  </div>\n</form>\n<p class=\"mt-4\">dropdown value:</p>\n<p>{{ $ctrl.dropdownValue }}</p>\n<div class=\"mt-4\">\n  <button class=\"btn btn-outline-primary\" ng-click=\"$ctrl.switchArray()\">Switch Array</button>\n</div>";
 
 /***/ }),
 /* 35 */
@@ -49510,7 +49522,7 @@ module.exports = "<div class=\"row\">\n    <div class=\"col-12 text-center py-5\
 /* 37 */
 /***/ (function(module, exports) {
 
-module.exports = "<hr/>\n<div class=\"row\">\n    <div class=\"col-md-6 col-xl-4\">\n        <div ng-transclude class=\"live-example\"></div>\n    </div>\n    <div class=\"col\">\n        <pre ng-if=\"$ctrl.md\" class=\"md\"><code prism=\"prism\" ng-bind=\"$ctrl.md\" class=\"language-markdown\"></code></pre>\n    </div>\n</div>\n<div class=\"row\">\n    <div class=\"col-12 mb-5\">\n        <ngbs-tabs>\n            <ngbs-pane title=\"HTML\" ng-if=\"$ctrl.html\">\n                <pre class=\"html\"><code prism=\"prism\" ng-bind=\"$ctrl.html\" class=\"language-html\"></code></pre>\n            </ngbs-pane>\n            <ngbs-pane title=\"Javascript\" ng-if=\"$ctrl.js\">\n                <pre class=\"javascript\"><code prism=\"prism\" ng-bind=\"$ctrl.js\" class=\"language-javascript\"></code></pre>\n            </ngbs-pane>\n        </ngbs-tabs>\n    </div>\n</div>";
+module.exports = "<hr/>\n<div class=\"row\">\n    <div class=\"col-md-6 col-xl-5\">\n        <div ng-transclude class=\"live-example\"></div>\n    </div>\n    <div class=\"col\">\n        <pre ng-if=\"$ctrl.md\" class=\"md\"><code prism=\"prism\" ng-bind=\"$ctrl.md\" class=\"language-markdown\"></code></pre>\n    </div>\n</div>\n<div class=\"row\">\n    <div class=\"col-12 mb-5\">\n        <ngbs-tabs>\n            <ngbs-pane title=\"HTML\" ng-if=\"$ctrl.html\">\n                <pre class=\"html\"><code prism=\"prism\" ng-bind=\"$ctrl.html\" class=\"language-html\"></code></pre>\n            </ngbs-pane>\n            <ngbs-pane title=\"Javascript\" ng-if=\"$ctrl.js\">\n                <pre class=\"javascript\"><code prism=\"prism\" ng-bind=\"$ctrl.js\" class=\"language-javascript\"></code></pre>\n            </ngbs-pane>\n        </ngbs-tabs>\n    </div>\n</div>";
 
 /***/ }),
 /* 38 */
@@ -49540,13 +49552,13 @@ module.exports = "<div>{{ $ctrl.text }}</div>\n<div class=\"css-test\" style=\"c
 /* 42 */
 /***/ (function(module, exports) {
 
-module.exports = "function controller() {\n  const vm = this;\n  const longArray = [\n    {\n      name: 'First Option',\n      id: 1\n    },\n    {\n      name: 'Second Option',\n      id: 2\n    },\n    {\n      name: 'Third Option',\n      id: 3\n    },\n    {\n      name: 'Forth Option',\n      id: 4\n    },\n    {\n      name: 'Fifth Option',\n      id: 5\n    },\n    {\n      name: 'Sixth Option',\n      id: 6\n    },\n    {\n      name: 'Seventh Option',\n      id: 7\n    },\n    {\n      name: 'Eighth Option',\n      id: 8\n    },\n    {\n      name: 'Ninth Option',\n      id: 9\n    }\n  ];\n  const shortArray = longArray.slice(0, 4);\n\n  vm.dropdownOptions = longArray;\n  vm.dropdownValue = null;\n\n  vm.valueChanged = function() {\n    console.info('value changed!');\n  };\n\n  vm.switchArray = function () {\n    if (this.dropdownOptions.length === 4) {\n      this.dropdownOptions = longArray;\n    } else {\n      this.dropdownOptions = shortArray;\n    }\n    this.dropdownValue = null;\n  };\n}\n\nexport default controller;"
+module.exports = "class controller {\n  constructor() {\n    this.longArray = [\n      {\n        name: 'First Option',\n        id: 1\n      },\n      {\n        name: 'Second Option',\n        id: 2\n      },\n      {\n        name: 'Third Option',\n        id: 3\n      },\n      {\n        name: '<b>with</b> <i>html</i>',\n        id: 4\n      },\n      {\n        name: 'Fifth Option',\n        id: 5\n      },\n      {\n        name: 'Sixth Option',\n        id: 6\n      },\n      {\n        name: 'Seventh Option',\n        id: 7\n      },\n      {\n        name: 'Eighth Option',\n        id: 8\n      },\n      {\n        name: 'Ninth Option',\n        id: 9\n      }\n    ];\n    this.shortArray = this.longArray.slice(0, 4);\n\n    this.dropdownOptions = this.longArray;\n  }\n\n  valueChanged() {\n    console.info('value changed!');\n  };\n\n  switchArray() {\n    this.dropdownOptions = (this.dropdownOptions.length === 4) ? this.longArray : this.shortArray;\n    this.dropdownValue = null;\n  };\n\n}\n\nexport default controller;"
 
 /***/ }),
 /* 43 */
 /***/ (function(module, exports) {
 
-module.exports = "<form name=\"form\">\n  <div class=\"form-group\">\n    <label>Check out this lovely title</label>\n    <ngbs-dropdown\n            name=\"ngbsDropdown\"\n            ng-model=\"vm.dropdownValue\"\n            ng-change=\"vm.valueChanged()\"\n            dropdown-placeholder=\"Choose a life\"\n            dropdown-options=\"vm.dropdownOptions\"\n            dropdown-display-property=\"name\"\n            dropdown-key-property=\"id\"\n            dropdown-enable-search=\"true\"\n            dropdown-direction=\"down\"\n    ></ngbs-dropdown><small class=\"form-text form-control-feedback\"> This is some description that no one reads</small>\n  </div>\n</form>\n<p class=\"mt-4\">dropdown value:</p>\n<p>{{ vm.dropdownValue }}</p>\n<div class=\"mt-4\">\n  <button class=\"btn btn-outline-primary\" ng-click=\"vm.switchArray()\">Switch Array</button>\n</div>"
+module.exports = "<form name=\"form\">\n  <div class=\"form-group\">\n    <label>Check out this lovely title</label>\n    <ngbs-dropdown\n            name=\"ngbsDropdown\"\n            ng-model=\"$ctrl.dropdownValue\"\n            ng-change=\"$ctrl.valueChanged()\"\n            dropdown-placeholder=\"Choose a life\"\n            dropdown-options=\"$ctrl.dropdownOptions\"\n            dropdown-display-property=\"name\"\n            dropdown-key-property=\"id\"\n            dropdown-enable-search=\"true\"\n            dropdown-direction=\"down\"\n    ></ngbs-dropdown><small class=\"form-text form-control-feedback\"> This is some description that no one reads</small>\n  </div>\n</form>\n<p class=\"mt-4\">dropdown value:</p>\n<p>{{ $ctrl.dropdownValue }}</p>\n<div class=\"mt-4\">\n  <button class=\"btn btn-outline-primary\" ng-click=\"$ctrl.switchArray()\">Switch Array</button>\n</div>"
 
 /***/ }),
 /* 44 */
