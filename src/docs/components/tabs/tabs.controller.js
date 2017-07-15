@@ -1,4 +1,4 @@
-function controller() {
+class controller {
 
 }
 

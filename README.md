@@ -42,7 +42,7 @@ test by adding this directive anywhere in your markup
 ## Philosophy
 **No Styling**
 
-We believe you should be able to customize as much as you want, and with bootstrap 4 theming is easy! That is why all components include minimal styling, and rely heavily on bootstrap's variables.
+We believe you should be able to customize as much as you want, and with bootstrap 4 theming is easy! That is why all components include minimal styling, and rely heavily on bootstrap's native classes and variables.
 
 **Simple Code**
 

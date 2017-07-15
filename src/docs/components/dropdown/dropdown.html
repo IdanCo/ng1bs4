@@ -3,10 +3,10 @@
     <label>Check out this lovely title</label>
     <ngbs-dropdown
             name="ngbsDropdown"
-            ng-model="vm.dropdownValue"
-            ng-change="vm.valueChanged()"
+            ng-model="$ctrl.dropdownValue"
+            ng-change="$ctrl.valueChanged()"
             dropdown-placeholder="Choose a life"
-            dropdown-options="vm.dropdownOptions"
+            dropdown-options="$ctrl.dropdownOptions"
             dropdown-display-property="name"
             dropdown-key-property="id"
             dropdown-enable-search="true"
@@ -15,7 +15,7 @@
   </div>
 </form>
 <p class="mt-4">dropdown value:</p>
-<p>{{ vm.dropdownValue }}</p>
+<p>{{ $ctrl.dropdownValue }}</p>
 <div class="mt-4">
-  <button class="btn btn-outline-primary" ng-click="vm.switchArray()">Switch Array</button>
+  <button class="btn btn-outline-primary" ng-click="$ctrl.switchArray()">Switch Array</button>
 </div>
