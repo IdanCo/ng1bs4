@@ -45051,31 +45051,31 @@ var controller = function () {
     _classCallCheck(this, controller);
 
     this.longArray = [{
-      name: 'First Option',
+      display: 'First Option',
       id: 1
     }, {
-      name: 'Second Option',
+      display: 'Second Option',
       id: 2
     }, {
-      name: 'Third Option',
+      display: 'Third Option',
       id: 3
     }, {
-      name: '<b>with</b> <i>html</i>',
+      display: '<b>with</b> <i>html</i>',
       id: 4
     }, {
-      name: 'Fifth Option',
+      display: 'Fifth Option',
       id: 5
     }, {
-      name: 'Sixth Option',
+      display: 'Sixth Option',
       id: 6
     }, {
-      name: 'Seventh Option',
+      display: 'Seventh Option',
       id: 7
     }, {
-      name: 'Eighth Option',
+      display: 'Eighth Option',
       id: 8
     }, {
-      name: 'Ninth Option',
+      display: 'Ninth Option',
       id: 9
     }];
     this.shortArray = this.longArray.slice(0, 4);
@@ -45549,7 +45549,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var DEFAULT_DISPLAY_PROPERTY = 'display';
+var DEFAULT_KEY_PROPERTY = 'id';
+var DEFAULT_DIRECTION = 'down';
+var DEFAULT_PLACEHOLDER = 'Select an option...';
+
 // Set up controller
+
 var controller = function () {
   function controller($element, $timeout) {
     _classCallCheck(this, controller);
@@ -45563,13 +45569,11 @@ var controller = function () {
     value: function $onInit() {
       var _this = this;
 
-      // Set a default DISPLAY property if none was supplied
-      this.dropdownDisplayProperty = this.dropdownDisplayProperty || 'display';
-      // Set a default KEY property if none was supplied
-      this.dropdownKeyProperty = this.dropdownKeyProperty || 'id';
-      // Set a default drop direction if none was supplied
-      this.dropdownDirection = this.dropdownDirection || 'down';
-      // Initialize search query
+      // Set defaults
+      this.dropdownDisplayProperty = this.dropdownDisplayProperty || DEFAULT_DISPLAY_PROPERTY;
+      this.dropdownKeyProperty = this.dropdownKeyProperty || DEFAULT_KEY_PROPERTY;
+      this.dropdownDirection = this.dropdownDirection || DEFAULT_DIRECTION;
+      this.dropdownPlaceholder = this.dropdownPlaceholder || DEFAULT_PLACEHOLDER;
       this.dropdownQuery = '';
 
       // Set drop direction
@@ -49504,7 +49508,7 @@ var Popover = function ($) {
 /* 34 */
 /***/ (function(module, exports) {
 
-module.exports = "<form name=\"form\">\n  <div class=\"form-group\">\n    <label>Check out this lovely title</label>\n    <ngbs-dropdown\n            name=\"ngbsDropdown\"\n            ng-model=\"$ctrl.dropdownValue\"\n            ng-change=\"$ctrl.valueChanged()\"\n            dropdown-placeholder=\"Choose a life\"\n            dropdown-options=\"$ctrl.dropdownOptions\"\n            dropdown-display-property=\"name\"\n            dropdown-key-property=\"id\"\n            dropdown-enable-search=\"true\"\n            dropdown-direction=\"down\"\n    ></ngbs-dropdown><small class=\"form-text form-control-feedback\"> This is some description that no one reads</small>\n  </div>\n</form>\n<p class=\"mt-4\">dropdown value:</p>\n<p>{{ $ctrl.dropdownValue }}</p>\n<div class=\"mt-4\">\n  <button class=\"btn btn-outline-primary\" ng-click=\"$ctrl.switchArray()\">Switch Array</button>\n</div>";
+module.exports = "<form name=\"form\">\n  <div class=\"form-group\">\n    <label>Check out this lovely title</label>\n    <ngbs-dropdown\n            ng-model=\"$ctrl.dropdownValue\"\n            ng-change=\"$ctrl.valueChanged()\"\n            dropdown-placeholder=\"Choose a life\"\n            dropdown-options=\"$ctrl.dropdownOptions\"\n            dropdown-display-property=\"display\"\n            dropdown-key-property=\"id\"\n            dropdown-enable-search=\"true\"\n            dropdown-direction=\"down\"\n    ></ngbs-dropdown><small class=\"form-text form-control-feedback\"> This is some description that no one reads</small>\n  </div>\n</form>\n<p class=\"mt-4\">dropdown value:</p>\n<p>{{ $ctrl.dropdownValue }}</p>\n<div class=\"mt-4\">\n  <button class=\"btn btn-outline-primary\" ng-click=\"$ctrl.switchArray()\">Switch Array</button>\n</div>";
 
 /***/ }),
 /* 35 */
@@ -49552,19 +49556,19 @@ module.exports = "<div>{{ $ctrl.text }}</div>\n<div class=\"css-test\" style=\"c
 /* 42 */
 /***/ (function(module, exports) {
 
-module.exports = "class controller {\n  constructor() {\n    this.longArray = [\n      {\n        name: 'First Option',\n        id: 1\n      },\n      {\n        name: 'Second Option',\n        id: 2\n      },\n      {\n        name: 'Third Option',\n        id: 3\n      },\n      {\n        name: '<b>with</b> <i>html</i>',\n        id: 4\n      },\n      {\n        name: 'Fifth Option',\n        id: 5\n      },\n      {\n        name: 'Sixth Option',\n        id: 6\n      },\n      {\n        name: 'Seventh Option',\n        id: 7\n      },\n      {\n        name: 'Eighth Option',\n        id: 8\n      },\n      {\n        name: 'Ninth Option',\n        id: 9\n      }\n    ];\n    this.shortArray = this.longArray.slice(0, 4);\n\n    this.dropdownOptions = this.longArray;\n  }\n\n  valueChanged() {\n    console.info('value changed!');\n  };\n\n  switchArray() {\n    this.dropdownOptions = (this.dropdownOptions.length === 4) ? this.longArray : this.shortArray;\n    this.dropdownValue = null;\n  };\n\n}\n\nexport default controller;"
+module.exports = "class controller {\n  constructor() {\n    this.longArray = [\n      {\n        display: 'First Option',\n        id: 1\n      },\n      {\n        display: 'Second Option',\n        id: 2\n      },\n      {\n        display: 'Third Option',\n        id: 3\n      },\n      {\n        display: '<b>with</b> <i>html</i>',\n        id: 4\n      },\n      {\n        display: 'Fifth Option',\n        id: 5\n      },\n      {\n        display: 'Sixth Option',\n        id: 6\n      },\n      {\n        display: 'Seventh Option',\n        id: 7\n      },\n      {\n        display: 'Eighth Option',\n        id: 8\n      },\n      {\n        display: 'Ninth Option',\n        id: 9\n      }\n    ];\n    this.shortArray = this.longArray.slice(0, 4);\n\n    this.dropdownOptions = this.longArray;\n  }\n\n  valueChanged() {\n    console.info('value changed!');\n  };\n\n  switchArray() {\n    this.dropdownOptions = (this.dropdownOptions.length === 4) ? this.longArray : this.shortArray;\n    this.dropdownValue = null;\n  };\n\n}\n\nexport default controller;"
 
 /***/ }),
 /* 43 */
 /***/ (function(module, exports) {
 
-module.exports = "<form name=\"form\">\n  <div class=\"form-group\">\n    <label>Check out this lovely title</label>\n    <ngbs-dropdown\n            name=\"ngbsDropdown\"\n            ng-model=\"$ctrl.dropdownValue\"\n            ng-change=\"$ctrl.valueChanged()\"\n            dropdown-placeholder=\"Choose a life\"\n            dropdown-options=\"$ctrl.dropdownOptions\"\n            dropdown-display-property=\"name\"\n            dropdown-key-property=\"id\"\n            dropdown-enable-search=\"true\"\n            dropdown-direction=\"down\"\n    ></ngbs-dropdown><small class=\"form-text form-control-feedback\"> This is some description that no one reads</small>\n  </div>\n</form>\n<p class=\"mt-4\">dropdown value:</p>\n<p>{{ $ctrl.dropdownValue }}</p>\n<div class=\"mt-4\">\n  <button class=\"btn btn-outline-primary\" ng-click=\"$ctrl.switchArray()\">Switch Array</button>\n</div>"
+module.exports = "<form name=\"form\">\n  <div class=\"form-group\">\n    <label>Check out this lovely title</label>\n    <ngbs-dropdown\n            ng-model=\"$ctrl.dropdownValue\"\n            ng-change=\"$ctrl.valueChanged()\"\n            dropdown-placeholder=\"Choose a life\"\n            dropdown-options=\"$ctrl.dropdownOptions\"\n            dropdown-display-property=\"display\"\n            dropdown-key-property=\"id\"\n            dropdown-enable-search=\"true\"\n            dropdown-direction=\"down\"\n    ></ngbs-dropdown><small class=\"form-text form-control-feedback\"> This is some description that no one reads</small>\n  </div>\n</form>\n<p class=\"mt-4\">dropdown value:</p>\n<p>{{ $ctrl.dropdownValue }}</p>\n<div class=\"mt-4\">\n  <button class=\"btn btn-outline-primary\" ng-click=\"$ctrl.switchArray()\">Switch Array</button>\n</div>"
 
 /***/ }),
 /* 44 */
 /***/ (function(module, exports) {
 
-module.exports = "## ngbs-dropdown\n\n**dropdown-placeholder** (*string*) - The text which appears when no value is selected\n\n**dropdown-options** (*array of objects*) - Each object in the array represents an option in the dropdown, and must include a display value (which appears in the dropdown options) and a key value (which is binded to the ng-model).\n\n**dropdown-display-property** (*string*) - The name of the display value property in the option object\n\n**dropdown-key-property** (*string*) - The name of the unique key property in the option object. The value of this field will be binded to 'ng-modal'.\n\n**dropdown-direction** (*string*) - accepted values are 'up' or 'down'.\n\n**dropdown-enable-search** (*boolean*) - whether or not to show the search field at the top of the dropdown menu."
+module.exports = "## ngbs-dropdown\n\n**dropdown-options** (*array of objects*) - Each object in the array represents an option in the dropdown, and must include a display value (which appears in the dropdown options) and a key value (which is binded to the ng-model).\n\n**dropdown-placeholder** (*string*, optional) - The text which appears when no value is selected. Defaults to \"Select an option...\"\n\n**dropdown-display-property** (*string*, optional) - The name of the display value property in the option object. Defaults to 'display'\n\n**dropdown-key-property** (*string*, optional) - The name of the unique key property in the option object. The value of this field will be binded to 'ng-modal'. Defaults to 'id'\n\n**dropdown-direction** (*string*, optional) - accepted values are 'up' or 'down'. Defaults to 'down'.\n\n**dropdown-enable-search** (*boolean*, optional) - whether or not to show the search field at the top of the dropdown menu. Defaults to false."
 
 /***/ }),
 /* 45 */

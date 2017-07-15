@@ -1,8 +1,10 @@
+$dropdown-max-height: 18rem;
+
 ngbs-dropdown {
   display: block;
 
   .dropdown-menu-inner {
-    max-height: 290px;
+    max-height: $dropdown-max-height;
     overflow-y: auto;
     overflow-x: hidden;
   }

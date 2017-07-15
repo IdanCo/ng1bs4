@@ -3,7 +3,7 @@ ngbs-test .css-test {
 ngbs-dropdown {
   display: block; }
   ngbs-dropdown .dropdown-menu-inner {
-    max-height: 290px;
+    max-height: 18rem;
     overflow-y: auto;
     overflow-x: hidden; }
   ngbs-dropdown .selected {

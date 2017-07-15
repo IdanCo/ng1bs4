@@ -176,7 +176,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var DEFAULT_DISPLAY_PROPERTY = 'display';
+var DEFAULT_KEY_PROPERTY = 'id';
+var DEFAULT_DIRECTION = 'down';
+var DEFAULT_PLACEHOLDER = 'Select an option...';
+
 // Set up controller
+
 var controller = function () {
   function controller($element, $timeout) {
     _classCallCheck(this, controller);
@@ -190,13 +196,11 @@ var controller = function () {
     value: function $onInit() {
       var _this = this;
 
-      // Set a default DISPLAY property if none was supplied
-      this.dropdownDisplayProperty = this.dropdownDisplayProperty || 'display';
-      // Set a default KEY property if none was supplied
-      this.dropdownKeyProperty = this.dropdownKeyProperty || 'id';
-      // Set a default drop direction if none was supplied
-      this.dropdownDirection = this.dropdownDirection || 'down';
-      // Initialize search query
+      // Set defaults
+      this.dropdownDisplayProperty = this.dropdownDisplayProperty || DEFAULT_DISPLAY_PROPERTY;
+      this.dropdownKeyProperty = this.dropdownKeyProperty || DEFAULT_KEY_PROPERTY;
+      this.dropdownDirection = this.dropdownDirection || DEFAULT_DIRECTION;
+      this.dropdownPlaceholder = this.dropdownPlaceholder || DEFAULT_PLACEHOLDER;
       this.dropdownQuery = '';
 
       // Set drop direction

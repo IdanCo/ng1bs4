@@ -2,39 +2,39 @@ class controller {
   constructor() {
     this.longArray = [
       {
-        name: 'First Option',
+        display: 'First Option',
         id: 1
       },
       {
-        name: 'Second Option',
+        display: 'Second Option',
         id: 2
       },
       {
-        name: 'Third Option',
+        display: 'Third Option',
         id: 3
       },
       {
-        name: '<b>with</b> <i>html</i>',
+        display: '<b>with</b> <i>html</i>',
         id: 4
       },
       {
-        name: 'Fifth Option',
+        display: 'Fifth Option',
         id: 5
       },
       {
-        name: 'Sixth Option',
+        display: 'Sixth Option',
         id: 6
       },
       {
-        name: 'Seventh Option',
+        display: 'Seventh Option',
         id: 7
       },
       {
-        name: 'Eighth Option',
+        display: 'Eighth Option',
         id: 8
       },
       {
-        name: 'Ninth Option',
+        display: 'Ninth Option',
         id: 9
       }
     ];
