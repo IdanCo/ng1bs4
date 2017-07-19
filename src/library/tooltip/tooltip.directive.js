@@ -16,20 +16,12 @@ const TooltipDirective = ($compile, $timeout) => ({
             trigger: $scope.bpTooltipTriger || DEFAULT_TRIGGER,
             animation: true,
             html: true,
-            title: getContent(),
+            title: $scope.bpTooltipContent || DEFAULT_CONTENT,
             placement: $scope.bpTooltipPlacement || DEFAULT_PLACEMENT,
             delay: { "show": 200, "hide": 0 },
         };
 
         initTooltip();
-
-        function getContent() {
-            if ($scope.bpTooltipContent) {
-                return $scope.bpTooltipContent;
-            } else {
-                return DEFAULT_CONTENT
-            }
-        }
 
         function initTooltip() {
             $element.removeAttr('ngbs-tooltip');
