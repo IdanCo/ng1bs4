@@ -12,6 +12,13 @@ module.exports = new WebpackConfig()
       app: [`webpack-dev-server/client?http://localhost:${conf.servePort}/`, 'webpack/hot/dev-server']
     },
     devtool: 'inline-source-map', // make sure source maps are created
+    module: {
+      rules: [{
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader"
+      }]
+    },
     plugins: [
       new webpack.HotModuleReplacementPlugin(), // enable hot module replacement
       new webpack.NamedModulesPlugin(), // add names to modules
@@ -22,4 +29,4 @@ module.exports = new WebpackConfig()
         disable: true
       })
     ]
-  });
+});

@@ -17,7 +17,7 @@ controller.prototype.$onInit = function() {
 // Component definition
 const Component = {
   require: {
-    demo: '^demo',
+    demo: '^demo'
   },
   template,
   controller

@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const WebpackConfig = require('webpack-config').default;
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const WebpackCleanupPlugin = require('webpack-cleanup-plugin');

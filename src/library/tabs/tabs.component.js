@@ -19,7 +19,6 @@ class controller {
     }
     this.panes.push(pane);
   };
-
 }
 // Define and export component
 export default {
