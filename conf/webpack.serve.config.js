@@ -16,7 +16,7 @@ module.exports = new WebpackConfig()
       rules: [{
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "eslint-loader"
+        loader: 'eslint-loader'
       }]
     },
     plugins: [
@@ -29,4 +29,4 @@ module.exports = new WebpackConfig()
         disable: true
       })
     ]
-});
+  });

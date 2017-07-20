@@ -71,5 +71,5 @@ module.exports = new WebpackConfig().merge({
     // new webpack.optimize.CommonsChunkPlugin({ // seperate vendor chunks
     //   name: ['vendor', 'manifest']
     // }),
-]
+  ]
 });

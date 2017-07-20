@@ -25,7 +25,7 @@ module.exports = new WebpackConfig()
     },
     plugins: [
       new ExtractTextPlugin('library.css'),
-      new WebpackCleanupPlugin(),
+      new WebpackCleanupPlugin()
       // new webpack.optimize.UglifyJsPlugin({ minimize: true })
     ]
   });
