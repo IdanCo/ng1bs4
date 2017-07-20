@@ -1,0 +1,13 @@
+<div class="dropdown">
+    <button type="button" data-toggle="dropdown" class="btn btn-secondary dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+        <span class="placeholder">{{ ::$ctrl.menuDisplay }}</span>
+    </button>
+
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item"
+           ng-repeat="menuAction in $ctrl.menuActions"
+           ng-bind-html="menuAction.display"
+           ng-click="menuAction.action()">
+        </a>
+    </div>
+</div>
