@@ -16,13 +16,13 @@ import TooltipDemo from './components/tooltip/tooltip.module';
 
 // Register module, define components, configure routes and export name
 export default angular
-    .module('ng1bs4.docs', [
-        Prism,
-        Demo,
-        SelectDemo,
-        TabsDemo,
-        MenuDemo,
-        TooltipDemo
-    ])
-    .component('docs', Docs)
-    .name;
+  .module('ng1bs4.docs', [
+    Prism,
+    Demo,
+    SelectDemo,
+    TabsDemo,
+    MenuDemo,
+    TooltipDemo
+  ])
+  .component('docs', Docs)
+  .name;

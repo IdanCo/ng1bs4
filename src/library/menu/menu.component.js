@@ -3,8 +3,8 @@ import template from './menu.html';
 
 const DEFAULT_MENU_DISPLAY = 'Chose an action';
 const DEFAULT_MENU_ACTIONS = [
-  { display: "action1", action: () => alert("action1")},
-  { display: "action2", action: () => alert("action2")}
+  { display: 'action1', action: () => alert('action1') },
+  { display: 'action2', action: () => alert('action2') }
 ];
 
 // Set up controller

@@ -13,11 +13,11 @@ import TooltipModule from './tooltip/tooltip.module';
 
 // Register module, inject components and export name
 export default angular
-    .module('ng1bs4.library', [
-        TestModule,
-        SelectModule,
-        TabsModule,
-        MenuModule,
-        TooltipModule
-    ])
-    .name;
+  .module('ng1bs4.library', [
+    TestModule,
+    SelectModule,
+    TabsModule,
+    MenuModule,
+    TooltipModule
+  ])
+  .name;

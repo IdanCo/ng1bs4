@@ -8,7 +8,6 @@ const DEFAULT_PLACEHOLDER = 'Select an option...';
 
 // Set up controller
 class controller {
-
   constructor($element, $timeout) {
     this.$element = $element;
     this.$timeout = $timeout;
@@ -28,7 +27,7 @@ class controller {
     // Tell component how to handle changes in ng-model
     this.ngModel.$render = () => {
       if (!!this.ngModel.$modelValue) {
-        this.displayValue = this.selectOptions.find(this.isSelected, this)[this.selectDisplayProperty]
+        this.displayValue = this.selectOptions.find(this.isSelected, this)[this.selectDisplayProperty];
       }
     };
 
@@ -39,7 +38,6 @@ class controller {
     this.$element.on('shown.bs.dropdown', () => {
       this.$element.find('.dropdown-header input').focus();
     });
-
   };
 
   $onChanges(changesObj) {
@@ -66,7 +64,6 @@ class controller {
   isSelected(option) {
     return option[this.selectKeyProperty] === this.ngModel.$modelValue;
   }
-
 }
 
 // Define and export component
@@ -77,10 +74,10 @@ export default {
     selectKeyProperty: '@',
     selectOptions: '<',
     selectDirection: '<',
-    selectEnableSearch: '<',
+    selectEnableSearch: '<'
   },
   require: {
-    ngModel: 'ngModel',
+    ngModel: 'ngModel'
   },
   template,
   controller
