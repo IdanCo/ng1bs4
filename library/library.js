@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -87,9 +87,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _dropdown = __webpack_require__(6);
+var _menu = __webpack_require__(7);
 
-var _dropdown2 = _interopRequireDefault(_dropdown);
+var _menu2 = _interopRequireDefault(_menu);
 
 __webpack_require__(13);
 
@@ -97,7 +97,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // Register module, register component and export name
 // Import Resources
-exports.default = angular.module('ng1bs4.library.dropdown', []).component('ngbsDropdown', _dropdown2.default).name;
+exports.default = angular.module('ng1bs4.library.menu', []).component('ngbsMenu', _menu2.default).name;
 
 /***/ }),
 /* 1 */
@@ -110,9 +110,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _menu = __webpack_require__(8);
+var _select = __webpack_require__(8);
 
-var _menu2 = _interopRequireDefault(_menu);
+var _select2 = _interopRequireDefault(_select);
 
 __webpack_require__(14);
 
@@ -120,7 +120,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // Register module, register component and export name
 // Import Resources
-exports.default = angular.module('ng1bs4.library.menu', []).component('ngbsMenu', _menu2.default).name;
+exports.default = angular.module('ng1bs4.library.select', []).component('ngbsSelect', _select2.default).name;
 
 /***/ }),
 /* 2 */
@@ -208,128 +208,6 @@ exports.default = angular.module('ng1bs4.library.tooltip', []).directive('ngbsTo
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); // Import Template
-
-
-var _dropdown = __webpack_require__(18);
-
-var _dropdown2 = _interopRequireDefault(_dropdown);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var DEFAULT_DISPLAY_PROPERTY = 'display';
-var DEFAULT_KEY_PROPERTY = 'id';
-var DEFAULT_DIRECTION = 'down';
-var DEFAULT_PLACEHOLDER = 'Select an option...';
-
-// Set up controller
-
-var controller = function () {
-  function controller($element, $timeout) {
-    _classCallCheck(this, controller);
-
-    this.$element = $element;
-    this.$timeout = $timeout;
-  }
-
-  _createClass(controller, [{
-    key: '$onInit',
-    value: function $onInit() {
-      var _this = this;
-
-      // Set defaults
-      this.dropdownDisplayProperty = this.dropdownDisplayProperty || DEFAULT_DISPLAY_PROPERTY;
-      this.dropdownKeyProperty = this.dropdownKeyProperty || DEFAULT_KEY_PROPERTY;
-      this.dropdownDirection = this.dropdownDirection || DEFAULT_DIRECTION;
-      this.dropdownPlaceholder = this.dropdownPlaceholder || DEFAULT_PLACEHOLDER;
-      this.dropdownQuery = '';
-
-      // Set drop direction
-      this.$element.addClass('drop' + this.dropdownDirection);
-
-      // Tell component how to handle changes in ng-model
-      this.ngModel.$render = function () {
-        if (!!_this.ngModel.$modelValue) {
-          _this.displayValue = _this.dropdownOptions.find(_this.isSelected, _this)[_this.dropdownDisplayProperty];
-        }
-      };
-
-      // Initialize option list
-      this.filterOptions();
-
-      // On open, set focus on search field
-      this.$element.on('shown.bs.dropdown', function () {
-        _this.$element.find('.dropdown-header input').focus();
-      });
-    }
-  }, {
-    key: '$onChanges',
-    value: function $onChanges(changesObj) {
-      // when external option list is updated, reset internal list
-      if (!changesObj.dropdownOptions.isFirstChange()) {
-        this.dropdownQuery = '';
-        this.filteredOptions = this.dropdownOptions;
-      }
-    }
-  }, {
-    key: 'setValue',
-    value: function setValue(value) {
-      var newValue = value[this.dropdownKeyProperty];
-
-      this.ngModel.$setViewValue(newValue);
-      this.ngModel.$render();
-    }
-  }, {
-    key: 'filterOptions',
-    value: function filterOptions() {
-      var _this2 = this;
-
-      this.filteredOptions = this.dropdownOptions.filter(function (option) {
-        return option[_this2.dropdownDisplayProperty].toLowerCase().indexOf(_this2.dropdownQuery.toLowerCase()) !== -1;
-      });
-    }
-  }, {
-    key: 'isSelected',
-    value: function isSelected(option) {
-      return option[this.dropdownKeyProperty] === this.ngModel.$modelValue;
-    }
-  }]);
-
-  return controller;
-}();
-
-// Define and export component
-
-
-exports.default = {
-  bindings: {
-    dropdownPlaceholder: '@',
-    dropdownDisplayProperty: '@',
-    dropdownKeyProperty: '@',
-    dropdownOptions: '<',
-    dropdownDirection: '<',
-    dropdownEnableSearch: '<'
-  },
-  require: {
-    ngModel: 'ngModel'
-  },
-  template: _dropdown2.default,
-  controller: controller
-};
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
@@ -339,15 +217,15 @@ var _test = __webpack_require__(3);
 
 var _test2 = _interopRequireDefault(_test);
 
-var _dropdown = __webpack_require__(0);
+var _select = __webpack_require__(1);
 
-var _dropdown2 = _interopRequireDefault(_dropdown);
+var _select2 = _interopRequireDefault(_select);
 
 var _tabs = __webpack_require__(2);
 
 var _tabs2 = _interopRequireDefault(_tabs);
 
-var _menu = __webpack_require__(1);
+var _menu = __webpack_require__(0);
 
 var _menu2 = _interopRequireDefault(_menu);
 
@@ -362,12 +240,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // Here all library resources are imported, and all component modules are injected
 
 // General Styling
-exports.default = angular.module('ng1bs4.library', [_test2.default, _dropdown2.default, _tabs2.default, _menu2.default, _tooltip2.default]).name;
+exports.default = angular.module('ng1bs4.library', [_test2.default, _select2.default, _tabs2.default, _menu2.default, _tooltip2.default]).name;
 
 // Component Modules
 
 /***/ }),
-/* 8 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -380,7 +258,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); // Import Template
 
 
-var _menu = __webpack_require__(19);
+var _menu = __webpack_require__(18);
 
 var _menu2 = _interopRequireDefault(_menu);
 
@@ -424,6 +302,128 @@ exports.default = {
     menuActions: '<'
   },
   template: _menu2.default,
+  controller: controller
+};
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); // Import Template
+
+
+var _select = __webpack_require__(19);
+
+var _select2 = _interopRequireDefault(_select);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var DEFAULT_DISPLAY_PROPERTY = 'display';
+var DEFAULT_KEY_PROPERTY = 'id';
+var DEFAULT_DIRECTION = 'down';
+var DEFAULT_PLACEHOLDER = 'Select an option...';
+
+// Set up controller
+
+var controller = function () {
+  function controller($element, $timeout) {
+    _classCallCheck(this, controller);
+
+    this.$element = $element;
+    this.$timeout = $timeout;
+  }
+
+  _createClass(controller, [{
+    key: '$onInit',
+    value: function $onInit() {
+      var _this = this;
+
+      // Set defaults
+      this.selectDisplayProperty = this.selectDisplayProperty || DEFAULT_DISPLAY_PROPERTY;
+      this.selectKeyProperty = this.selectKeyProperty || DEFAULT_KEY_PROPERTY;
+      this.selectDirection = this.selectDirection || DEFAULT_DIRECTION;
+      this.selectPlaceholder = this.selectPlaceholder || DEFAULT_PLACEHOLDER;
+      this.selectQuery = '';
+
+      // Set drop direction
+      this.$element.addClass('drop' + this.selectDirection);
+
+      // Tell component how to handle changes in ng-model
+      this.ngModel.$render = function () {
+        if (!!_this.ngModel.$modelValue) {
+          _this.displayValue = _this.selectOptions.find(_this.isSelected, _this)[_this.selectDisplayProperty];
+        }
+      };
+
+      // Initialize option list
+      this.filterOptions();
+
+      // On open, set focus on search field
+      this.$element.on('shown.bs.dropdown', function () {
+        _this.$element.find('.dropdown-header input').focus();
+      });
+    }
+  }, {
+    key: '$onChanges',
+    value: function $onChanges(changesObj) {
+      // when external option list is updated, reset internal list
+      if (!changesObj.selectOptions.isFirstChange()) {
+        this.selectQuery = '';
+        this.filteredOptions = this.selectOptions;
+      }
+    }
+  }, {
+    key: 'setValue',
+    value: function setValue(value) {
+      var newValue = value[this.selectKeyProperty];
+
+      this.ngModel.$setViewValue(newValue);
+      this.ngModel.$render();
+    }
+  }, {
+    key: 'filterOptions',
+    value: function filterOptions() {
+      var _this2 = this;
+
+      this.filteredOptions = this.selectOptions.filter(function (option) {
+        return option[_this2.selectDisplayProperty].toLowerCase().indexOf(_this2.selectQuery.toLowerCase()) !== -1;
+      });
+    }
+  }, {
+    key: 'isSelected',
+    value: function isSelected(option) {
+      return option[this.selectKeyProperty] === this.ngModel.$modelValue;
+    }
+  }]);
+
+  return controller;
+}();
+
+// Define and export component
+
+
+exports.default = {
+  bindings: {
+    selectPlaceholder: '@',
+    selectDisplayProperty: '@',
+    selectKeyProperty: '@',
+    selectOptions: '<',
+    selectDirection: '<',
+    selectEnableSearch: '<'
+  },
+  require: {
+    ngModel: 'ngModel'
+  },
+  template: _select2.default,
   controller: controller
 };
 
@@ -658,13 +658,13 @@ exports.default = TooltipDirective;
 /* 18 */
 /***/ (function(module, exports) {
 
-module.exports = "<button type=\"button\" data-toggle=\"dropdown\" class=\"dropdown-toggle btn btn-secondary\">\n    <span ng-show=\"!$ctrl.displayValue\" class=\"placeholder\">{{ ::$ctrl.dropdownPlaceholder }}</span>\n    <span ng-show=\"!!$ctrl.displayValue\" ng-bind-html=\"$ctrl.displayValue\" class=\"value\"></span>\n</button>\n\n<div class=\"dropdown-menu\">\n    <div ng-show=\"$ctrl.dropdownEnableSearch\" class=\"dropdown-header\">\n        <input type=\"text\" placeholder=\"Search...\" ng-model=\"$ctrl.dropdownQuery\" ng-change=\"$ctrl.filterOptions()\" class=\"form-control\"/>\n        <!--<i ng-click=\"vm.clickClearSearch($event)\" ng-show=\"vm.dropdownQuery\" class=\"input-suffix bp-icon-remove\"></i>-->\n    </div>\n    <div class=\"dropdown-menu-inner\">\n        <a ng-repeat=\"option in $ctrl.filteredOptions\" ng-click=\"$ctrl.setValue(option)\" ng-class=\"{ 'selected': $ctrl.isSelected(option) }\" href=\"\" ng-bind-html=\"option[$ctrl.dropdownDisplayProperty]\" class=\"dropdown-item\"></a>\n        <a ng-if=\"!$ctrl.filteredOptions.length\" class=\"dropdown-item\">No results found...</a></div>\n</div>";
+module.exports = "<div class=\"dropdown\">\n    <button type=\"button\" data-toggle=\"dropdown\" class=\"btn btn-secondary dropdown-toggle\" aria-haspopup=\"true\" aria-expanded=\"false\">\n        <span class=\"placeholder\">{{ ::$ctrl.menuDisplay }}</span>\n    </button>\n\n    <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n        <a class=\"dropdown-item\"\n           ng-repeat=\"menuAction in $ctrl.menuActions\"\n           ng-bind-html=\"menuAction.display\"\n           ng-click=\"menuAction.action()\">\n        </a>\n    </div>\n</div>\n";
 
 /***/ }),
 /* 19 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"dropdown\">\n    <button type=\"button\" data-toggle=\"dropdown\" class=\"btn btn-secondary dropdown-toggle\" aria-haspopup=\"true\" aria-expanded=\"false\">\n        <span class=\"placeholder\">{{ ::$ctrl.menuDisplay }}</span>\n    </button>\n\n    <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n        <a class=\"dropdown-item\"\n           ng-repeat=\"menuAction in $ctrl.menuActions\"\n           ng-bind-html=\"menuAction.display\"\n           ng-click=\"menuAction.action()\">\n        </a>\n    </div>\n</div>\n";
+module.exports = "<button type=\"button\" data-toggle=\"dropdown\" class=\"dropdown-toggle btn btn-secondary\">\n    <span ng-show=\"!$ctrl.displayValue\" class=\"placeholder\">{{ ::$ctrl.selectPlaceholder }}</span>\n    <span ng-show=\"!!$ctrl.displayValue\" ng-bind-html=\"$ctrl.displayValue\" class=\"value\"></span>\n</button>\n\n<div class=\"dropdown-menu\">\n    <div ng-show=\"$ctrl.selectEnableSearch\" class=\"dropdown-header\">\n        <input type=\"text\" placeholder=\"Search...\" ng-model=\"$ctrl.selectQuery\" ng-change=\"$ctrl.filterOptions()\" class=\"form-control\"/>\n    </div>\n    <div class=\"dropdown-menu-inner\">\n        <a ng-repeat=\"option in $ctrl.filteredOptions\" ng-click=\"$ctrl.setValue(option)\" ng-class=\"{ 'selected': $ctrl.isSelected(option) }\" href=\"\" ng-bind-html=\"option[$ctrl.selectDisplayProperty]\" class=\"dropdown-item\"></a>\n        <a ng-if=\"!$ctrl.filteredOptions.length\" class=\"dropdown-item\">No results found...</a></div>\n</div>";
 
 /***/ }),
 /* 20 */

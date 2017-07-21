@@ -6,7 +6,7 @@ import './library.scss';
 
 // Component Modules
 import TestModule from './test/test.module';
-import DropdownModule from './dropdown/dropdown.module';
+import SelectModule from './select/select.module';
 import TabsModule from './tabs/tabs.module';
 import MenuModule from './menu/menu.module';
 import TooltipModule from './tooltip/tooltip.module';
@@ -15,10 +15,9 @@ import TooltipModule from './tooltip/tooltip.module';
 export default angular
     .module('ng1bs4.library', [
         TestModule,
-        DropdownModule,
+        SelectModule,
         TabsModule,
         MenuModule,
         TooltipModule
-
     ])
     .name;
