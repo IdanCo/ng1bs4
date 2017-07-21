@@ -16,7 +16,7 @@ class controller {
   $onInit() {
     this.menuDisplay = this.menuDisplay || DEFAULT_MENU_DISPLAY;
     this.menuActions = this.menuActions || DEFAULT_MENU_ACTIONS;
-  };
+  }
 }
 
 // Define and export component

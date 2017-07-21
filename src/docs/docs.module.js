@@ -9,10 +9,10 @@ import Prism from './utils/prism/prism.module';
 import Demo from './utils/demo/demo.module';
 
 // Demos
-import SelectDemo from './components/select/select.module';
-import TabsDemo from './components/tabs/tabs.module';
-import MenuDemo from './components/menu/menu.module';
-import TooltipDemo from './components/tooltip/tooltip.module';
+import SelectDemo from './demos/select/selectDemo.module';
+import TabsDemo from './demos/tabs/tabsDemo.module';
+import MenuDemo from './demos/menu/menuDemo.module';
+import TooltipDemo from './demos/tooltip/tooltipDemo.module';
 
 // Register module, define components, configure routes and export name
 export default angular

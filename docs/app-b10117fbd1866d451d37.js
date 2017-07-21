@@ -46184,13 +46184,13 @@ var TooltipDirective = function TooltipDirective($compile, $timeout) {
         scope: {
             bpTooltipContent: '@',
             bpTooltipPlacement: '@',
-            bpTooltipTriger: '@'
+            bpTooltipTrigger: '@'
         },
 
         link: function link($scope, $element, $attrs) {
             // set a base object for tooltip options
             var options = {
-                trigger: $scope.bpTooltipTriger || DEFAULT_TRIGGER,
+                trigger: $scope.bpTooltipTrigger || DEFAULT_TRIGGER,
                 animation: true,
                 html: true,
                 title: $scope.bpTooltipContent || DEFAULT_CONTENT,

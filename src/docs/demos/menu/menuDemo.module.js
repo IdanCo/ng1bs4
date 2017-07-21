@@ -1,14 +1,16 @@
 // Import Angular Resources
-import template from './tabs.html';
-import controller from './tabs.controller.js';
+import template from './menuDemo.html';
+import controller from './menuDemo.controller.js';
 
 // Import Raw Files
-import TemplateRaw from '!raw-loader!./tabs.html';
-import MarkdownRaw from '!raw-loader!./tabs.md';
+import TemplateRaw from '!raw-loader!./menuDemo.html';
+import ControllerRaw from '!raw-loader!./menuDemo.controller.js';
+import MarkdownRaw from '!raw-loader!./menuDemo.md';
 
 // manipulate controller to pass raw files up to demo
 controller.prototype.$onInit = function() {
   this.demo.html = TemplateRaw;
+  this.demo.js = ControllerRaw;
   this.demo.md = MarkdownRaw;
 };
 
@@ -23,6 +25,6 @@ const Component = {
 
 // Register module, register component and export name
 export default angular
-  .module('ng1bs4.docs.tabsDemo', [])
-  .component('tabsDemo', Component)
+  .module('ng1bs4.docs.menuDemo', [])
+  .component('menuDemo', Component)
   .name;
