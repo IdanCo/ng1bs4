@@ -26,7 +26,7 @@ class controller {
 
     // Tell component how to handle changes in ng-model
     this.ngModel.$render = () => {
-      if (!!this.ngModel.$modelValue) {
+      if (this.ngModel.$modelValue) {
         this.displayValue = this.selectOptions.find(this.isSelected, this)[this.selectDisplayProperty];
       }
     };

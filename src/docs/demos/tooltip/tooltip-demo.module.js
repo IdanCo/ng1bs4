@@ -1,11 +1,11 @@
 // Import Angular Resources
-import template from './tooltipDemo.html';
-import controller from './tooltipDemo.controller.js';
+import template from './tooltip-demo.html';
+import controller from './tooltip-demo.controller.js';
 
 // Import Raw Files
-import TemplateRaw from '!raw-loader!./tooltipDemo.html';
-import ControllerRaw from '!raw-loader!./tooltipDemo.controller.js';
-import MarkdownRaw from '!raw-loader!./tooltipDemo.md';
+import TemplateRaw from '!raw-loader!./tooltip-demo.html';
+import ControllerRaw from '!raw-loader!./tooltip-demo.controller.js';
+import MarkdownRaw from '!raw-loader!./tooltip-demo.md';
 
 // manipulate controller to pass raw files up to demo
 controller.prototype.$onInit = function() {

@@ -9,18 +9,11 @@ module.exports = {
     "sourceType": "module",
   },
   "rules": {
-    "semi": [2, "always"],
-    "eol-last": 0,
-    "indent": [2, 2, {
-      "SwitchCase": 1
-    }],
-    "no-extra-boolean-cast": 0,
-    "import/no-webpack-loader-syntax": 0,
-    "space-unary-ops": 0,
-    "space-before-function-paren": [0, "always"],
-    "no-unused-expressions": 0,
+    "semi": [2, "always"], // end lines with semicolon
+    "eol-last": 2, // end files with newline
+    "indent": [2, 2], // indent with two spaces
     // new ones
-    "angular/file-name": [0, {ignorePrefix: 'ng1bs4', typeSeparator: 'dot', ignoreTypeSuffix: true}]
+    "angular/file-name": 0 // not friendly to modular architecture
 
   }
 };

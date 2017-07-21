@@ -1,11 +1,11 @@
 // Import Angular Resources
-import template from './selectDemo.html';
-import controller from './selectDemo.controller.js';
+import template from './menu-demo.html';
+import controller from './menu-demo.controller.js';
 
 // Import Raw Files
-import TemplateRaw from '!raw-loader!./selectDemo.html';
-import ControllerRaw from '!raw-loader!./selectDemo.controller.js';
-import MarkdownRaw from '!raw-loader!./selectDemo.md';
+import TemplateRaw from '!raw-loader!./menu-demo.html';
+import ControllerRaw from '!raw-loader!./menu-demo.controller.js';
+import MarkdownRaw from '!raw-loader!./menu-demo.md';
 
 // manipulate controller to pass raw files up to demo
 controller.prototype.$onInit = function() {
@@ -25,6 +25,6 @@ const Component = {
 
 // Register module, register component and export name
 export default angular
-  .module('ng1bs4.docs.selectDemo', [])
-  .component('selectDemo', Component)
+  .module('ng1bs4.docs.menuDemo', [])
+  .component('menuDemo', Component)
   .name;

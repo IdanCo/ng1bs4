@@ -5,18 +5,18 @@ const DEFAULT_PLACEMENT = 'bottom';
 const TooltipDirective = () => ({
   restrict: 'A',
   scope: {
-    bpTooltipContent: '@',
-    bpTooltipPlacement: '@',
-    bpTooltipTrigger: '@'
+    tooltipContent: '@',
+    tooltipPlacement: '@',
+    tooltipTrigger: '@'
   },
   link: function($scope, $element) {
     // set a base object for tooltip options
     let options = {
-      trigger: $scope.bpTooltipTrigger || DEFAULT_TRIGGER,
+      trigger: $scope.tooltipTrigger || DEFAULT_TRIGGER,
       animation: true,
       html: true,
-      title: $scope.bpTooltipContent || DEFAULT_CONTENT,
-      placement: $scope.bpTooltipPlacement || DEFAULT_PLACEMENT,
+      title: $scope.tooltipContent || DEFAULT_CONTENT,
+      placement: $scope.tooltipPlacement || DEFAULT_PLACEMENT,
       delay: { 'show': 200, 'hide': 0 }
     };
 
