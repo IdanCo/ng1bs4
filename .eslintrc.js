@@ -6,6 +6,7 @@ module.exports = {
     ],
     "globals": {
         angular: true,
+        alert: true,
     },
     "rules": {
         "semi": [2, "always"],

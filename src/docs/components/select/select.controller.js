@@ -43,7 +43,6 @@ class controller {
   valueChanged() {
     console.info('value changed!');
   };
-
 }
 
 export default controller;

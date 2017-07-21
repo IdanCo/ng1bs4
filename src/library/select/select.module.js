@@ -1,6 +1,6 @@
 // Import Resources
 import component from './select.component';
-import './select.scss'
+import './select.scss';
 
 // Register module, register component and export name
 export default angular

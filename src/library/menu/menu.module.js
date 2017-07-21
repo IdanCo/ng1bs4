@@ -1,6 +1,6 @@
 // Import Resources
 import MenuComponent from './menu.component';
-import './menu.scss'
+import './menu.scss';
 
 // Register module, register component and export name
 export default angular

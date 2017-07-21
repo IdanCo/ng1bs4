@@ -6,7 +6,8 @@
   "scripts": {
     "serve": "node tasks.js",
     "build": "node tasks.js",
-    "library": "node tasks.js"
+    "library": "node tasks.js",
+    "lint": "eslint --ext .js src/"
   },
   "repository": {
     "type": "git",
