@@ -1,3 +1,6 @@
-<div class="alert alert-{{ $ctrl.alertType}}" role="alert">
+<div class="alert alert-{{ $ctrl.alertType}}" role="alert" ng-class="{'alert-dismissible': $ctrl.alertDismissible}">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" ng-if="$ctrl.alertDismissible">
+        <span aria-hidden="true">&times;</span>
+    </button>
     <ng-transclude></ng-transclude>
 </div>

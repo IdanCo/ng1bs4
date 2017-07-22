@@ -1,0 +1,8 @@
+<ngbs-alert alert-type="$ctrl.alertType" alert-dismissible="true">
+    <strong>Well done!</strong> You successfully read this important alert message.
+</ngbs-alert>
+
+<button type="button" class="btn btn-outline-success" ng-click="$ctrl.alertType = 'success'">Success</button>
+<button type="button" class="btn btn-outline-info" ng-click="$ctrl.alertType = 'info'">Info</button>
+<button type="button" class="btn btn-outline-warning" ng-click="$ctrl.alertType = 'warning'">Warning</button>
+<button type="button" class="btn btn-outline-danger" ng-click="$ctrl.alertType = 'danger'">Danger</button>

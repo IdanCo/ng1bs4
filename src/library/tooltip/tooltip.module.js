@@ -5,5 +5,5 @@ import './tooltip.scss';
 // Register module, register component and export name
 export default angular
   .module('ng1bs4.library.tooltip', [])
-  .component('ngbsTooltip', directive)
+  .directive('ngbsTooltip', directive)
   .name;

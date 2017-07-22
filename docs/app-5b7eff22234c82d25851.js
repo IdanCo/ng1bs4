@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 68);
+/******/ 	return __webpack_require__(__webpack_require__.s = 78);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -44186,17 +44186,17 @@ var _angularSanitize = __webpack_require__(5);
 
 var _angularSanitize2 = _interopRequireDefault(_angularSanitize);
 
-__webpack_require__(32);
+__webpack_require__(36);
 
-var _library = __webpack_require__(20);
+var _library = __webpack_require__(24);
 
 var _library2 = _interopRequireDefault(_library);
 
-var _docs = __webpack_require__(15);
+var _docs = __webpack_require__(17);
 
 var _docs2 = _interopRequireDefault(_docs);
 
-__webpack_require__(37);
+__webpack_require__(41);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -44204,7 +44204,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // Entry point for entire app
 
 // Frameworks
-_angular2.default.module('app', [_angularSanitize2.default, _library2.default, _docs2.default]);
+_angular2.default.module('ng1bs4', [_angularSanitize2.default, _library2.default, _docs2.default]);
 
 // Styling
 
@@ -45042,26 +45042,24 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var controller = function controller() {
-  _classCallCheck(this, controller);
+var controller = function () {
+  function controller() {
+    _classCallCheck(this, controller);
+  }
 
-  this.menuDisplay = "Choose an action";
-  this.menuActions = [{ display: "action1", action: function action() {
-      return alert("action1");
-    } }, { display: "action2", action: function action() {
-      return alert("action2");
-    } }, { display: "action3", action: function action() {
-      return alert("action3");
-    } }, { display: "action4", action: function action() {
-      return alert("action4");
-    } }, { display: "action5", action: function action() {
-      return alert("action5");
-    } }, { display: "action6", action: function action() {
-      return alert("action6");
-    } }];
-};
+  _createClass(controller, [{
+    key: '$onInit',
+    value: function $onInit() {
+      this.alertType = 'info';
+    }
+  }]);
+
+  return controller;
+}();
 
 exports.default = controller;
 
@@ -45076,33 +45074,33 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _menu = __webpack_require__(44);
+var _alertDemo = __webpack_require__(49);
 
-var _menu2 = _interopRequireDefault(_menu);
+var _alertDemo2 = _interopRequireDefault(_alertDemo);
 
-var _menuController = __webpack_require__(6);
+var _alertDemoController = __webpack_require__(6);
 
-var _menuController2 = _interopRequireDefault(_menuController);
+var _alertDemoController2 = _interopRequireDefault(_alertDemoController);
 
-var _menu3 = __webpack_require__(56);
+var _alertDemo3 = __webpack_require__(63);
 
-var _menu4 = _interopRequireDefault(_menu3);
+var _alertDemo4 = _interopRequireDefault(_alertDemo3);
 
-var _menuController3 = __webpack_require__(55);
+var _alertDemoController3 = __webpack_require__(62);
 
-var _menuController4 = _interopRequireDefault(_menuController3);
+var _alertDemoController4 = _interopRequireDefault(_alertDemoController3);
 
-var _menu5 = __webpack_require__(57);
+var _alertDemo5 = __webpack_require__(64);
 
-var _menu6 = _interopRequireDefault(_menu5);
+var _alertDemo6 = _interopRequireDefault(_alertDemo5);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // manipulate controller to pass raw files up to demo
-_menuController2.default.prototype.$onInit = function () {
-  this.demo.html = _menu4.default;
-  this.demo.js = _menuController4.default;
-  this.demo.md = _menu6.default;
+_alertDemoController2.default.prototype.$onInit = function () {
+  this.demo.html = _alertDemo4.default;
+  this.demo.js = _alertDemoController4.default;
+  this.demo.md = _alertDemo6.default;
 };
 
 // Component definition
@@ -45114,15 +45112,105 @@ var Component = {
   require: {
     demo: '^demo'
   },
-  template: _menu2.default,
-  controller: _menuController2.default
+  template: _alertDemo2.default,
+  controller: _alertDemoController2.default
+};
+
+// Register module, register component and export name
+exports.default = angular.module('ng1bs4.docs.alertDemo', []).component('alertDemo', Component).name;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var controller = function controller() {
+  _classCallCheck(this, controller);
+
+  this.menuDisplay = 'Choose an action';
+  this.menuActions = [{ display: 'action1', action: function action() {
+      return alert('action1');
+    } }, { display: 'action2', action: function action() {
+      return alert('action2');
+    } }, { display: 'action3', action: function action() {
+      return alert('action3');
+    } }, { display: 'action4', action: function action() {
+      return alert('action4');
+    } }, { display: 'action5', action: function action() {
+      return alert('action5');
+    } }, { display: 'action6', action: function action() {
+      return alert('action6');
+    } }];
+};
+
+exports.default = controller;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _menuDemo = __webpack_require__(50);
+
+var _menuDemo2 = _interopRequireDefault(_menuDemo);
+
+var _menuDemoController = __webpack_require__(8);
+
+var _menuDemoController2 = _interopRequireDefault(_menuDemoController);
+
+var _menuDemo3 = __webpack_require__(66);
+
+var _menuDemo4 = _interopRequireDefault(_menuDemo3);
+
+var _menuDemoController3 = __webpack_require__(65);
+
+var _menuDemoController4 = _interopRequireDefault(_menuDemoController3);
+
+var _menuDemo5 = __webpack_require__(67);
+
+var _menuDemo6 = _interopRequireDefault(_menuDemo5);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// manipulate controller to pass raw files up to demo
+_menuDemoController2.default.prototype.$onInit = function () {
+  this.demo.html = _menuDemo4.default;
+  this.demo.js = _menuDemoController4.default;
+  this.demo.md = _menuDemo6.default;
+};
+
+// Component definition
+
+
+// Import Raw Files
+// Import Angular Resources
+var Component = {
+  require: {
+    demo: '^demo'
+  },
+  template: _menuDemo2.default,
+  controller: _menuDemoController2.default
 };
 
 // Register module, register component and export name
 exports.default = angular.module('ng1bs4.docs.menuDemo', []).component('menuDemo', Component).name;
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45137,9 +45225,10 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var controller = function () {
-  function controller() {
+  function controller($log) {
     _classCallCheck(this, controller);
 
+    this.$log = $log;
     this.selectOptions = [{
       display: 'First Option',
       id: 1
@@ -45173,7 +45262,7 @@ var controller = function () {
   _createClass(controller, [{
     key: 'valueChanged',
     value: function valueChanged() {
-      console.info('value changed!');
+      this.$log.info('value changed!');
     }
   }]);
 
@@ -45183,7 +45272,7 @@ var controller = function () {
 exports.default = controller;
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45193,33 +45282,33 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _select = __webpack_require__(45);
+var _selectDemo = __webpack_require__(51);
 
-var _select2 = _interopRequireDefault(_select);
+var _selectDemo2 = _interopRequireDefault(_selectDemo);
 
-var _selectController = __webpack_require__(8);
+var _selectDemoController = __webpack_require__(10);
 
-var _selectController2 = _interopRequireDefault(_selectController);
+var _selectDemoController2 = _interopRequireDefault(_selectDemoController);
 
-var _select3 = __webpack_require__(59);
+var _selectDemo3 = __webpack_require__(69);
 
-var _select4 = _interopRequireDefault(_select3);
+var _selectDemo4 = _interopRequireDefault(_selectDemo3);
 
-var _selectController3 = __webpack_require__(58);
+var _selectDemoController3 = __webpack_require__(68);
 
-var _selectController4 = _interopRequireDefault(_selectController3);
+var _selectDemoController4 = _interopRequireDefault(_selectDemoController3);
 
-var _select5 = __webpack_require__(60);
+var _selectDemo5 = __webpack_require__(70);
 
-var _select6 = _interopRequireDefault(_select5);
+var _selectDemo6 = _interopRequireDefault(_selectDemo5);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // manipulate controller to pass raw files up to demo
-_selectController2.default.prototype.$onInit = function () {
-  this.demo.html = _select4.default;
-  this.demo.js = _selectController4.default;
-  this.demo.md = _select6.default;
+_selectDemoController2.default.prototype.$onInit = function () {
+  this.demo.html = _selectDemo4.default;
+  this.demo.js = _selectDemoController4.default;
+  this.demo.md = _selectDemo6.default;
 };
 
 // Component definition
@@ -45231,15 +45320,15 @@ var Component = {
   require: {
     demo: '^demo'
   },
-  template: _select2.default,
-  controller: _selectController2.default
+  template: _selectDemo2.default,
+  controller: _selectDemoController2.default
 };
 
 // Register module, register component and export name
 exports.default = angular.module('ng1bs4.docs.selectDemo', []).component('selectDemo', Component).name;
 
 /***/ }),
-/* 10 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45258,7 +45347,7 @@ var controller = function controller() {
 exports.default = controller;
 
 /***/ }),
-/* 11 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45268,21 +45357,21 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _tabs = __webpack_require__(46);
+var _tabsDemo = __webpack_require__(52);
 
-var _tabs2 = _interopRequireDefault(_tabs);
+var _tabsDemo2 = _interopRequireDefault(_tabsDemo);
 
-var _tabsController = __webpack_require__(10);
+var _tabsDemoController = __webpack_require__(12);
 
-var _tabsController2 = _interopRequireDefault(_tabsController);
+var _tabsDemoController2 = _interopRequireDefault(_tabsDemoController);
 
-var _tabs3 = __webpack_require__(61);
+var _tabsDemo3 = __webpack_require__(71);
 
-var _tabs4 = _interopRequireDefault(_tabs3);
+var _tabsDemo4 = _interopRequireDefault(_tabsDemo3);
 
-var _tabs5 = __webpack_require__(62);
+var _tabsDemo5 = __webpack_require__(72);
 
-var _tabs6 = _interopRequireDefault(_tabs5);
+var _tabsDemo6 = _interopRequireDefault(_tabsDemo5);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45291,9 +45380,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // Import Raw Files
 // Import Angular Resources
-_tabsController2.default.prototype.$onInit = function () {
-  this.demo.html = _tabs4.default;
-  this.demo.md = _tabs6.default;
+_tabsDemoController2.default.prototype.$onInit = function () {
+  this.demo.html = _tabsDemo4.default;
+  this.demo.md = _tabsDemo6.default;
 };
 
 // Component definition
@@ -45301,87 +45390,12 @@ var Component = {
   require: {
     demo: '^demo'
   },
-  template: _tabs2.default,
-  controller: _tabsController2.default
+  template: _tabsDemo2.default,
+  controller: _tabsDemoController2.default
 };
 
 // Register module, register component and export name
 exports.default = angular.module('ng1bs4.docs.tabsDemo', []).component('tabsDemo', Component).name;
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var controller = function controller() {
-    _classCallCheck(this, controller);
-};
-
-exports.default = controller;
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _tooltip = __webpack_require__(47);
-
-var _tooltip2 = _interopRequireDefault(_tooltip);
-
-var _tooltipController = __webpack_require__(12);
-
-var _tooltipController2 = _interopRequireDefault(_tooltipController);
-
-var _tooltip3 = __webpack_require__(64);
-
-var _tooltip4 = _interopRequireDefault(_tooltip3);
-
-var _tooltipController3 = __webpack_require__(63);
-
-var _tooltipController4 = _interopRequireDefault(_tooltipController3);
-
-var _tooltip5 = __webpack_require__(65);
-
-var _tooltip6 = _interopRequireDefault(_tooltip5);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// manipulate controller to pass raw files up to demo
-_tooltipController2.default.prototype.$onInit = function () {
-    this.demo.html = _tooltip4.default;
-    this.demo.js = _tooltipController4.default;
-    this.demo.md = _tooltip6.default;
-};
-
-// Component definition
-
-
-// Import Raw Files
-// Import Angular Resources
-var Component = {
-    require: {
-        demo: '^demo'
-    },
-    template: _tooltip2.default,
-    controller: _tooltipController2.default
-};
-
-// Register module, register component and export name
-exports.default = angular.module('ng1bs4.docs.tooltipDemo', []).component('tooltipDemo', Component).name;
 
 /***/ }),
 /* 14 */
@@ -45394,7 +45408,82 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _docs = __webpack_require__(48);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var controller = function controller() {
+  _classCallCheck(this, controller);
+};
+
+exports.default = controller;
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _tooltipDemo = __webpack_require__(53);
+
+var _tooltipDemo2 = _interopRequireDefault(_tooltipDemo);
+
+var _tooltipDemoController = __webpack_require__(14);
+
+var _tooltipDemoController2 = _interopRequireDefault(_tooltipDemoController);
+
+var _tooltipDemo3 = __webpack_require__(74);
+
+var _tooltipDemo4 = _interopRequireDefault(_tooltipDemo3);
+
+var _tooltipDemoController3 = __webpack_require__(73);
+
+var _tooltipDemoController4 = _interopRequireDefault(_tooltipDemoController3);
+
+var _tooltipDemo5 = __webpack_require__(75);
+
+var _tooltipDemo6 = _interopRequireDefault(_tooltipDemo5);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// manipulate controller to pass raw files up to demo
+_tooltipDemoController2.default.prototype.$onInit = function () {
+  this.demo.html = _tooltipDemo4.default;
+  this.demo.js = _tooltipDemoController4.default;
+  this.demo.md = _tooltipDemo6.default;
+};
+
+// Component definition
+
+
+// Import Raw Files
+// Import Angular Resources
+var Component = {
+  require: {
+    demo: '^demo'
+  },
+  template: _tooltipDemo2.default,
+  controller: _tooltipDemoController2.default
+};
+
+// Register module, register component and export name
+exports.default = angular.module('ng1bs4.docs.tooltipDemo', []).component('tooltipDemo', Component).name;
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _docs = __webpack_require__(54);
 
 var _docs2 = _interopRequireDefault(_docs);
 
@@ -45418,62 +45507,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 15 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _docs = __webpack_require__(14);
-
-var _docs2 = _interopRequireDefault(_docs);
-
-__webpack_require__(34);
-
-var _prism = __webpack_require__(19);
-
-var _prism2 = _interopRequireDefault(_prism);
-
-var _demo = __webpack_require__(17);
-
-var _demo2 = _interopRequireDefault(_demo);
-
-var _select = __webpack_require__(9);
-
-var _select2 = _interopRequireDefault(_select);
-
-var _tabs = __webpack_require__(11);
-
-var _tabs2 = _interopRequireDefault(_tabs);
-
-var _menu = __webpack_require__(7);
-
-var _menu2 = _interopRequireDefault(_menu);
-
-var _tooltip = __webpack_require__(13);
-
-var _tooltip2 = _interopRequireDefault(_tooltip);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// Register module, define components, configure routes and export name
-
-
-// Demos
-
-
-// Utilities
-// Showcase to display the library components
-
-// Resources
-exports.default = angular.module('ng1bs4.docs', [_prism2.default, _demo2.default, _select2.default, _tabs2.default, _menu2.default, _tooltip2.default]).component('docs', _docs2.default).name;
-
-/***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45483,7 +45517,65 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _demo = __webpack_require__(49);
+var _docs = __webpack_require__(16);
+
+var _docs2 = _interopRequireDefault(_docs);
+
+__webpack_require__(38);
+
+var _prism = __webpack_require__(21);
+
+var _prism2 = _interopRequireDefault(_prism);
+
+var _demo = __webpack_require__(19);
+
+var _demo2 = _interopRequireDefault(_demo);
+
+var _selectDemo = __webpack_require__(11);
+
+var _selectDemo2 = _interopRequireDefault(_selectDemo);
+
+var _tabsDemo = __webpack_require__(13);
+
+var _tabsDemo2 = _interopRequireDefault(_tabsDemo);
+
+var _menuDemo = __webpack_require__(9);
+
+var _menuDemo2 = _interopRequireDefault(_menuDemo);
+
+var _tooltipDemo = __webpack_require__(15);
+
+var _tooltipDemo2 = _interopRequireDefault(_tooltipDemo);
+
+var _alertDemo = __webpack_require__(7);
+
+var _alertDemo2 = _interopRequireDefault(_alertDemo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// Register module, define components, configure routes and export name
+exports.default = angular.module('ng1bs4.docs', [_prism2.default, _demo2.default, _selectDemo2.default, _tabsDemo2.default, _menuDemo2.default, _tooltipDemo2.default, _alertDemo2.default]).component('docs', _docs2.default).name;
+
+// Demos
+
+
+// Utilities
+// Showcase to display the library components
+
+// Resources
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _demo = __webpack_require__(55);
 
 var _demo2 = _interopRequireDefault(_demo);
 
@@ -45496,7 +45588,7 @@ exports.default = {
 }; // Import Template
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45506,11 +45598,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _demo = __webpack_require__(16);
+var _demo = __webpack_require__(18);
 
 var _demo2 = _interopRequireDefault(_demo);
 
-__webpack_require__(35);
+__webpack_require__(39);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45519,7 +45611,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = angular.module('ng1bs4.docs.demo', []).component('demo', _demo2.default).name;
 
 /***/ }),
-/* 18 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45656,84 +45748,7 @@ Prism.languages.javascript = Prism.languages.extend("clike", { keyword: /\b(as|a
   }e.languages.insertBefore("jade", "filter", a);
 }(Prism);
 Prism.languages.markdown = Prism.languages.extend("markup", {}), Prism.languages.insertBefore("markdown", "prolog", { blockquote: { pattern: /^>(?:[\t ]*>)*/m, alias: "punctuation" }, code: [{ pattern: /^(?: {4}|\t).+/m, alias: "keyword" }, { pattern: /``.+?``|`[^`\n]+`/, alias: "keyword" }], title: [{ pattern: /\w+.*(?:\r?\n|\r)(?:==+|--+)/, alias: "important", inside: { punctuation: /==+$|--+$/ } }, { pattern: /(^\s*)#+.+/m, lookbehind: !0, alias: "important", inside: { punctuation: /^#+|#+$/ } }], hr: { pattern: /(^\s*)([*-])([\t ]*\2){2,}(?=\s*$)/m, lookbehind: !0, alias: "punctuation" }, list: { pattern: /(^\s*)(?:[*+-]|\d+\.)(?=[\t ].)/m, lookbehind: !0, alias: "punctuation" }, "url-reference": { pattern: /!?\[[^\]]+\]:[\t ]+(?:\S+|<(?:\\.|[^>\\])+>)(?:[\t ]+(?:"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\((?:\\.|[^)\\])*\)))?/, inside: { variable: { pattern: /^(!?\[)[^\]]+/, lookbehind: !0 }, string: /(?:"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\((?:\\.|[^)\\])*\))$/, punctuation: /^[\[\]!:]|[<>]/ }, alias: "url" }, bold: { pattern: /(^|[^\\])(\*\*|__)(?:(?:\r?\n|\r)(?!\r?\n|\r)|.)+?\2/, lookbehind: !0, inside: { punctuation: /^\*\*|^__|\*\*$|__$/ } }, italic: { pattern: /(^|[^\\])([*_])(?:(?:\r?\n|\r)(?!\r?\n|\r)|.)+?\2/, lookbehind: !0, inside: { punctuation: /^[*_]|[*_]$/ } }, url: { pattern: /!?\[[^\]]+\](?:\([^\s)]+(?:[\t ]+"(?:\\.|[^"\\])*")?\)| ?\[[^\]\n]*\])/, inside: { variable: { pattern: /(!?\[)[^\]]+(?=\]$)/, lookbehind: !0 }, string: { pattern: /"(?:\\.|[^"\\])*"(?=\)$)/ } } } }), Prism.languages.markdown.bold.inside.url = Prism.util.clone(Prism.languages.markdown.url), Prism.languages.markdown.italic.inside.url = Prism.util.clone(Prism.languages.markdown.url), Prism.languages.markdown.bold.inside.italic = Prism.util.clone(Prism.languages.markdown.italic), Prism.languages.markdown.italic.inside.bold = Prism.util.clone(Prism.languages.markdown.bold);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(67)))
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _prism = __webpack_require__(18);
-
-var _prism2 = _interopRequireDefault(_prism);
-
-__webpack_require__(33);
-
-__webpack_require__(36);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// Register module, register directive and export name
-exports.default = angular.module('ng1bs4.docs.prism', []).directive('prism', function () {
-  return {
-    restrict: 'A',
-    link: function link($scope, element, attrs) {
-      element.ready(function () {
-        _prism2.default.highlightElement(element[0]);
-      });
-    }
-  };
-}).name; // import library (can't use npm because JADE is included only in custom build)
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-__webpack_require__(38);
-
-var _test = __webpack_require__(29);
-
-var _test2 = _interopRequireDefault(_test);
-
-var _select = __webpack_require__(24);
-
-var _select2 = _interopRequireDefault(_select);
-
-var _tabs = __webpack_require__(27);
-
-var _tabs2 = _interopRequireDefault(_tabs);
-
-var _menu = __webpack_require__(22);
-
-var _menu2 = _interopRequireDefault(_menu);
-
-var _tooltip = __webpack_require__(31);
-
-var _tooltip2 = _interopRequireDefault(_tooltip);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// Register module, inject components and export name
-// Main entry point for library
-// Here all library resources are imported, and all component modules are injected
-
-// General Styling
-exports.default = angular.module('ng1bs4.library', [_test2.default, _select2.default, _tabs2.default, _menu2.default, _tooltip2.default]).name;
-
-// Component Modules
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(77)))
 
 /***/ }),
 /* 21 */
@@ -45746,10 +45761,167 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _prism = __webpack_require__(20);
+
+var _prism2 = _interopRequireDefault(_prism);
+
+__webpack_require__(37);
+
+__webpack_require__(40);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// Register module, register directive and export name
+exports.default = angular.module('ng1bs4.docs.prism', []).directive('prism', function () {
+  return {
+    restrict: 'A',
+    link: function link($scope, element) {
+      element.ready(function () {
+        _prism2.default.highlightElement(element[0]);
+      });
+    }
+  };
+}).name; // import library (can't use npm because JADE is included only in custom build)
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); // Import Template
 
 
-var _menu = __webpack_require__(50);
+var _alert = __webpack_require__(56);
+
+var _alert2 = _interopRequireDefault(_alert);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var DEFAULT_ALERT_TYPE = 'info';
+
+var controller = function () {
+  function controller() {
+    _classCallCheck(this, controller);
+  }
+
+  _createClass(controller, [{
+    key: '$onInit',
+    value: function $onInit() {
+      // Set defaults
+      this.alertType = this.alertType || DEFAULT_ALERT_TYPE;
+    }
+  }]);
+
+  return controller;
+}();
+
+// Define and export component
+
+
+exports.default = {
+  bindings: {
+    alertType: '<',
+    alertDismissible: '<'
+  },
+  transclude: true,
+  template: _alert2.default,
+  controller: controller
+};
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _alert = __webpack_require__(22);
+
+var _alert2 = _interopRequireDefault(_alert);
+
+__webpack_require__(42);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// Register module, register component and export name
+// Import Resources
+exports.default = angular.module('ng1bs4.library.alert', []).component('ngbsAlert', _alert2.default).name;
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+__webpack_require__(43);
+
+var _test = __webpack_require__(33);
+
+var _test2 = _interopRequireDefault(_test);
+
+var _select = __webpack_require__(28);
+
+var _select2 = _interopRequireDefault(_select);
+
+var _tabs = __webpack_require__(31);
+
+var _tabs2 = _interopRequireDefault(_tabs);
+
+var _menu = __webpack_require__(26);
+
+var _menu2 = _interopRequireDefault(_menu);
+
+var _tooltip = __webpack_require__(35);
+
+var _tooltip2 = _interopRequireDefault(_tooltip);
+
+var _alert = __webpack_require__(23);
+
+var _alert2 = _interopRequireDefault(_alert);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// Register module, inject components and export name
+
+
+// Component Modules
+exports.default = angular.module('ng1bs4.library', [_test2.default, _select2.default, _tabs2.default, _menu2.default, _tooltip2.default, _alert2.default]).name; // Main entry point for library
+// Here all library resources are imported, and all component modules are injected
+
+// General Styling
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); // Import Template
+
+
+var _menu = __webpack_require__(57);
 
 var _menu2 = _interopRequireDefault(_menu);
 
@@ -45758,10 +45930,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var DEFAULT_MENU_DISPLAY = 'Chose an action';
-var DEFAULT_MENU_ACTIONS = [{ display: "action1", action: function action() {
-    return alert("action1");
-  } }, { display: "action2", action: function action() {
-    return alert("action2");
+var DEFAULT_MENU_ACTIONS = [{ display: 'action1', action: function action() {
+    return alert('action1');
+  } }, { display: 'action2', action: function action() {
+    return alert('action2');
   } }];
 
 // Set up controller
@@ -45797,7 +45969,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 22 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45807,11 +45979,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _menu = __webpack_require__(21);
+var _menu = __webpack_require__(25);
 
 var _menu2 = _interopRequireDefault(_menu);
 
-__webpack_require__(39);
+__webpack_require__(44);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45820,7 +45992,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = angular.module('ng1bs4.library.menu', []).component('ngbsMenu', _menu2.default).name;
 
 /***/ }),
-/* 23 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45833,7 +46005,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); // Import Template
 
 
-var _select = __webpack_require__(51);
+var _select = __webpack_require__(58);
 
 var _select2 = _interopRequireDefault(_select);
 
@@ -45873,7 +46045,7 @@ var controller = function () {
 
       // Tell component how to handle changes in ng-model
       this.ngModel.$render = function () {
-        if (!!_this.ngModel.$modelValue) {
+        if (_this.ngModel.$modelValue) {
           _this.displayValue = _this.selectOptions.find(_this.isSelected, _this)[_this.selectDisplayProperty];
         }
       };
@@ -45942,7 +46114,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 24 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45952,11 +46124,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _select = __webpack_require__(23);
+var _select = __webpack_require__(27);
 
 var _select2 = _interopRequireDefault(_select);
 
-__webpack_require__(40);
+__webpack_require__(45);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45965,7 +46137,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = angular.module('ng1bs4.library.select', []).component('ngbsSelect', _select2.default).name;
 
 /***/ }),
-/* 25 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45978,7 +46150,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); // Import Template
 
 
-var _pane = __webpack_require__(52);
+var _pane = __webpack_require__(59);
 
 var _pane2 = _interopRequireDefault(_pane);
 
@@ -46025,7 +46197,7 @@ exports.default = {
 // }
 
 /***/ }),
-/* 26 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46038,7 +46210,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); // Import Template
 
 
-var _tabs = __webpack_require__(53);
+var _tabs = __webpack_require__(60);
 
 var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -46083,7 +46255,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 27 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46093,15 +46265,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _tabs = __webpack_require__(26);
+var _tabs = __webpack_require__(30);
 
 var _tabs2 = _interopRequireDefault(_tabs);
 
-var _pane = __webpack_require__(25);
+var _pane = __webpack_require__(29);
 
 var _pane2 = _interopRequireDefault(_pane);
 
-__webpack_require__(41);
+__webpack_require__(46);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -46109,7 +46281,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = angular.module('ng1bs4.library.tabs', []).component('ngbsTabs', _tabs2.default).component('ngbsPane', _pane2.default).name; // Import Resources
 
 /***/ }),
-/* 28 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46119,7 +46291,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _test = __webpack_require__(54);
+var _test = __webpack_require__(61);
 
 var _test2 = _interopRequireDefault(_test);
 
@@ -46142,7 +46314,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 29 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46152,11 +46324,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _test = __webpack_require__(28);
+var _test = __webpack_require__(32);
 
 var _test2 = _interopRequireDefault(_test);
 
-__webpack_require__(42);
+__webpack_require__(47);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -46165,67 +46337,66 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = angular.module('ng1bs4.library.test', []).component('ngbsTest', _test2.default).name;
 
 /***/ }),
-/* 30 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 var DEFAULT_CONTENT = 'Please provide tooltip content';
 var DEFAULT_TRIGGER = 'hover focus';
 var DEFAULT_PLACEMENT = 'bottom';
 
-var TooltipDirective = function TooltipDirective($compile, $timeout) {
-    return {
-        restrict: 'A',
-        scope: {
-            tooltipContent: '@',
-            tooltipPlacement: '@',
-            tooltipTrigger: '@'
-        },
+var TooltipDirective = function TooltipDirective() {
+  return {
+    restrict: 'A',
+    scope: {
+      tooltipContent: '@',
+      tooltipPlacement: '@',
+      tooltipTrigger: '@'
+    },
+    link: function link($scope, $element) {
+      // set a base object for tooltip options
+      var options = {
+        trigger: $scope.tooltipTrigger || DEFAULT_TRIGGER,
+        animation: true,
+        html: true,
+        title: $scope.tooltipContent || DEFAULT_CONTENT,
+        placement: $scope.tooltipPlacement || DEFAULT_PLACEMENT,
+        delay: { 'show': 200, 'hide': 0 }
+      };
 
-        link: function link($scope, $element, $attrs) {
-            // set a base object for tooltip options
-            var options = {
-                trigger: $scope.tooltipTrigger || DEFAULT_TRIGGER,
-                animation: true,
-                html: true,
-                title: $scope.tooltipContent || DEFAULT_CONTENT,
-                placement: $scope.tooltipPlacement || DEFAULT_PLACEMENT,
-                delay: { "show": 200, "hide": 0 }
-            };
+      initTooltip();
 
-            initTooltip();
-
-            function initTooltip() {
-                $element.removeAttr('ngbs-tooltip');
-                $element.tooltip(options);
-            }
-        }
-    };
+      function initTooltip() {
+        $element.removeAttr('ngbs-tooltip');
+        $element.tooltip(options);
+      }
+    }
+  };
 };
 
 exports.default = TooltipDirective;
 
 /***/ }),
-/* 31 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
-var _tooltip = __webpack_require__(30);
+var _tooltip = __webpack_require__(34);
 
 var _tooltip2 = _interopRequireDefault(_tooltip);
 
-__webpack_require__(43);
+__webpack_require__(48);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -46234,7 +46405,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = angular.module('ng1bs4.library.tooltip', []).directive('ngbsTooltip', _tooltip2.default).name;
 
 /***/ }),
-/* 32 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery, Tether) {/*!
@@ -49773,31 +49944,7 @@ var Popover = function ($) {
 
 }();
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(66)))
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 34 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 35 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 36 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(76)))
 
 /***/ }),
 /* 37 */
@@ -49845,136 +49992,196 @@ var Popover = function ($) {
 /* 44 */
 /***/ (function(module, exports) {
 
-module.exports = "<ngbs-menu\n        menu-display=\"Choose an action\"\n        menu-actions=\"$ctrl.menuActions\"\n></ngbs-menu>";
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 45 */
 /***/ (function(module, exports) {
 
-module.exports = "<form name=\"form\">\n  <div class=\"form-group\">\n    <label>Check out this lovely label</label>\n    <ngbs-select\n            name=\"ngbsSelect\"\n            ng-model=\"$ctrl.selectValue\"\n            ng-change=\"$ctrl.valueChanged()\"\n            select-placeholder=\"Choose a life\"\n            select-options=\"$ctrl.selectOptions\"\n            select-display-property=\"display\"\n            select-key-property=\"id\"\n            select-enable-search=\"true\"\n            select-direction=\"down\"\n    ></ngbs-select>\n    <small class=\"form-text form-control-feedback\"> This is some description that no one reads</small>\n  </div>\n</form>\n<p class=\"mt-4\">selected value:</p>\n<p>{{ $ctrl.selectValue }}</p>\n";
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 46 */
 /***/ (function(module, exports) {
 
-module.exports = "<ngbs-tabs>\n    <ngbs-pane title=\"First Pane\">\n        <p>I'm happy!</p>\n    </ngbs-pane>\n    <ngbs-pane title=\"Second Pane\">\n        <p>I'm also happy!</p>\n    </ngbs-pane>\n    <ngbs-pane title=\"Last Pane\">\n        <p>I'm last but not least!</p>\n    </ngbs-pane>\n</ngbs-tabs>";
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 47 */
 /***/ (function(module, exports) {
 
-module.exports = "<button class=\"btn btn-success\" ngbs-tooltip bp-tooltip-content=\"Tooltip Content\" bp-tooltip-placement=\"right\">Hover Me!</button>\n";
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 48 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"col-12 text-center py-5\">\n        <h1 class=\"display-1 py-3\">ng1bs4</h1>\n        <p class=\"lead mb-5\">Tomorrow's Library with Yesterday's Framework</p>\n        <p>A collection of UI components built with Bootstrap 4 & AngularJS (1.x)</p>\n        <!-- Place this tag where you want the button to render. -->\n        <a class=\"github-button\" href=\"https://github.com/idanco/ng1bs4\" data-size=\"large\" aria-label=\"Star idanco/ng1bs4 on GitHub\">Star</a>\n    </div>\n</div>\n<div class=\"row\">\n    <div class=\"col-12\">\n        <h1>Form Elements</h1>\n        <h2>Select</h2>\n        <demo>\n            <select-demo></select-demo>\n        </demo>\n        <h1>Navigation</h1>\n        <h2>Tabs</h2>\n        <demo>\n            <tabs-demo></tabs-demo>\n        </demo>\n        <h2>Menu</h2>\n        <demo>\n            <menu-demo></menu-demo>\n        </demo>\n        <h1>Tooltips</h1>\n        <demo>\n            <tooltip-demo></tooltip-demo>\n        </demo>\n    </div>\n</div>\n\n<!-- Place this tag in your head or just before your close body tag. -->\n<script async defer src=\"https://buttons.github.io/buttons.js\"></script>";
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 49 */
 /***/ (function(module, exports) {
 
-module.exports = "<hr/>\n<div class=\"row\">\n    <div class=\"col-md-6 col-xl-5\">\n        <div ng-transclude class=\"live-example\"></div>\n    </div>\n    <div class=\"col\">\n        <pre ng-if=\"$ctrl.md\" class=\"md\"><code prism=\"prism\" ng-bind=\"$ctrl.md\" class=\"language-markdown\"></code></pre>\n    </div>\n</div>\n<div class=\"row\">\n    <div class=\"col-12 mb-5\">\n        <ngbs-tabs>\n            <ngbs-pane title=\"HTML\" ng-if=\"$ctrl.html\">\n                <pre class=\"html\"><code prism=\"prism\" ng-bind=\"$ctrl.html\" class=\"language-html\"></code></pre>\n            </ngbs-pane>\n            <ngbs-pane title=\"Javascript\" ng-if=\"$ctrl.js\">\n                <pre class=\"javascript\"><code prism=\"prism\" ng-bind=\"$ctrl.js\" class=\"language-javascript\"></code></pre>\n            </ngbs-pane>\n        </ngbs-tabs>\n    </div>\n</div>";
+module.exports = "<ngbs-alert alert-type=\"$ctrl.alertType\" alert-dismissible=\"true\">\n    <strong>Well done!</strong> You successfully read this important alert message.\n</ngbs-alert>\n\n<button type=\"button\" class=\"btn btn-outline-success\" ng-click=\"$ctrl.alertType = 'success'\">Success</button>\n<button type=\"button\" class=\"btn btn-outline-info\" ng-click=\"$ctrl.alertType = 'info'\">Info</button>\n<button type=\"button\" class=\"btn btn-outline-warning\" ng-click=\"$ctrl.alertType = 'warning'\">Warning</button>\n<button type=\"button\" class=\"btn btn-outline-danger\" ng-click=\"$ctrl.alertType = 'danger'\">Danger</button>";
 
 /***/ }),
 /* 50 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"dropdown\">\n    <button type=\"button\" data-toggle=\"dropdown\" class=\"btn btn-secondary dropdown-toggle\" aria-haspopup=\"true\" aria-expanded=\"false\">\n        <span class=\"placeholder\">{{ ::$ctrl.menuDisplay }}</span>\n    </button>\n\n    <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n        <a class=\"dropdown-item\"\n           ng-repeat=\"menuAction in $ctrl.menuActions\"\n           ng-bind-html=\"menuAction.display\"\n           ng-click=\"menuAction.action()\">\n        </a>\n    </div>\n</div>\n";
+module.exports = "<ngbs-menu\n        menu-display=\"Choose an action\"\n        menu-actions=\"$ctrl.menuActions\"\n></ngbs-menu>";
 
 /***/ }),
 /* 51 */
 /***/ (function(module, exports) {
 
-module.exports = "<button type=\"button\" data-toggle=\"dropdown\" class=\"dropdown-toggle btn btn-secondary\">\n    <span ng-show=\"!$ctrl.displayValue\" class=\"placeholder\">{{ ::$ctrl.selectPlaceholder }}</span>\n    <span ng-show=\"!!$ctrl.displayValue\" ng-bind-html=\"$ctrl.displayValue\" class=\"value\"></span>\n</button>\n\n<div class=\"dropdown-menu\">\n    <div ng-show=\"$ctrl.selectEnableSearch\" class=\"dropdown-header\">\n        <input type=\"text\" placeholder=\"Search...\" ng-model=\"$ctrl.selectQuery\" ng-change=\"$ctrl.filterOptions()\" class=\"form-control\"/>\n    </div>\n    <div class=\"dropdown-menu-inner\">\n        <a ng-repeat=\"option in $ctrl.filteredOptions\" ng-click=\"$ctrl.setValue(option)\" ng-class=\"{ 'selected': $ctrl.isSelected(option) }\" href=\"\" ng-bind-html=\"option[$ctrl.selectDisplayProperty]\" class=\"dropdown-item\"></a>\n        <a ng-if=\"!$ctrl.filteredOptions.length\" class=\"dropdown-item\">No results found...</a></div>\n</div>";
+module.exports = "<form name=\"form\">\n  <div class=\"form-group\">\n    <label>Check out this lovely label</label>\n    <ngbs-select\n            name=\"ngbsSelect\"\n            ng-model=\"$ctrl.selectValue\"\n            ng-change=\"$ctrl.valueChanged()\"\n            select-placeholder=\"Choose a life\"\n            select-options=\"$ctrl.selectOptions\"\n            select-display-property=\"display\"\n            select-key-property=\"id\"\n            select-enable-search=\"true\"\n            select-direction=\"down\"\n    ></ngbs-select>\n    <small class=\"form-text form-control-feedback\"> This is some description that no one reads</small>\n  </div>\n</form>\n<p class=\"mt-4\">selected value:</p>\n<p>{{ $ctrl.selectValue }}</p>\n";
 
 /***/ }),
 /* 52 */
 /***/ (function(module, exports) {
 
-module.exports = "<div ng-class=\"{active:$ctrl.selected}\" ng-transclude=\"\" class=\"tab-pane\"></div>";
+module.exports = "<ngbs-tabs>\n    <ngbs-pane title=\"First Pane\">\n        <p>I'm happy!</p>\n    </ngbs-pane>\n    <ngbs-pane title=\"Second Pane\">\n        <p>I'm also happy!</p>\n    </ngbs-pane>\n    <ngbs-pane title=\"Last Pane\">\n        <p>I'm last but not least!</p>\n    </ngbs-pane>\n</ngbs-tabs>";
 
 /***/ }),
 /* 53 */
 /***/ (function(module, exports) {
 
-module.exports = "<ul class=\"nav nav-tabs\">\n    <li ng-repeat=\"pane in $ctrl.panes\" class=\"nav-item\"><a href=\"\" ng-click=\"$ctrl.select(pane)\" ng-class=\"{active:pane.selected}\" class=\"nav-link\">{{pane.title}}</a></li>\n</ul>\n<div ng-transclude=\"\" class=\"tab-content\"></div>";
+module.exports = "<button class=\"btn btn-secondary\"\n        ngbs-tooltip\n        tooltip-content=\"Tooltip Content\"\n        tooltip-placement=\"right\">\n    Hover Me!\n</button>\n";
 
 /***/ }),
 /* 54 */
 /***/ (function(module, exports) {
 
-module.exports = "<div>{{ $ctrl.text }}</div>\n<div class=\"css-test\" style=\"color:red\">But you forgot to load css!</div>";
+module.exports = "<div class=\"row\">\n    <div class=\"col-12 text-center py-5\">\n        <h1 class=\"display-1 py-3\">ng1bs4</h1>\n        <p class=\"lead mb-5\">Tomorrow's Library with Yesterday's Framework</p>\n        <p>A collection of UI components built with Bootstrap 4 & AngularJS (1.x)</p>\n        <!-- Place this tag where you want the button to render. -->\n        <a class=\"github-button\" href=\"https://github.com/idanco/ng1bs4\" data-size=\"large\" aria-label=\"Star idanco/ng1bs4 on GitHub\">Star</a>\n    </div>\n</div>\n<div class=\"row\">\n    <div class=\"col-12\">\n        <h1>Form Elements</h1>\n        <h2>Select</h2>\n        <demo>\n            <select-demo></select-demo>\n        </demo>\n        <h1>Navigation</h1>\n        <h2>Tabs</h2>\n        <demo>\n            <tabs-demo></tabs-demo>\n        </demo>\n        <h2>Menu</h2>\n        <demo>\n            <menu-demo></menu-demo>\n        </demo>\n        <h1>Tooltip</h1>\n        <demo>\n            <tooltip-demo></tooltip-demo>\n        </demo>\n        <h1>Alert</h1>\n        <demo>\n            <alert-demo></alert-demo>\n        </demo>\n    </div>\n</div>\n\n<!-- Place this tag in your head or just before your close body tag. -->\n<script async defer src=\"https://buttons.github.io/buttons.js\"></script>";
 
 /***/ }),
 /* 55 */
 /***/ (function(module, exports) {
 
-module.exports = "class controller {\n  constructor() {\n    this.menuDisplay = \"Choose an action\";\n    this.menuActions = [\n      { display: \"action1\", action: () => alert(\"action1\")},\n      { display: \"action2\", action: () => alert(\"action2\")},\n      { display: \"action3\", action: () => alert(\"action3\")},\n      { display: \"action4\", action: () => alert(\"action4\")},\n      { display: \"action5\", action: () => alert(\"action5\")},\n      { display: \"action6\", action: () => alert(\"action6\")}\n    ];\n  }\n}\n\nexport default controller;"
+module.exports = "<hr/>\n<div class=\"row\">\n    <div class=\"col-md-6 col-xl-5\">\n        <div ng-transclude class=\"live-example\"></div>\n    </div>\n    <div class=\"col\">\n        <pre ng-if=\"$ctrl.md\" class=\"md\"><code prism=\"prism\" ng-bind=\"$ctrl.md\" class=\"language-markdown\"></code></pre>\n    </div>\n</div>\n<div class=\"row\">\n    <div class=\"col-12 mb-5\">\n        <ngbs-tabs>\n            <ngbs-pane title=\"HTML\" ng-if=\"$ctrl.html\">\n                <pre class=\"html\"><code prism=\"prism\" ng-bind=\"$ctrl.html\" class=\"language-html\"></code></pre>\n            </ngbs-pane>\n            <ngbs-pane title=\"Javascript\" ng-if=\"$ctrl.js\">\n                <pre class=\"javascript\"><code prism=\"prism\" ng-bind=\"$ctrl.js\" class=\"language-javascript\"></code></pre>\n            </ngbs-pane>\n        </ngbs-tabs>\n    </div>\n</div>";
 
 /***/ }),
 /* 56 */
 /***/ (function(module, exports) {
 
-module.exports = "<ngbs-menu\n        menu-display=\"Choose an action\"\n        menu-actions=\"$ctrl.menuActions\"\n></ngbs-menu>"
+module.exports = "<div class=\"alert alert-{{ $ctrl.alertType}}\" role=\"alert\" ng-class=\"{'alert-dismissible': $ctrl.alertDismissible}\">\n    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\" ng-if=\"$ctrl.alertDismissible\">\n        <span aria-hidden=\"true\">&times;</span>\n    </button>\n    <ng-transclude></ng-transclude>\n</div>";
 
 /***/ }),
 /* 57 */
 /***/ (function(module, exports) {
 
-module.exports = "## ngbs-dropdown\n\n**menu-display** (*string*) - The title of the menu. Default is 'Choose an action'\n\n**menu-actions** (*object*) - The actions that can be chosen from the menu. Each action is an object with the properties 'display' (*string*) and 'action' (*function*).\n"
+module.exports = "<div class=\"dropdown\">\n    <button type=\"button\" data-toggle=\"dropdown\" class=\"btn btn-secondary dropdown-toggle\" aria-haspopup=\"true\" aria-expanded=\"false\">\n        <span class=\"placeholder\">{{ ::$ctrl.menuDisplay }}</span>\n    </button>\n\n    <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n        <a class=\"dropdown-item\"\n           ng-repeat=\"menuAction in $ctrl.menuActions\"\n           ng-bind-html=\"menuAction.display\"\n           ng-click=\"menuAction.action()\">\n        </a>\n    </div>\n</div>\n";
 
 /***/ }),
 /* 58 */
 /***/ (function(module, exports) {
 
-module.exports = "class controller {\n  constructor() {\n    this.selectOptions = [\n      {\n        display: 'First Option',\n        id: 1\n      },\n      {\n        display: 'Second Option',\n        id: 2\n      },\n      {\n        display: 'Third Option',\n        id: 3\n      },\n      {\n        display: '<b>with</b> <i>html</i>',\n        id: 4\n      },\n      {\n        display: 'Fifth Option',\n        id: 5\n      },\n      {\n        display: 'Sixth Option',\n        id: 6\n      },\n      {\n        display: 'Seventh Option',\n        id: 7\n      },\n      {\n        display: 'Eighth Option',\n        id: 8\n      },\n      {\n        display: 'Ninth Option',\n        id: 9\n      }\n    ];\n  }\n\n  valueChanged() {\n    console.info('value changed!');\n  };\n\n}\n\nexport default controller;"
+module.exports = "<button type=\"button\" data-toggle=\"dropdown\" class=\"dropdown-toggle btn btn-secondary\">\n    <span ng-show=\"!$ctrl.displayValue\" class=\"placeholder\">{{ ::$ctrl.selectPlaceholder }}</span>\n    <span ng-show=\"!!$ctrl.displayValue\" ng-bind-html=\"$ctrl.displayValue\" class=\"value\"></span>\n</button>\n\n<div class=\"dropdown-menu\">\n    <div ng-show=\"$ctrl.selectEnableSearch\" class=\"dropdown-header\">\n        <input type=\"text\" placeholder=\"Search...\" ng-model=\"$ctrl.selectQuery\" ng-change=\"$ctrl.filterOptions()\" class=\"form-control\"/>\n    </div>\n    <div class=\"dropdown-menu-inner\">\n        <a ng-repeat=\"option in $ctrl.filteredOptions\" ng-click=\"$ctrl.setValue(option)\" ng-class=\"{ 'selected': $ctrl.isSelected(option) }\" href=\"\" ng-bind-html=\"option[$ctrl.selectDisplayProperty]\" class=\"dropdown-item\"></a>\n        <a ng-if=\"!$ctrl.filteredOptions.length\" class=\"dropdown-item\">No results found...</a></div>\n</div>";
 
 /***/ }),
 /* 59 */
 /***/ (function(module, exports) {
 
-module.exports = "<form name=\"form\">\n  <div class=\"form-group\">\n    <label>Check out this lovely label</label>\n    <ngbs-select\n            name=\"ngbsSelect\"\n            ng-model=\"$ctrl.selectValue\"\n            ng-change=\"$ctrl.valueChanged()\"\n            select-placeholder=\"Choose a life\"\n            select-options=\"$ctrl.selectOptions\"\n            select-display-property=\"display\"\n            select-key-property=\"id\"\n            select-enable-search=\"true\"\n            select-direction=\"down\"\n    ></ngbs-select>\n    <small class=\"form-text form-control-feedback\"> This is some description that no one reads</small>\n  </div>\n</form>\n<p class=\"mt-4\">selected value:</p>\n<p>{{ $ctrl.selectValue }}</p>\n"
+module.exports = "<div ng-class=\"{active:$ctrl.selected}\" ng-transclude=\"\" class=\"tab-pane\"></div>";
 
 /***/ }),
 /* 60 */
 /***/ (function(module, exports) {
 
-module.exports = "## ngbs-select\n\n**select-options** (*array of objects*) - Each object in the array represents an option in the dropdown, and must include a display value (which appears in the dropdown options) and a key value (which is binded to the ng-model).\n\n**select-placeholder** (*string*, optional) - The text which appears when no value is selected. Defaults to \"Select an option...\"\n\n**select-display-property** (*string*, optional) - The name of the display value property in the option object. Defaults to 'display'\n\n**select-key-property** (*string*, optional) - The name of the unique key property in the option object. The value of this field will be binded to 'ng-modal'. Defaults to 'id'\n\n**select-direction** (*string*, optional) - accepted values are 'up' or 'down'. Defaults to 'down'.\n\n**select-enable-search** (*boolean*, optional) - whether or not to show the search field at the top of the dropdown menu. Defaults to false."
+module.exports = "<ul class=\"nav nav-tabs\">\n    <li ng-repeat=\"pane in $ctrl.panes\" class=\"nav-item\"><a href=\"\" ng-click=\"$ctrl.select(pane)\" ng-class=\"{active:pane.selected}\" class=\"nav-link\">{{pane.title}}</a></li>\n</ul>\n<div ng-transclude=\"\" class=\"tab-content\"></div>";
 
 /***/ }),
 /* 61 */
 /***/ (function(module, exports) {
 
-module.exports = "<ngbs-tabs>\n    <ngbs-pane title=\"First Pane\">\n        <p>I'm happy!</p>\n    </ngbs-pane>\n    <ngbs-pane title=\"Second Pane\">\n        <p>I'm also happy!</p>\n    </ngbs-pane>\n    <ngbs-pane title=\"Last Pane\">\n        <p>I'm last but not least!</p>\n    </ngbs-pane>\n</ngbs-tabs>"
+module.exports = "<div>{{ $ctrl.text }}</div>\n<div class=\"css-test\" style=\"color:red\">But you forgot to load css!</div>";
 
 /***/ }),
 /* 62 */
 /***/ (function(module, exports) {
 
-module.exports = "## ngbs-tabs\n\nUse beatiful for packing a lot of content in a small space.\nnotice the structure of the mark up: `ngbs-tab` as the wrapper, and `ngbs-pane` for every tab. Put the tab content under `ngbs-pane`\n\n**title** (*string*) - The text which appears on the tab\n"
+module.exports = "class controller {\n  $onInit () {\n    this.alertType = 'info';\n  }\n}\n\nexport default controller;\n"
 
 /***/ }),
 /* 63 */
 /***/ (function(module, exports) {
 
-module.exports = "class controller {\n    constructor() {}\n}\n\nexport default controller;"
+module.exports = "<ngbs-alert alert-type=\"$ctrl.alertType\" alert-dismissible=\"true\">\n    <strong>Well done!</strong> You successfully read this important alert message.\n</ngbs-alert>\n\n<button type=\"button\" class=\"btn btn-outline-success\" ng-click=\"$ctrl.alertType = 'success'\">Success</button>\n<button type=\"button\" class=\"btn btn-outline-info\" ng-click=\"$ctrl.alertType = 'info'\">Info</button>\n<button type=\"button\" class=\"btn btn-outline-warning\" ng-click=\"$ctrl.alertType = 'warning'\">Warning</button>\n<button type=\"button\" class=\"btn btn-outline-danger\" ng-click=\"$ctrl.alertType = 'danger'\">Danger</button>"
 
 /***/ }),
 /* 64 */
 /***/ (function(module, exports) {
 
-module.exports = "<button class=\"btn btn-success\" ngbs-tooltip bp-tooltip-content=\"Tooltip Content\" bp-tooltip-placement=\"right\">Hover Me!</button>\n"
+module.exports = "## ngbs-alert\n\n**alert-type** (*string*, optional) - The alert type, as supplied by bottstrap: \"success\", \"info\", \"warning\", \"danger\". When no value is supplied the type defaults to \"info\".\n\n**alert-dismissible** (*boolean*, optional) - Whether or not to show a close button inside the alert. Defaults to false."
 
 /***/ }),
 /* 65 */
 /***/ (function(module, exports) {
 
-module.exports = "## ngbs-tooltip\n\n**tooltip-content** (*string*, required) - The test which appears inside the tooltip.\n\n**tooltip-placment** (*string*, optional) - define in which direction the tooltip will appear.\n\n**tooltip-trigger** (*string*, optional) - define when the tooltip will trigger - [click, hover, focus]"
+module.exports = "class controller {\n  constructor() {\n    this.menuDisplay = 'Choose an action';\n    this.menuActions = [\n      { display: 'action1', action: () => alert('action1') },\n      { display: 'action2', action: () => alert('action2') },\n      { display: 'action3', action: () => alert('action3') },\n      { display: 'action4', action: () => alert('action4') },\n      { display: 'action5', action: () => alert('action5') },\n      { display: 'action6', action: () => alert('action6') }\n    ];\n  }\n}\n\nexport default controller;\n"
 
 /***/ }),
 /* 66 */
+/***/ (function(module, exports) {
+
+module.exports = "<ngbs-menu\n        menu-display=\"Choose an action\"\n        menu-actions=\"$ctrl.menuActions\"\n></ngbs-menu>"
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports) {
+
+module.exports = "## ngbs-dropdown\n\n**menu-display** (*string*) - The title of the menu. Default is 'Choose an action'\n\n**menu-actions** (*object*) - The actions that can be chosen from the menu. Each action is an object with the properties 'display' (*string*) and 'action' (*function*).\n"
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports) {
+
+module.exports = "class controller {\n  constructor($log) {\n    this.$log = $log;\n    this.selectOptions = [\n      {\n        display: 'First Option',\n        id: 1\n      },\n      {\n        display: 'Second Option',\n        id: 2\n      },\n      {\n        display: 'Third Option',\n        id: 3\n      },\n      {\n        display: '<b>with</b> <i>html</i>',\n        id: 4\n      },\n      {\n        display: 'Fifth Option',\n        id: 5\n      },\n      {\n        display: 'Sixth Option',\n        id: 6\n      },\n      {\n        display: 'Seventh Option',\n        id: 7\n      },\n      {\n        display: 'Eighth Option',\n        id: 8\n      },\n      {\n        display: 'Ninth Option',\n        id: 9\n      }\n    ];\n  }\n\n  valueChanged() {\n    this.$log.info('value changed!');\n  }\n}\n\nexport default controller;\n"
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports) {
+
+module.exports = "<form name=\"form\">\n  <div class=\"form-group\">\n    <label>Check out this lovely label</label>\n    <ngbs-select\n            name=\"ngbsSelect\"\n            ng-model=\"$ctrl.selectValue\"\n            ng-change=\"$ctrl.valueChanged()\"\n            select-placeholder=\"Choose a life\"\n            select-options=\"$ctrl.selectOptions\"\n            select-display-property=\"display\"\n            select-key-property=\"id\"\n            select-enable-search=\"true\"\n            select-direction=\"down\"\n    ></ngbs-select>\n    <small class=\"form-text form-control-feedback\"> This is some description that no one reads</small>\n  </div>\n</form>\n<p class=\"mt-4\">selected value:</p>\n<p>{{ $ctrl.selectValue }}</p>\n"
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports) {
+
+module.exports = "## ngbs-select\n\n**select-options** (*array of objects*) - Each object in the array represents an option in the dropdown, and must include a display value (which appears in the dropdown options) and a key value (which is binded to the ng-model).\n\n**select-placeholder** (*string*, optional) - The text which appears when no value is selected. Defaults to \"Select an option...\"\n\n**select-display-property** (*string*, optional) - The name of the display value property in the option object. Defaults to 'display'\n\n**select-key-property** (*string*, optional) - The name of the unique key property in the option object. The value of this field will be binded to 'ng-modal'. Defaults to 'id'\n\n**select-direction** (*string*, optional) - accepted values are 'up' or 'down'. Defaults to 'down'.\n\n**select-enable-search** (*boolean*, optional) - whether or not to show the search field at the top of the dropdown menu. Defaults to false."
+
+/***/ }),
+/* 71 */
+/***/ (function(module, exports) {
+
+module.exports = "<ngbs-tabs>\n    <ngbs-pane title=\"First Pane\">\n        <p>I'm happy!</p>\n    </ngbs-pane>\n    <ngbs-pane title=\"Second Pane\">\n        <p>I'm also happy!</p>\n    </ngbs-pane>\n    <ngbs-pane title=\"Last Pane\">\n        <p>I'm last but not least!</p>\n    </ngbs-pane>\n</ngbs-tabs>"
+
+/***/ }),
+/* 72 */
+/***/ (function(module, exports) {
+
+module.exports = "## ngbs-tabs\n\nUse beatiful for packing a lot of content in a small space.\nnotice the structure of the mark up: `ngbs-tab` as the wrapper, and `ngbs-pane` for every tab. Put the tab content under `ngbs-pane`\n\n**title** (*string*) - The text which appears on the tab\n"
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports) {
+
+module.exports = "class controller {\n}\n\nexport default controller;\n"
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports) {
+
+module.exports = "<button class=\"btn btn-secondary\"\n        ngbs-tooltip\n        tooltip-content=\"Tooltip Content\"\n        tooltip-placement=\"right\">\n    Hover Me!\n</button>\n"
+
+/***/ }),
+/* 75 */
+/***/ (function(module, exports) {
+
+module.exports = "## ngbs-tooltip\n\n**tooltip-content** (*string*, required) - The test which appears inside the tooltip.\n\n**tooltip-placment** (*string*, optional) - define in which direction the tooltip will appear.\n\n**tooltip-trigger** (*string*, optional) - define when the tooltip will trigger - [click, hover, focus]"
+
+/***/ }),
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! tether 1.4.0 */
@@ -51795,7 +52002,7 @@ return Tether;
 
 
 /***/ }),
-/* 67 */
+/* 77 */
 /***/ (function(module, exports) {
 
 var g;
@@ -51822,7 +52029,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 68 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(3);
