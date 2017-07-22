@@ -10,6 +10,7 @@ import SelectModule from './select/select.module';
 import TabsModule from './tabs/tabs.module';
 import MenuModule from './menu/menu.module';
 import TooltipModule from './tooltip/tooltip.module';
+import AlertModule from './alert/alert.module';
 
 // Register module, inject components and export name
 export default angular
@@ -18,6 +19,7 @@ export default angular
     SelectModule,
     TabsModule,
     MenuModule,
-    TooltipModule
+    TooltipModule,
+    AlertModule
   ])
   .name;

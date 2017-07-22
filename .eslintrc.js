@@ -3,6 +3,7 @@ module.exports = {
   "globals": {
     angular: true,
     alert: true,
+    console: true,
   },
   parserOptions: {
     "ecmaVersion": 6,
@@ -12,6 +13,8 @@ module.exports = {
     "semi": [2, "always"], // end lines with semicolon
     "eol-last": 2, // end files with newline
     "indent": [2, 2], // indent with two spaces
-    "angular/file-name": 0 // not friendly to modular architecture
+    "angular/file-name": 0, // not friendly to modular architecture
+    "no-console": 1, // useful for debugging
+    "angular/function-type": 0 // not friendly to modular architecture
   }
 };

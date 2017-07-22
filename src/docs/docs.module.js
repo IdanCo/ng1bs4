@@ -13,6 +13,7 @@ import SelectDemo from './demos/select/select-demo.module';
 import TabsDemo from './demos/tabs/tabs-demo.module';
 import MenuDemo from './demos/menu/menu-demo.module';
 import TooltipDemo from './demos/tooltip/tooltip-demo.module';
+import AlertDemo from './demos/alert/alert-demo.module';
 
 // Register module, define components, configure routes and export name
 export default angular
@@ -22,7 +23,8 @@ export default angular
     SelectDemo,
     TabsDemo,
     MenuDemo,
-    TooltipDemo
+    TooltipDemo,
+    AlertDemo
   ])
   .component('docs', Docs)
   .name;
