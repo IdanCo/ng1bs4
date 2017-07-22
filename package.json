@@ -1,6 +1,6 @@
 {
   "name": "ng1bs4",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A Library of AngularJS Components Implementing Boostrap 4",
   "main": "library/library.js",
   "scripts": {
