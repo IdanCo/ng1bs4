@@ -11,14 +11,14 @@ class controller {
       pane.selected = false;
     });
     pane.selected = true;
-  };
+  }
 
   addPane(pane) {
     if (this.panes.length === 0) {
       this.select(pane);
     }
     this.panes.push(pane);
-  };
+  }
 }
 // Define and export component
 export default {

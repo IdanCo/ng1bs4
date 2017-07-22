@@ -14,7 +14,7 @@ import './index.scss';
 
 // Register app
 angular
-  .module('app', [
+  .module('ng1bs4', [
     ngSanitize,
     LibraryModule,
     DocsModule

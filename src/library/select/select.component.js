@@ -26,7 +26,7 @@ class controller {
 
     // Tell component how to handle changes in ng-model
     this.ngModel.$render = () => {
-      if (!!this.ngModel.$modelValue) {
+      if (this.ngModel.$modelValue) {
         this.displayValue = this.selectOptions.find(this.isSelected, this)[this.selectDisplayProperty];
       }
     };
@@ -38,7 +38,7 @@ class controller {
     this.$element.on('shown.bs.dropdown', () => {
       this.$element.find('.dropdown-header input').focus();
     });
-  };
+  }
 
   $onChanges(changesObj) {
     // when external option list is updated, reset internal list
@@ -46,7 +46,7 @@ class controller {
       this.selectQuery = '';
       this.filteredOptions = this.selectOptions;
     }
-  };
+  }
 
   setValue(value) {
     let newValue = value[this.selectKeyProperty];

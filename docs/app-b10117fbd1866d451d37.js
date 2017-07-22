@@ -46182,19 +46182,19 @@ var TooltipDirective = function TooltipDirective($compile, $timeout) {
     return {
         restrict: 'A',
         scope: {
-            bpTooltipContent: '@',
-            bpTooltipPlacement: '@',
-            bpTooltipTriger: '@'
+            tooltipContent: '@',
+            tooltipPlacement: '@',
+            tooltipTrigger: '@'
         },
 
         link: function link($scope, $element, $attrs) {
             // set a base object for tooltip options
             var options = {
-                trigger: $scope.bpTooltipTriger || DEFAULT_TRIGGER,
+                trigger: $scope.tooltipTrigger || DEFAULT_TRIGGER,
                 animation: true,
                 html: true,
-                title: $scope.bpTooltipContent || DEFAULT_CONTENT,
-                placement: $scope.bpTooltipPlacement || DEFAULT_PLACEMENT,
+                title: $scope.tooltipContent || DEFAULT_CONTENT,
+                placement: $scope.tooltipPlacement || DEFAULT_PLACEMENT,
                 delay: { "show": 200, "hide": 0 }
             };
 

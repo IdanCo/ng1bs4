@@ -2,21 +2,21 @@ const DEFAULT_CONTENT = 'Please provide tooltip content';
 const DEFAULT_TRIGGER = 'hover focus';
 const DEFAULT_PLACEMENT = 'bottom';
 
-const TooltipDirective = ($compile, $timeout) => ({
+const TooltipDirective = () => ({
   restrict: 'A',
   scope: {
-    bpTooltipContent: '@',
-    bpTooltipPlacement: '@',
-    bpTooltipTriger: '@'
+    tooltipContent: '@',
+    tooltipPlacement: '@',
+    tooltipTrigger: '@'
   },
-  link: function($scope, $element, $attrs) {
+  link: function($scope, $element) {
     // set a base object for tooltip options
     let options = {
-      trigger: $scope.bpTooltipTriger || DEFAULT_TRIGGER,
+      trigger: $scope.tooltipTrigger || DEFAULT_TRIGGER,
       animation: true,
       html: true,
-      title: $scope.bpTooltipContent || DEFAULT_CONTENT,
-      placement: $scope.bpTooltipPlacement || DEFAULT_PLACEMENT,
+      title: $scope.tooltipContent || DEFAULT_CONTENT,
+      placement: $scope.tooltipPlacement || DEFAULT_PLACEMENT,
       delay: { 'show': 200, 'hide': 0 }
     };
 

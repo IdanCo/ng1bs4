@@ -1,5 +1,6 @@
 class controller {
-  constructor() {
+  constructor($log) {
+    this.$log = $log;
     this.selectOptions = [
       {
         display: 'First Option',
@@ -41,8 +42,8 @@ class controller {
   }
 
   valueChanged() {
-    console.info('value changed!');
-  };
+    this.$log.info('value changed!');
+  }
 }
 
 export default controller;

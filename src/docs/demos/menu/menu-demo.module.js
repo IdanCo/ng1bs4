@@ -1,11 +1,11 @@
 // Import Angular Resources
-import template from './menu.html';
-import controller from './menu.controller.js';
+import template from './menu-demo.html';
+import controller from './menu-demo.controller.js';
 
 // Import Raw Files
-import TemplateRaw from '!raw-loader!./menu.html';
-import ControllerRaw from '!raw-loader!./menu.controller.js';
-import MarkdownRaw from '!raw-loader!./menu.md';
+import TemplateRaw from '!raw-loader!./menu-demo.html';
+import ControllerRaw from '!raw-loader!./menu-demo.controller.js';
+import MarkdownRaw from '!raw-loader!./menu-demo.md';
 
 // manipulate controller to pass raw files up to demo
 controller.prototype.$onInit = function() {
