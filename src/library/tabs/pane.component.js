@@ -4,7 +4,7 @@ import template from './pane.html';
 class controller {
   $onInit() {
     this.tabsCtrl.addPane(this);
-  };
+  }
 }
 
 // Define and export component

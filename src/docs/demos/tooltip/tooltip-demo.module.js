@@ -1,11 +1,11 @@
 // Import Angular Resources
-import template from './dropdown.html';
-import controller from './dropdown.controller.js';
+import template from './tooltip-demo.html';
+import controller from './tooltip-demo.controller.js';
 
 // Import Raw Files
-import TemplateRaw from '!raw-loader!./dropdown.html';
-import ControllerRaw from '!raw-loader!./dropdown.controller.js';
-import MarkdownRaw from '!raw-loader!./dropdown.md';
+import TemplateRaw from '!raw-loader!./tooltip-demo.html';
+import ControllerRaw from '!raw-loader!./tooltip-demo.controller.js';
+import MarkdownRaw from '!raw-loader!./tooltip-demo.md';
 
 // manipulate controller to pass raw files up to demo
 controller.prototype.$onInit = function() {
@@ -17,7 +17,7 @@ controller.prototype.$onInit = function() {
 // Component definition
 const Component = {
   require: {
-    demo: '^demo',
+    demo: '^demo'
   },
   template,
   controller
@@ -25,6 +25,6 @@ const Component = {
 
 // Register module, register component and export name
 export default angular
-  .module('ng1bs4.docs.dropdownDemo', [])
-  .component('dropdownDemo', Component)
+  .module('ng1bs4.docs.tooltipDemo', [])
+  .component('tooltipDemo', Component)
   .name;

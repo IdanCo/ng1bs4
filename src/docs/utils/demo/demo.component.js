@@ -6,4 +6,3 @@ export default {
   transclude: true,
   template: template
 };
-

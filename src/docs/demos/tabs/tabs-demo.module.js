@@ -1,10 +1,10 @@
 // Import Angular Resources
-import template from './tabs.html';
-import controller from './tabs.controller.js';
+import template from './tabs-demo.html';
+import controller from './tabs-demo.controller.js';
 
 // Import Raw Files
-import TemplateRaw from '!raw-loader!./tabs.html';
-import MarkdownRaw from '!raw-loader!./tabs.md';
+import TemplateRaw from '!raw-loader!./tabs-demo.html';
+import MarkdownRaw from '!raw-loader!./tabs-demo.md';
 
 // manipulate controller to pass raw files up to demo
 controller.prototype.$onInit = function() {
@@ -15,7 +15,7 @@ controller.prototype.$onInit = function() {
 // Component definition
 const Component = {
   require: {
-    demo: '^demo',
+    demo: '^demo'
   },
   template,
   controller

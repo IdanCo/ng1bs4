@@ -1,6 +1,7 @@
 class controller {
-  constructor() {
-    this.longArray = [
+  constructor($log) {
+    this.$log = $log;
+    this.selectOptions = [
       {
         display: 'First Option',
         id: 1
@@ -38,20 +39,11 @@ class controller {
         id: 9
       }
     ];
-    this.shortArray = this.longArray.slice(0, 4);
-
-    this.dropdownOptions = this.longArray;
   }
 
   valueChanged() {
-    console.info('value changed!');
-  };
-
-  switchArray() {
-    this.dropdownOptions = (this.dropdownOptions.length === 4) ? this.longArray : this.shortArray;
-    this.dropdownValue = null;
-  };
-
+    this.$log.info('value changed!');
+  }
 }
 
 export default controller;

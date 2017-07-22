@@ -1,12 +1,12 @@
 ngbs-test .css-test {
   display: none; }
-ngbs-dropdown {
+ngbs-select {
   display: block; }
-  ngbs-dropdown .dropdown-menu-inner {
+  ngbs-select .dropdown-menu-inner {
     max-height: 18rem;
     overflow-y: auto;
     overflow-x: hidden; }
-  ngbs-dropdown .selected {
+  ngbs-select .selected {
     font-weight: bold; }
 ngbs-tabs .tab-pane {
   display: none; }

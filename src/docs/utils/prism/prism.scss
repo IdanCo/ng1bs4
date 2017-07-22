@@ -1,3 +1,4 @@
-pre[prism], code[prism] {
+pre[class*="language-"], code[prism] {
   white-space: pre-wrap;
+  margin: 0;
 }
