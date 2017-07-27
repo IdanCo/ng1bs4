@@ -3,6 +3,10 @@ class controller {
     this.$ngbsModal = $ngbsModal;
   }
 
+  $onInit() {
+    console.info('yay');
+  }
+
   openModalPrompt () {
     const options = {
       title: 'Modal Prompt Title',
@@ -20,7 +24,6 @@ class controller {
         console.info('modal prompt closed without button click');
       });
   }
-
 }
 
 export default controller;

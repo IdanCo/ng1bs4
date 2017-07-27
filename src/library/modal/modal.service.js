@@ -5,12 +5,12 @@ const DEFAULT_OPTIONS = {
   body: 'Modal body text goes here.',
   buttons: [
     {
-      text: 'Save Changes',
       type: 'primary',
+      text: 'OK',
     },
     {
-      text: 'Close',
       type: 'secondary',
+      text: 'Cancel',
     },
   ]
 };
@@ -24,7 +24,7 @@ class ModalService {
   }
 
   openPrompt(options) {
-    // promise object to pass prompt answer
+    // promise object to handle prompt results
     const deferred = this.$q.defer();
     // new scope for the modal
     const modalScope = this.$rootScope.$new(true);
