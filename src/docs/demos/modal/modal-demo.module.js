@@ -27,4 +27,5 @@ const Component = {
 export default angular
   .module('ng1bs4.docs.modalDemo', [])
   .component('modalDemo', Component)
+
   .name;

@@ -24,4 +24,7 @@ export default angular
     AlertModule,
     ModalModule
   ])
+  .config(function ($qProvider) {
+    $qProvider.errorOnUnhandledRejections(false);
+  })
   .name;

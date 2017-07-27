@@ -1,5 +1,4 @@
 // Import Resources
-import ModalComponent from './modal.component';
 import ModalService from './modal.service';
 import './modal.scss';
 
@@ -7,5 +6,4 @@ import './modal.scss';
 export default angular
   .module('ng1bs4.library.modal', [])
   .service('$ngbsModal', ModalService)
-  .component('ngbsModal', ModalComponent)
   .name;

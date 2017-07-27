@@ -8,9 +8,8 @@ const DEFAULT_PLACEHOLDER = 'Select an option...';
 
 // Set up controller
 class controller {
-  constructor($element, $timeout) {
+  constructor($element) {
     this.$element = $element;
-    this.$timeout = $timeout;
   }
 
   $onInit() {
