@@ -1,7 +1,2 @@
-.tmp/
-/node_modules/
-.idea/
 /conf/
 /docs/
-npm-debug.log
-.DS_Store
