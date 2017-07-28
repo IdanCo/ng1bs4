@@ -36,5 +36,4 @@ deploy:
     file_glob: true
     skip_cleanup: true
     on:
-      repo: IdanCo/ng1bs4
-      branch: feature/travis
+      tags: true
