@@ -23,9 +23,16 @@ before_script:
 - npm run test
 script: npm run build
 deploy:
-  provider: pages
-  skip_cleanup: true
-  local_dir: docs
-  github_token: $GITHUB_TOKEN
-  on:
-    all_branches: true
+  - provider: pages
+    skip_cleanup: true
+    local_dir: docs
+    github_token: $GITHUB_TOKEN
+    on:
+      all_branches: true
+  - provider: releases
+    api_key:
+      secure: oP5a2Zh0lA1BfUkP0DzqWMEU/GErPPWLp1/h3twfY6l3wvs58GzZHkE7bf9Y/EPDk4e5xigxLAEXMI4U8pq8sngant6gAfP9+W31JjVXN6UD0clY0m45WPcFdn5B6AB91Kguo1lXLRWKocrBdVjYP981zE3VKIT9yOosD5koJHprKfXaf/yQCiCoxgn9V+EaQni/6ZOHxnRwDzYvi6WH8Kd3AaWqMeD0gxdcD1Dnu2yuHwrwBvwYqm7WEQ9joCZ7q33Bb+/K6r4VihaxWmVdtQi2qqj89W61+xTPF5edd4fi4EUPnqe9nVl5I1ssN5IPfsp0fzyQnrYnsRGkDogKVF5elj7EiwFfWXmylipusDg79rIuYgoIK18pcT2okRlXV5EDxz1iRJJ0UlhB/a51MRTy3pl8GVoKaRPescDUTV4w6gHBGPgUBlYcFSUJI8p4xySVgmHtHClywQESJxW01CQ97n15ciu32gAEUJXk5BNrt0na2kvyyFuExzSLrzon+hvesuzw5MXj+eIAkzsDj71fYpw0CvhjewpjwgGXmrZ2VaCStvIae8nbOvrIdy7mMeBriki4j0ochrJmYslohYkazJpyqyKXG03X2/ZkGfl+6WAyFkcrMLkx8+H8u9PVOAvl3GKfAiOK5y+OENg+Mk1SyI0mSDDlwDsJbAwhfbg=
+    file: "/dist/*"
+    on:
+      repo: IdanCo/ng1bs4
+      branch: feature/travis

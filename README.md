@@ -25,7 +25,7 @@ npm install ng1bs4 --save
 import ng1bs4 module and styling into your project:
 ```js
 import ng1bs4 from 'ng1bs4';
-import 'ng1bs4/library/library.css'
+import 'ng1bs4/dist/import.css'
 ```
 inject ng1bs4 module into your app:
 ```js
