@@ -25,6 +25,6 @@ deploy:
   provider: pages
   skip_cleanup: true
   local_dir: docs
-  github_token: 33ecf4499bd80f93be5a38c4906b445f664e5dda
+  github_token: ad457e5bf95c9ba11df640b974a49c221a7956eb
   on:
     all_branches: true
