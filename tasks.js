@@ -15,8 +15,8 @@ switch (npmEvent) {
   case 'serve':
     startDevelopmentServer();
     break;
-  case 'build':
-    buildDistFolder();
+  case 'docs':
+    buildDocs();
     break;
   case 'library':
     buildLibrary();
@@ -38,14 +38,14 @@ function startDevelopmentServer() {
 }
 
 // method to build static webapp
-function buildDistFolder() {
+function buildDocs() {
   const compiler = webpack(webpackConfig);
 
   compiler.run((err, stats) => {
     if (err || stats.hasErrors()) {
       console.info(err);
     }
-    console.info('dist build finished');
+    console.info('docs build finished');
   });
 }
 

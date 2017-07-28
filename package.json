@@ -2,11 +2,12 @@
   "name": "ng1bs4",
   "version": "0.0.3",
   "description": "A Library of AngularJS Components Implementing Boostrap 4",
-  "main": "library/library.js",
+  "main": "dist/ng1bs4.js",
   "scripts": {
     "serve": "node tasks.js",
-    "build": "node tasks.js",
+    "build": "npm run library && npm run docs",
     "library": "node tasks.js",
+    "docs": "node tasks.js",
     "lint": "eslint --ext .js src/",
     "test": "true",
     "lint-fix": "eslint --ext .js src/ --fix"

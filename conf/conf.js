@@ -10,15 +10,14 @@ const path = require('path');
 exports.servePort = 8080;
 
 // library name
-exports.libraryName = 'library';
+exports.libraryName = 'ng1bs4';
 
 // list of paths in project
 exports.paths = {
   src: 'src',
   tests: 'tests',
-  library: 'src/library',
-  libraryDist: 'library',
-  dist: 'docs',
+  library: 'dist',
+  docs: 'docs',
   tmp: '.tmp',
   conf: 'conf'
 };

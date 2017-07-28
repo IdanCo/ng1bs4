@@ -9,7 +9,7 @@ module.exports = new WebpackConfig()
   .extend('conf/webpack.base.config.js')
   .merge({
     output: {
-      path: conf.absolutePath(conf.paths.dist),
+      path: conf.absolutePath(conf.paths.docs),
       filename: '[name]-[hash].js'
     },
     plugins: [
