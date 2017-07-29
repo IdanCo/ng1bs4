@@ -14,17 +14,17 @@ module.exports = new WebpackConfig()
   })
   .merge({
     entry: {
-      app: `./${conf.path.library('library.module')}`
+      app: `./${conf.path.src('library/library.module')}`
     },
     output: {
-      path: conf.absolutePath(conf.paths.libraryDist),
+      path: conf.absolutePath(conf.paths.library),
       filename: conf.libraryName + '.js',
       library: conf.libraryName,
       libraryTarget: 'umd',
       umdNamedDefine: true
     },
     plugins: [
-      new ExtractTextPlugin('library.css'),
+      new ExtractTextPlugin(conf.libraryName + '.css'),
       new WebpackCleanupPlugin()
       // new webpack.optimize.UglifyJsPlugin({ minimize: true })
     ]

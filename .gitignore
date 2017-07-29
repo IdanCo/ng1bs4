@@ -1,5 +1,7 @@
-.tmp/
-node_modules/
-.idea/
+/.tmp/
+/node_modules/
+/.idea/
+/docs/
+/dist/
 npm-debug.log
 .DS_Store
