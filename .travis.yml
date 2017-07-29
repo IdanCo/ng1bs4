@@ -3,20 +3,9 @@ cache:
   bundler: true
   directories:
     - node_modules
-env:
-  global:
-  - NODE_ENV=development
 install:
 - npm install
 before_script:
-- |
-  if [ "$TRAVIS_BRANCH" = master ]; then
-    echo "Starting production build"
-    export NODE_ENV="production"
-  elif [ "$TRAVIS_BRANCH" = staging ]; then
-    echo "Starting staging build"
-    export NODE_ENV="staging"
-  fi
 - npm run lint
 - npm run test
 script: npm run build
