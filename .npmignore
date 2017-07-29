@@ -1,2 +1,7 @@
 /conf/
 /docs/
+.eslintrc.js
+.nvmrc
+.travis.yml
+tasks.js
+webpack.config.js
