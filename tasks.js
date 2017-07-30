@@ -21,6 +21,9 @@ switch (npmEvent) {
   case 'library':
     buildLibrary();
     break;
+  case 'test':
+    runTest();
+    break;
   default:
     console.info('tasks.js must run via "npm run ...". you tired running it directly, or ');
     break;
@@ -61,4 +64,12 @@ function buildLibrary() {
   });
 }
 
+// method to start Karma server and run tests
+function runTest() {
+  const karma = require('karma');
+  const configFile = conf.absolutePath(conf.path.conf('karma.conf.js'));
 
+  const karmaServer = new karma.Server({configFile});
+  karmaServer.start();
+
+}
