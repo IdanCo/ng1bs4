@@ -2,7 +2,6 @@
 
 // Frameworks
 import angular from 'angular';
-import ngSanitize from 'angular-sanitize';
 import 'bootstrap';
 
 // Internal Modules
@@ -15,7 +14,6 @@ import './index.scss';
 // Register app
 angular
   .module('ng1bs4', [
-    ngSanitize,
     LibraryModule,
     DocsModule
   ]);

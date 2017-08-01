@@ -14,12 +14,10 @@ module.exports = function (config) {
       'chai'
     ],
     files: [
-      conf.path.src('index.spec.js')
+      'src/**/*spec.js'
     ],
     preprocessors: {
-      [conf.path.src('index.spec.js')]: [
-        'webpack'
-      ]
+      'src/**/*spec.js': 'webpack'
     },
     reporters: ['progress'],
     webpack: webpackConfig,
