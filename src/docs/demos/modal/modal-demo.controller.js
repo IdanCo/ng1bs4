@@ -1,13 +1,9 @@
 class controller {
-  constructor ($ngbsModal) {
-    this.$ngbsModal = $ngbsModal;
+  constructor($log, $ngbsModal) {
+    Object.assign(this, { $log, $ngbsModal });
   }
 
-  $onInit() {
-    console.info('yay');
-  }
-
-  openModalPrompt () {
+  openModalPrompt() {
     const options = {
       title: 'Modal Prompt Title',
       body: 'Here is the prompt text',
@@ -18,10 +14,10 @@ class controller {
     };
 
     this.$ngbsModal.openPrompt(options)
-      .then(function(button) {
-        console.info('clicked ' + button.text);
-      }, function() {
-        console.info('modal prompt closed without button click');
+      .then((button) => {
+        this.$log.info('clicked ' + button.text);
+      }, () => {
+        this.$log.info('modal prompt closed without button click');
       });
   }
 }
