@@ -1,0 +1,23 @@
+<div>
+    <ngbs-pagination current-page="$ctrl.currentPage1"
+                     items-per-page="10"
+                     total-items="100"
+                     max-visible-pages="3"
+                     use-icons="true"
+                     disabled="true"
+                     on-page-change="$ctrl.onPageChange(currentPage)"></ngbs-pagination>
+
+    Current Page: {{$ctrl.currentPage1}}
+</div>
+
+<div>
+    <ngbs-pagination current-page="$ctrl.currentPage2"
+                     items-per-page="10"
+                     total-items="100"
+                     max-visible-pages="3"
+                     use-icons="true"
+                     disabled="true"
+                     on-page-change="$ctrl.onPageChange(currentPage)"></ngbs-pagination>
+
+    Current Page: {{$ctrl.currentPage2}}
+</div>
