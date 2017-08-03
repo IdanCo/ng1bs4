@@ -1,23 +1,57 @@
-<div>
-    <ngbs-pagination current-page="$ctrl.currentPage1"
-                     items-per-page="10"
-                     total-items="100"
-                     max-visible-pages="3"
-                     use-icons="true"
-                     disabled="true"
-                     on-page-change="$ctrl.onPageChange(currentPage)"></ngbs-pagination>
-
-    Current Page: {{$ctrl.currentPage1}}
+<div class="mb-4" ng-init="currentPageBasic10 = 1">
+    <h6>Basic (Current Page: {{currentPageBasic10}})</h6>
+    <ngbs-pagination items-per-page="10" total-items="100" on-page-change="currentPageBasic10 = currentPage"></ngbs-pagination>
 </div>
 
-<div>
-    <ngbs-pagination current-page="$ctrl.currentPage2"
-                     items-per-page="10"
-                     total-items="100"
-                     max-visible-pages="3"
-                     use-icons="true"
-                     disabled="true"
-                     on-page-change="$ctrl.onPageChange(currentPage)"></ngbs-pagination>
+<div class="mb-4">
+    <h6>Disabled (Current Page: 25)</h6>
+    <ngbs-pagination disabled="true" current-page="25" items-per-page="10" total-items="1000"></ngbs-pagination>
+</div>
 
-    Current Page: {{$ctrl.currentPage2}}
+<div class="mb-4" ng-init="currentPageSmall = 2">
+    <h6>Small (Current Page: {{currentPageSmall}})</h6>
+    <ngbs-pagination size="sm" current-page="2" items-per-page="10" total-items="25" on-page-change="currentPageSmall = currentPage"></ngbs-pagination>
+</div>
+
+<div class="mb-4">
+    <h6>Large (Current Page: 1)</h6>
+    <ngbs-pagination size="lg" items-per-page="321" total-items="963"></ngbs-pagination>
+</div>
+
+<div class="mb-4" ng-init="currentPageUsability1 = 13">
+    <h6>Usability</h6>
+    <p>
+        <small>The usability examples below illustrate the power of the <strong>visible-page-buffer</strong> attribute. As the user clicks through the pages, the width of the pagination component never shifts, allowing them to page through the results without ever moving their mouse.  Not only can this be done 1 by 1 with the next button, but results can be stepped through multiple pages at a time using the buttons after/before the ellipses without any mouse movement (not available with the third demo, where visible-page-buffer is set to 0).</small>
+    </p>
+    <style type="text/css">
+        /* these styles exist for demo purposes only, it is recommended that you would specify these styles in a separate file (.scss, etc) */
+        .custom-pagination-1 .page-item .page-link {
+            text-align: center;
+            width: 40px;
+        }
+        .custom-pagination-2 .page-item .page-link {
+            text-align: center;
+            width: 50px;
+        }
+        .custom-pagination-3 .page-item .page-link {
+            text-align: center;
+            width: 80px;
+        }
+    </style>
+    <ngbs-pagination class="custom-pagination-1"
+                     size="sm"
+                     current-page="7"
+                     items-per-page="192"
+                     total-items="31337"></ngbs-pagination>
+    <ngbs-pagination class="custom-pagination-2"
+                     current-page="84"
+                     items-per-page="256"
+                     total-items="32768"
+                     visible-page-buffer="2"></ngbs-pagination>
+    <ngbs-pagination class="custom-pagination-3"
+                     size="lg"
+                     current-page="1"
+                     items-per-page="256"
+                     total-items="31337"
+                     visible-page-buffer="0"></ngbs-pagination>
 </div>

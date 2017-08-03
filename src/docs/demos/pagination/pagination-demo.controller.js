@@ -1,6 +1,1 @@
-class controller {
-  $onInit () {
-  }
-}
-
-export default controller;
+export default class {}
