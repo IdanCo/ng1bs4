@@ -8,13 +8,6 @@ class controller {
       $scope
     });
 
-    this.currentPage = 0; // binding
-    this.disabled = false; // binding
-    this.itemsPerPage = 0; // binding
-    this.size = ''; // binding
-    this.totalItems = 0; // binding
-    this.visiblePageBuffer = 0; // binding
-
     this.pages = [];
     this.totalPages = [];
   }
