@@ -1,57 +1,57 @@
-<div class="mb-4" ng-init="currentPageBasic10 = 1">
-    <h6>Basic (Current Page: {{currentPageBasic10}})</h6>
-    <ngbs-pagination items-per-page="10" total-items="100" on-page-change="currentPageBasic10 = currentPage"></ngbs-pagination>
+<div class="mb-4" ng-init="currentPageBasic = 1">
+    <h6>Basic Demo (Current Page: {{currentPageBasic}})</h6>
+    <p class="small">Use the inputs below to control how the component will be rendered.</p>
+    <ngbs-pagination disabled="paginationDisabled"
+                     size="{{paginationSize}}"
+                     items-per-page="paginationItemsPerPage"
+                     total-items="paginationTotalItems"
+                     on-page-change="currentPageBasic = currentPage"
+                     visible-page-buffer="paginationVisiblePageBuffer"></ngbs-pagination>
 </div>
 
-<div class="mb-4">
-    <h6>Disabled (Current Page: 25)</h6>
-    <ngbs-pagination disabled="true" current-page="25" items-per-page="10" total-items="1000"></ngbs-pagination>
+<div class="form-inline mb-4">
+    <div class="form-group mr-2 mb-2">
+        <label class="form-label mr-2" for="pagination-size">Size</label>
+        <select id="pagination-size" class="form-control" ng-init="paginationSize = ''" ng-model="paginationSize" ng-options="size.value as size.label for size in [{ value: '', label: 'Normal' }, { value: 'sm', label: 'Small' }, { value: 'lg', label: 'Large' }]"></select>
+    </div>
+
+    <div class="form-group mr-2 mb-2">
+        <label class="form-label mr-2" for="pagination-items-per-page">Items/Page</label>
+        <input id="pagination-items-per-page" class="form-control" type="number" min="1" ng-init="paginationItemsPerPage = 10" ng-model="paginationItemsPerPage">
+    </div>
+
+    <div class="form-group mr-2 mb-2">
+        <label class="form-label mr-2" for="pagination-total-items">Total Items</label>
+        <input id="pagination-total-items" class="form-control" type="number" min="1" ng-init="paginationTotalItems = 100" ng-model="paginationTotalItems">
+    </div>
+    
+    <div class="form-group mr-2 mb-2">
+        <label class="form-label mr-2" for="pagination-visible-page-buffer">Visible Page Buffer</label>
+        <input id="pagination-visible-page-buffer" class="form-control" type="number" min="1" ng-init="paginationVisiblePageBuffer = 2" ng-model="paginationVisiblePageBuffer">
+    </div>
+    
+    <div class="form-group mr-2 mb-2">
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="checkbox" ng-model="paginationDisabled">&nbsp;Disabled
+            </label>
+        </div>
+    </div>
 </div>
 
-<div class="mb-4" ng-init="currentPageSmall = 2">
-    <h6>Small (Current Page: {{currentPageSmall}})</h6>
-    <ngbs-pagination size="sm" current-page="2" items-per-page="10" total-items="25" on-page-change="currentPageSmall = currentPage"></ngbs-pagination>
-</div>
-
-<div class="mb-4">
-    <h6>Large (Current Page: 1)</h6>
-    <ngbs-pagination size="lg" items-per-page="321" total-items="963"></ngbs-pagination>
-</div>
-
-<div class="mb-4" ng-init="currentPageUsability1 = 13">
-    <h6>Usability</h6>
-    <p>
-        <small>The usability examples below illustrate the power of the <strong>visible-page-buffer</strong> attribute. As the user clicks through the pages, the width of the pagination component never shifts, allowing them to page through the results without ever moving their mouse.  Not only can this be done 1 by 1 with the next button, but results can be stepped through multiple pages at a time using the buttons after/before the ellipses without any mouse movement (not available with the third demo, where visible-page-buffer is set to 0).</small>
+<div class="mb-4" ng-init="currentPageUsability = 13">
+    <h6>Usability Demo (Current Page: {{currentPageUsability}})</h6>
+    <p class="small">
+        This illustrates the power of the <strong>visible-page-buffer</strong> attribute.
+        As the user clicks through the pages, the width of the pagination component never shifts, allowing the user to page through the results without ever moving their mouse.
+        Not only can this be done 1 by 1 with the next button, but results can be stepped through multiple pages at a time using the ellipses without any mouse movement.
     </p>
     <style type="text/css">
         /* these styles exist for demo purposes only, it is recommended that you would specify these styles in a separate file (.scss, etc) */
-        .custom-pagination-1 .page-item .page-link {
+        .custom-pagination .page-item .page-link {
             text-align: center;
             width: 40px;
         }
-        .custom-pagination-2 .page-item .page-link {
-            text-align: center;
-            width: 50px;
-        }
-        .custom-pagination-3 .page-item .page-link {
-            text-align: center;
-            width: 80px;
-        }
     </style>
-    <ngbs-pagination class="custom-pagination-1"
-                     size="sm"
-                     current-page="7"
-                     items-per-page="192"
-                     total-items="31337"></ngbs-pagination>
-    <ngbs-pagination class="custom-pagination-2"
-                     current-page="84"
-                     items-per-page="256"
-                     total-items="32768"
-                     visible-page-buffer="2"></ngbs-pagination>
-    <ngbs-pagination class="custom-pagination-3"
-                     size="lg"
-                     current-page="1"
-                     items-per-page="256"
-                     total-items="31337"
-                     visible-page-buffer="0"></ngbs-pagination>
+    <ngbs-pagination class="custom-pagination" size="sm" current-page="7" items-per-page="192" total-items="31337"></ngbs-pagination>
 </div>
