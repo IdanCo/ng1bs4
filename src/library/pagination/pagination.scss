@@ -1,0 +1,16 @@
+ngbs-pagination {
+  display: block;
+
+  > .pagination {
+    user-select: none;
+
+    // it would be helpful to have access to user's variables here... i'm not sure if that's possible though.
+    // it's not great that the user can't see the selected page when ngbs-pagination is disabled
+    // it's also not great to hard-code these color values
+    // perhaps we leave it as is, and the user can override the style if they choose
+    > .page-item.active > span.page-link {
+      background-color: #efefef;
+      color: #636c72;
+    }
+  }
+}

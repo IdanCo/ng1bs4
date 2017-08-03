@@ -12,6 +12,7 @@ import MenuModule from './menu/menu.module';
 import TooltipModule from './tooltip/tooltip.module';
 import AlertModule from './alert/alert.module';
 import ModalModule from './modal/modal.module';
+import PaginationModule from './pagination/pagination.module';
 
 // Register module, inject components and export name
 export default angular
@@ -22,7 +23,8 @@ export default angular
     MenuModule,
     TooltipModule,
     AlertModule,
-    ModalModule
+    ModalModule,
+    PaginationModule,
   ])
   .config(function ($qProvider) {
     $qProvider.errorOnUnhandledRejections(false);
