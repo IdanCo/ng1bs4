@@ -2,10 +2,9 @@
 import template from './pagination.html';
 
 class controller {
-  constructor($log, $scope) {
+  constructor($log) {
     Object.assign(this, {
       $log,
-      $scope
     });
 
     this.pages = [];
@@ -13,12 +12,11 @@ class controller {
   }
 
   $onInit() {
-    // provide defaults
-    this.currentPage = this.currentPage || 1;
-    this.visiblePageBuffer = this.visiblePageBuffer || this.visiblePageBuffer === 0 ? this.visiblePageBuffer : 3;
-    this.size = this.size || '';
-
     // validate bindings
+    if (typeof this.currentPage !== 'number' || isFinite(this.currentPage) === false) {
+      this.$log.error('invalid ngbsPagination::currentPage: ', this.currentPage, 'expecting a number');
+    }
+
     if (typeof this.itemsPerPage !== 'number' || isFinite(this.itemsPerPage) === false) {
       this.$log.error('invalid ngbsPagination::itemsPerPage: ', this.itemsPerPage, 'expecting a number');
     }
@@ -31,9 +29,19 @@ class controller {
       this.$log.error('invalid ngbsPagination::totalItems: ', this.totalItems, 'expecting a number');
     }
 
-    this.$scope.$watch(() => `${this.currentPage}${this.itemsPerPage}${this.totalItems}${this.visiblePageBuffer}`, () => {
-      this.buildPages();
-    });
+    if (typeof this.visiblePageBuffer !== 'number' || isFinite(this.visiblePageBuffer) === false) {
+      this.$log.error('invalid ngbsPagination::visiblePageBuffer: ', this.visiblePageBuffer, 'expecting a number');
+    }
+  }
+
+  $onChanges() {
+    // provide defaults for when bad or no data is provided
+    this.currentPage = this.currentPage || 1;
+    this.size = this.size || '';
+    this.visiblePageBuffer = this.visiblePageBuffer || this.visiblePageBuffer === 0 ? this.visiblePageBuffer : 3;
+
+    // build pages array
+    this.buildPages();
   }
 
   buildPages() {
@@ -57,10 +65,10 @@ class controller {
     }
 
     // pad more if "..." isn't visible or this.totalPages has not been displayed for us
-    if (stopAt >= this.totalPages - 1) { 
+    if (stopAt >= this.totalPages - 1) {
       startAt--;
     }
-    
+
     if (stopAt == this.totalPages) {
       startAt--;
     }
@@ -143,6 +151,9 @@ class controller {
       this.onPageChange({
         currentPage: this.currentPage
       });
+
+      // $onChanges won't pick up the change to currentPage, so we call this manually
+      this.buildPages();
     }
   }
 }
