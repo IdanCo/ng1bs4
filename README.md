@@ -1,7 +1,9 @@
-[![Build Status](https://travis-ci.org/IdanCo/ng1bs4.svg?branch=master)](https://travis-ci.org/IdanCo/ng1bs4)
 # ng1bs4
-## A Library of AngularJS Components Implementing Boostrap 4
 ### _Tomorrow's Library with Yesterday's Framework_
+[![Gitter chat](https://badges.gitter.im/ng1bs4/native-navigation.svg)](https://gitter.im/ng1bs4)
+
+[![Build Status](https://travis-ci.org/IdanCo/ng1bs4.svg?branch=master)](https://travis-ci.org/IdanCo/ng1bs4)
+## A Library of AngularJS Components Implementing Boostrap 4
 
 Just because you use AngularJS and not Angular like all
 the cool kids, does'nt mean you can't look good!
@@ -70,3 +72,5 @@ You can help by:
 - Testing - unit, integration, and pregnancy (create a pull request)
 - Setting up coding standards and linting (create a pull request)
 - Stack, build, deploy and all that jazz
+
+Join us on gitter - https://gitter.im/ng1bs4
