@@ -1,8 +1,9 @@
 # ng1bs4
-### _Tomorrow's Library with Yesterday's Framework_
+#### _Tomorrow's Library with Yesterday's Framework_
 [![Gitter chat](https://badges.gitter.im/ng1bs4/native-navigation.svg)](https://gitter.im/ng1bs4)
 
 [![Build Status](https://travis-ci.org/IdanCo/ng1bs4.svg?branch=master)](https://travis-ci.org/IdanCo/ng1bs4)
+[![npm version](https://badge.fury.io/js/ng1bs4.svg)](https://badge.fury.io/js/ng1bs4)
 ## A Library of AngularJS Components Implementing Boostrap 4
 
 Just because you use AngularJS and not Angular like all
