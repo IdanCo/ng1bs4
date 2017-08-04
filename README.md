@@ -7,7 +7,7 @@
 ## A Library of AngularJS Components Implementing Boostrap 4
 
 Just because you use AngularJS and not Angular like all
-the cool kids, does'nt mean you can't look good!
+the cool kids, doesn't mean you can't look good!
 
 Enjoy the robust styling architecture of the new [Bootstrap 4](http://v4-alpha.getbootstrap.com/),
 while still using good ol' [AngularJS](https://angularjs.org/).
@@ -68,10 +68,21 @@ You can help by:
 - Staring, sharing, forking, and most of all: using
 - Documentation (create a pull request)
 - Building new components (create a pull request)
-- Imporving existing components (create a pull request)
+- Improving existing components (create a pull request)
 - Coming up with ideas for new components or new features (open an issue)
 - Testing - unit, integration, and pregnancy (create a pull request)
 - Setting up coding standards and linting (create a pull request)
 - Stack, build, deploy and all that jazz
+
+Development is easy and fun! Just follow these simple steps to get started:
+
+1. Have at least [Node.js 6.x](https://nodejs.org/) installed
+1. Fork [the main repository](https://github.com/IdanCo/ng1bs4)
+1. Clone the forked repository
+1. Run the following commands
+    1. `npm i`
+    1. `npm run serve`
+1. Open http://localhost:8080 in a browser
+1. Start making amazing changes!
 
 Join us on gitter - https://gitter.im/ng1bs4
