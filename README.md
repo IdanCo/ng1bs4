@@ -51,6 +51,9 @@ Test by adding this directive anywhere in your markup
 <ngbs-test></ngbs-test>
 ```
 
+for more details checkout a [sample project with angularJS, bootstrap4 and ng1bs4](https://github.com/IdanCo/webpack-modular/tree/ng1bs4).
+
+
 ## Philosophy
 
 **No Styling**. We believe you should be able to customize as much as you want, and with Bootstrap 4 theming is easy! That's why all components include minimal styling and rely heavily on Bootstrap's native classes and variables.
