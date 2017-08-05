@@ -11,34 +11,32 @@ class controller {
     this.totalPages = [];
   }
 
-  $onInit() {
-    // validate bindings
-    if (typeof this.currentPage !== 'number' || isFinite(this.currentPage) === false) {
-      this.$log.error('invalid ngbsPagination::currentPage:', this.currentPage, 'expecting a number');
-    }
-
-    if (typeof this.itemsPerPage !== 'number' || isFinite(this.itemsPerPage) === false) {
-      this.$log.error('invalid ngbsPagination::itemsPerPage:', this.itemsPerPage, 'expecting a number');
-    }
-
-    if (this.size && (typeof this.size !== 'string' || ['', 'lg', 'sm'].includes(this.size) === false)) {
-      this.$log.error('invalid ngbsPagination::size:', this.size, 'expecting sm or lg');
-    }
-
-    if (typeof this.totalItems !== 'number' || isFinite(this.totalItems) === false) {
-      this.$log.error('invalid ngbsPagination::totalItems:', this.totalItems, 'expecting a number');
-    }
-
-    if (typeof this.visiblePageBuffer !== 'number' || isFinite(this.visiblePageBuffer) === false) {
-      this.$log.error('invalid ngbsPagination::visiblePageBuffer:', this.visiblePageBuffer, 'expecting a number');
-    }
-  }
-
   $onChanges() {
     // provide defaults for when bad or no data is provided
     this.currentPage = this.currentPage || 1;
     this.size = this.size || '';
     this.visiblePageBuffer = this.visiblePageBuffer || this.visiblePageBuffer === 0 ? this.visiblePageBuffer : 3;
+
+    // (re)validate bindings
+    if (typeof this.currentPage !== 'number' || isFinite(this.currentPage) === false) {
+      this.$log.error('invalid ngbsPagination::currentPage:', JSON.stringify(this.currentPage), 'expecting a number');
+    }
+
+    if (typeof this.itemsPerPage !== 'number' || isFinite(this.itemsPerPage) === false) {
+      this.$log.error('invalid ngbsPagination::itemsPerPage:', JSON.stringify(this.itemsPerPage), 'expecting a number');
+    }
+
+    if (this.size && (typeof this.size !== 'string' || ['', 'lg', 'sm'].includes(this.size) === false)) {
+      this.$log.error('invalid ngbsPagination::size:', JSON.stringify(this.size), 'expecting "sm" or "lg"');
+    }
+
+    if (typeof this.totalItems !== 'number' || isFinite(this.totalItems) === false) {
+      this.$log.error('invalid ngbsPagination::totalItems:', JSON.stringify(this.totalItems), 'expecting a number');
+    }
+
+    if (typeof this.visiblePageBuffer !== 'number' || isFinite(this.visiblePageBuffer) === false) {
+      this.$log.error('invalid ngbsPagination::visiblePageBuffer:', JSON.stringify(this.visiblePageBuffer), 'expecting a number');
+    }
 
     // build pages array
     this.buildPages();
