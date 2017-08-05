@@ -33,6 +33,10 @@ ngbs-progress {
           }
         }
       }
+
+      > span {
+        white-space: nowrap;
+      }
     }
   }
 
