@@ -14,40 +14,38 @@ class controller {
     this.roundedPercentage = 0;
   }
 
-  $onInit() {
-    // validate bindings
+  $onChanges(changesObj) {
+    // (re)validate bindings
     if (this.max && (typeof this.max !== 'number' || isFinite(this.max) === false)) {
-      this.$log.error('invalid ngbsProgress::max:', this.max, 'expecting a number');
+      this.$log.error('invalid ngbsProgress::max:', JSON.stringify(this.max), 'expecting a number');
     }
 
     if (this.value && (typeof this.value !== 'number' || isFinite(this.value) === false)) {
-      this.$log.error('invalid ngbsProgress::value:', this.value, 'expecting a number');
+      this.$log.error('invalid ngbsProgress::value:', JSON.stringify(this.value), 'expecting a number');
     }
 
     if (this.animatedProgress && typeof this.animatedProgress !== 'boolean') {
-      this.$log.error('invalid ngbsProgress::animatedProgress:', this.animatedProgress, 'expecting a boolean');
+      this.$log.error('invalid ngbsProgress::animatedProgress:', JSON.stringify(this.animatedProgress), 'expecting a boolean');
     }
 
     if (this.autoLabel && typeof this.autoLabel !== 'boolean') {
-      this.$log.error('invalid ngbsProgress::autoLabel:', this.autoLabel, 'expecting a boolean');
+      this.$log.error('invalid ngbsProgress::autoLabel:', JSON.stringify(this.autoLabel), 'expecting a boolean');
     }
 
     if (this.striped && typeof this.striped !== 'boolean') {
-      this.$log.error('invalid ngbsProgress::striped:', this.striped, 'expecting a boolean');
+      this.$log.error('invalid ngbsProgress::striped:', JSON.stringify(this.striped), 'expecting a boolean');
     }
 
     if (this.animatedStripes && typeof this.animatedStripes !== 'boolean') {
-      this.$log.error('invalid ngbsProgress::animatedStripes:', this.animatedStripes, 'expecting a boolean');
+      this.$log.error('invalid ngbsProgress::animatedStripes:', JSON.stringify(this.animatedStripes), 'expecting a boolean');
     }
 
     if (this.background && SUPPORTED_BACKGROUNDS.includes(this.background) === false) {
-      this.$log.error('invalid ngbsProgress::background:', this.background, 'expecting one of the following', SUPPORTED_BACKGROUNDS);
+      this.$log.error('invalid ngbsProgress::background:', JSON.stringify(this.background), 'expecting one of the following', SUPPORTED_BACKGROUNDS);
     }
-  }
 
-  $onChanges(changesObj) {
     // recalculate percentage if max/value change
-    if ((changesObj.value && changesObj.value.isFirstChange() === false) || (changesObj.max && changesObj.max.isFirstChange() === false)) {
+    if (changesObj.value || changesObj.max) {
       this.percentage = this.value / this.max * 100;
       this.roundedPercentage = Math.round(this.percentage);
     }
