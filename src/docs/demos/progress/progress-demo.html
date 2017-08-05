@@ -5,34 +5,34 @@
 <h6>Side-By-Side HTML5 and Bootstrap 4</h6>
 
 <div class="mb-3">
-  <progress ng-attr-value="{{progressValue}}" max="{{progressMax}}" style="height: {{progressHeight}}px;">{{progressValue}} perc.</progress>
-  <ngbs-progress ng-attr-value="progressValue"
-                 max="progressMax"
-                 auto-label="progressLabel === 'auto'"
-                 animated-progress="progressAnimatedProgress"
-                 animated-stripes="progressAnimatedStripes"
-                 background="progressBackground"
-                 striped="progressStriped"
-                 style="height: {{progressHeight}}px;">{{progressLabel === 'custom' ? progressValue + ' perc.' : ''}}</ngbs-progress>
+  <progress ng-attr-value="{{$ctrl.value}}" max="{{$ctrl.max}}" style="height: {{$ctrl.height}}px;">{{$ctrl.value}} perc.</progress>
+  <ngbs-progress ng-attr-value="$ctrl.value"
+                 max="$ctrl.max"
+                 auto-label="$ctrl.label === 'auto'"
+                 animated-progress="$ctrl.animatedProgress"
+                 animated-stripes="$ctrl.animatedStripes"
+                 background="$ctrl.background"
+                 striped="$ctrl.striped"
+                 style="height: {{$ctrl.height}}px;">{{$ctrl.label === 'custom' ? $ctrl.value + ' perc.' : ''}}</ngbs-progress>
 </div>
 
 <div class="row">
   <div class="col-6">
     <div class="form-group">
         <label class="form-label" for="progress-value">Value</label>
-        <input id="progress-value" class="form-control" type="number" ng-init="progressValue = 25" ng-model="progressValue" min="0" ng-attr-max="{{progressMax}}"></input>
+        <input id="progress-value" class="form-control" type="number" ng-model="$ctrl.value" min="0" ng-attr-max="{{$ctrl.max}}"></input>
     </div>
   </div>
   <div class="col-6">
     <div class="form-group">
         <label class="form-label" for="progress-max">Max</label>
-        <input id="progress-max" class="form-control" type="number" min="0" ng-init="progressMax = 100" ng-model="progressMax" ng-attr-min="{{progressValue}}">
+        <input id="progress-max" class="form-control" type="number" min="0" ng-model="$ctrl.max" ng-attr-min="{{$ctrl.value}}">
     </div>
   </div>
   <div class="col-6">
     <div class="form-group">
         <label class="form-label" for="progress-label">Label</label>
-        <select id="progress-label" class="form-control" ng-init="progressLabel = ''" ng-model="progressLabel">
+        <select id="progress-label" class="form-control" ng-model="$ctrl.label">
           <option value="">No Label</option>
           <option value="auto">Automatic Label</option>
           <option value="custom">Custom Label</option>
@@ -42,7 +42,7 @@
   <div class="col-6">
     <div class="form-group">
         <label class="form-label" for="progress-background">Background</label>
-        <select id="progress-background" class="form-control" ng-init="progressBackground = ''" ng-model="progressBackground">
+        <select id="progress-background" class="form-control" ng-model="$ctrl.background">
           <option value="">Unspecified</option>
           <option value="primary">Primary</option>
           <option value="success">Success</option>
@@ -57,24 +57,24 @@
   <div class="col-6">
     <div class="form-group">
         <label class="form-label" for="progress-height">Height</label>
-        <input id="progress-height" class="form-control" type="number" ng-init="progressHeight = 20" ng-model="progressHeight" min="4" max="80">
+        <input id="progress-height" class="form-control" type="number" ng-model="$ctrl.height" min="4" max="80">
     </div>
   </div>
 </div>
 <div class="form-inline mb-4">
     <div class="form-check mr-3">
         <label class="form-check-label pl-0">
-        <input type="checkbox" ng-model="progressStriped">&nbsp;Striped
+        <input type="checkbox" ng-model="$ctrl.striped">&nbsp;Striped
         </label>
     </div>
     <div class="form-check mr-3">
       <label class="form-check-label pl-0">
-            <input type="checkbox" ng-model="progressAnimatedProgress">&nbsp;Animated Progress
+            <input type="checkbox" ng-model="$ctrl.animatedProgress">&nbsp;Animated Progress
       </label>
     </div>
     <div class="form-check mr-3">
       <label class="form-check-label pl-0">
-        <input type="checkbox" ng-model="progressAnimatedStripes">&nbsp;Animated Stripes
+        <input type="checkbox" ng-model="$ctrl.animatedStripes">&nbsp;Animated Stripes
       </label>
     </div>
   </div>
