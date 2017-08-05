@@ -1,11 +1,11 @@
 <div class="mb-4">
-    <h6>Basic Demo (Current Page: {{this.currentPageBasic}})</h6>
+    <h6>Basic Demo (Current Page: {{$ctrl.currentPageBasic}})</h6>
     <p class="small">Use the inputs below to control how the component will be rendered.</p>
     <ngbs-pagination disabled="paginationDisabled"
                      size="{{$ctrl.size}}"
                      items-per-page="$ctrl.itemsPerPage"
                      total-items="$ctrl.totalItems"
-                     on-page-change="this.currentPageBasic = currentPage"
+                     on-page-change="$ctrl.currentPageBasic = currentPage"
                      visible-page-buffer="$ctrl.visiblePageBuffer"></ngbs-pagination>
 </div>
 
@@ -40,7 +40,7 @@
 </div>
 
 <div class="mb-4">
-    <h6>Usability Demo (Current Page: {{this.currentPageUsability}})</h6>
+    <h6>Usability Demo (Current Page: {{$ctrl.currentPageUsability}})</h6>
     <p class="small">
         This illustrates the power of the <strong>visible-page-buffer</strong> attribute.
         As the user clicks through the pages, the width of the pagination component never shifts, allowing the user to page through the results without ever moving their mouse.
