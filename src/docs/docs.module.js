@@ -18,6 +18,7 @@ import TooltipDemo from './demos/tooltip/tooltip-demo.module';
 import AlertDemo from './demos/alert/alert-demo.module';
 import ModalDemo from './demos/modal/modal-demo.module';
 import PaginationDemo from './demos/pagination/pagination-demo.module';
+import ProgressDemo from './demos/progress/progress-demo.module';
 
 // Register module, define components, configure routes and export name
 export default angular
@@ -32,6 +33,7 @@ export default angular
     AlertDemo,
     ModalDemo,
     PaginationDemo,
+    ProgressDemo,
   ])
   .component('docs', Docs)
   .name;

@@ -1,0 +1,50 @@
+ngbs-progress {
+  display: block;
+  height: 1rem;
+
+  > .progress {
+    height: 100%;
+
+    > .progress-bar {
+      position: relative;
+
+      &.animated-progress {
+        transition: width 500ms;
+      }
+
+      &.indeterminate {
+        width: 25%;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-name: progress-bar-indeterminate;
+        animation-timing-function: linear;
+
+        @keyframes progress-bar-indeterminate {
+          0% {
+            left: 0;
+          }
+
+          50% {
+            left: 75%;
+          }
+
+          100% {
+            left: 0;
+          }
+        }
+      }
+
+      > span {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  // patch to vertically align labels on taller progress bars, remove when this is merged https://github.com/twbs/bootstrap/pull/22703
+  > .progress > .progress-bar {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+  }
+}
