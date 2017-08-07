@@ -54,6 +54,7 @@
     "webpack": "^2.5.0",
     "webpack-cleanup-plugin": "^0.5.1",
     "webpack-config": "^7.0.0",
-    "webpack-dev-server": "^2.4.2"
+    "webpack-dev-server": "^2.4.2",
+    "yeoman-generator": "^1.0.0"
   }
 }

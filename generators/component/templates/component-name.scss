@@ -1,0 +1,8 @@
+// setup local variables
+// make sure to use the !default flag so it will be easy to override
+$<%- componentName %>-variable: 1rem !default;
+
+ngbs-<%- componentName %> {
+  display: block;
+  margin-bottom: $<%- componentName %>-variable;
+}

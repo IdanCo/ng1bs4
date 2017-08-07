@@ -88,4 +88,10 @@ Development is easy and fun! Just follow these simple steps to get started:
 1. Open http://localhost:8080 in a browser
 1. Start making amazing changes!
 
-Join us on gitter - https://gitter.im/ng1bs4
+Create new components easily with our generator! simply install [yeoman](http://yeoman.io/), and inside the project folder type
+```sh
+yo ./generators/component
+```
+And follow the on-screen instructions.
+
+Any questions? open an issue or join us on gitter - https://gitter.im/ng1bs4
