@@ -1,8 +1,9 @@
 'use strict';
 const BaseGenerator = require('../base-generator.class');
+const assetModifier = require('../asset-modifier');
 
 module.exports = class extends BaseGenerator {
-
+  
   prompting() {
     return this._Base_Prompting();
   }
@@ -32,13 +33,14 @@ module.exports = class extends BaseGenerator {
       this.destinationPath(`src/library/${this.props.componentName}/${this.props.componentName}.component.js`),
       this.props
     );
+
   }
 
   end() {
+    assetModifier.addComponentToModule('./src/library/library.module.js', 'Module', '', '', this.props.componentName, this.props.camelName, this.props.capitalName);
+
     this.log([
       'New component module created!',
-      `Don't forget to manually inject the module into the library at`,
-      `src/library/library.module.js`
     ].join('\n'));
 
     if (this.props.createDocs) this.composeWith(require.resolve('../docs'), this.props);
