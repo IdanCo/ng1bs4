@@ -1,17 +1,17 @@
 <div class="progress">
   <div class="progress-bar" role="progressbar"
-       ng-if="$ctrl.value || $ctrl.value === 0"
-       ng-attr-aria-valuenow="{{$ctrl.value}}"
-       ng-attr-aria-valuemax="{{$ctrl.max}}"
+       ng-if="$ctrl.progressValue || $ctrl.progressValue === 0"
+       ng-attr-aria-valuenow="{{$ctrl.progressValue}}"
+       ng-attr-aria-valuemax="{{$ctrl.progressMax}}"
        ng-attr-style="width: {{$ctrl.percentage}}%"
-       ng-class="[$ctrl.background ? 'bg-' + $ctrl.background : '', { 'animated-progress': $ctrl.animatedProgress, 'progress-bar-animated': $ctrl.animatedStripes, 'progress-bar-striped': $ctrl.striped }]">
-        <span ng-if="$ctrl.autoLabel">{{$ctrl.roundedPercentage}}%</span>
-        <span ng-if="!$ctrl.autoLabel" ng-transclude></span>
+       ng-class="[$ctrl.progressBackground ? 'bg-' + $ctrl.progressBackground : '', { 'animated-progress': $ctrl.progressAnimatedProgression, 'progress-bar-animated': $ctrl.progressAnimatedStripes, 'progress-bar-striped': $ctrl.progressStriped }]">
+        <span ng-if="$ctrl.progressAutoLabel">{{$ctrl.roundedPercentage}}%</span>
+        <span ng-if="!$ctrl.progressAutoLabel" ng-transclude></span>
       </div>
 
   <div class="progress-bar indeterminate" role="progressbar"
-       ng-if="!$ctrl.value && $ctrl.value !== 0"
+       ng-if="!$ctrl.progressValue && $ctrl.progressValue !== 0"
        aria-valuenow="Unknown"
        aria-valuemax="Unknown"
-       ng-class="[$ctrl.background ? 'bg-' + $ctrl.background : '', { 'progress-bar-animated': $ctrl.animatedStripes, 'progress-bar-striped': $ctrl.striped }]"></div>
+       ng-class="[$ctrl.progressBackground ? 'bg-' + $ctrl.progressBackground : '', { 'progress-bar-animated': $ctrl.progressAnimatedStripes, 'progress-bar-striped': $ctrl.progressStriped }]"></div>
 </div>
