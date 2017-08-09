@@ -1,6 +1,6 @@
-<ul class="pagination" ng-class="{ 'pagination-sm': $ctrl.size === 'sm', 'pagination-lg': $ctrl.size === 'lg' }">
+<ul class="pagination" ng-class="{ 'pagination-sm': $ctrl.paginationSize === 'sm', 'pagination-lg': $ctrl.paginationSize === 'lg' }">
     <!-- clickable previous -->
-    <li class="page-item" ng-if="!$ctrl.disabled && $ctrl.currentPage > 1">
+    <li class="page-item" ng-if="!$ctrl.paginationDisabled && $ctrl.paginationCurrentPage > 1">
         <a ng-click="$ctrl.onPreviousClick(); $event.preventDefault();" class="page-link" href="#" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
             <span class="sr-only">Previous</span>
@@ -8,7 +8,7 @@
     </li>
 
     <!-- disabled previous -->
-    <li class="page-item disabled" ng-if="$ctrl.disabled || (!$ctrl.disabled && $ctrl.currentPage === 1)">
+    <li class="page-item disabled" ng-if="$ctrl.paginationDisabled || (!$ctrl.paginationDisabled && $ctrl.paginationCurrentPage === 1)">
         <span class="page-link">
             <span aria-hidden="true">&laquo;</span>
             <span class="sr-only">Previous</span>
@@ -16,13 +16,13 @@
     </li>
 
     <!-- pages -->
-    <li ng-repeat="pageMeta in $ctrl.pages track by $index" ng-class="{ active: $ctrl.currentPage === pageMeta.page, disabled: $ctrl.disabled }" class="page-item">
-        <a ng-if="!$ctrl.disabled" class="page-link" ng-click="$ctrl.onPageClick(pageMeta.page); $event.preventDefault();" href="#">{{pageMeta.display}}</a>
-        <span ng-if="$ctrl.disabled" class="page-link">{{pageMeta.display}}</span>
+    <li ng-repeat="pageMeta in $ctrl.pages track by $index" ng-class="{ active: $ctrl.paginationCurrentPage === pageMeta.page, disabled: $ctrl.paginationDisabled }" class="page-item">
+        <a ng-if="!$ctrl.paginationDisabled" class="page-link" ng-click="$ctrl.onPageClick(pageMeta.page); $event.preventDefault();" href="#">{{pageMeta.display}}</a>
+        <span ng-if="$ctrl.paginationDisabled" class="page-link">{{pageMeta.display}}</span>
     </li>
 
     <!-- clickable next -->
-    <li class="page-item" ng-if="!$ctrl.disabled && $ctrl.currentPage < $ctrl.totalPages">
+    <li class="page-item" ng-if="!$ctrl.paginationDisabled && $ctrl.paginationCurrentPage < $ctrl.totalPages">
         <a ng-click="$ctrl.onNextClick(); $event.preventDefault();" class="page-link" href="#" aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
             <span class="sr-only">Next</span>
@@ -30,7 +30,7 @@
     </li>
 
     <!-- disabled next -->
-    <li class="page-item disabled" ng-if="$ctrl.disabled || (!$ctrl.disabled && $ctrl.currentPage === $ctrl.totalPages)">
+    <li class="page-item disabled" ng-if="$ctrl.paginationDisabled || (!$ctrl.paginationDisabled && $ctrl.paginationCurrentPage === $ctrl.totalPages)">
         <span class="page-link">
             <span aria-hidden="true">&raquo;</span>
             <span class="sr-only">Next</span>
