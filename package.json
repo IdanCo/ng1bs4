@@ -30,7 +30,7 @@
   "dependencies": {
     "angular": "^1.6.3",
     "angular-sanitize": "^1.6.4",
-    "bootstrap": "^4.0.0-alpha.6"
+    "bootstrap": "4.0.0-alpha.6"
   },
   "devDependencies": {
     "angular-highlightjs": "^0.7.1",
