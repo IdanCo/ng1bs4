@@ -16,37 +16,37 @@ class controller {
 
   $onChanges(changesObj) {
     // (re)validate bindings
-    if (this.max && (typeof this.max !== 'number' || isFinite(this.max) === false)) {
-      this.$log.error('invalid ngbsProgress::max:', JSON.stringify(this.max), 'expecting a number');
+    if (this.progressMax && (typeof this.progressMax !== 'number' || isFinite(this.progressMax) === false)) {
+      this.$log.error('invalid ngbsProgress::progressMax:', JSON.stringify(this.progressMax), 'expecting a number');
     }
 
-    if (this.value && (typeof this.value !== 'number' || isFinite(this.value) === false)) {
-      this.$log.error('invalid ngbsProgress::value:', JSON.stringify(this.value), 'expecting a number');
+    if (this.progressValue && (typeof this.progressValue !== 'number' || isFinite(this.progressValue) === false)) {
+      this.$log.error('invalid ngbsProgress::progressValue:', JSON.stringify(this.progressValue), 'expecting a number');
     }
 
-    if (this.animatedProgress && typeof this.animatedProgress !== 'boolean') {
-      this.$log.error('invalid ngbsProgress::animatedProgress:', JSON.stringify(this.animatedProgress), 'expecting a boolean');
+    if (this.progressAnimatedProgression && typeof this.progressAnimatedProgression !== 'boolean') {
+      this.$log.error('invalid ngbsProgress::progressAnimatedProgression:', JSON.stringify(this.progressAnimatedProgression), 'expecting a boolean');
     }
 
-    if (this.autoLabel && typeof this.autoLabel !== 'boolean') {
-      this.$log.error('invalid ngbsProgress::autoLabel:', JSON.stringify(this.autoLabel), 'expecting a boolean');
+    if (this.progressAutoLabel && typeof this.progressAutoLabel !== 'boolean') {
+      this.$log.error('invalid ngbsProgress::progressAutoLabel:', JSON.stringify(this.progressAutoLabel), 'expecting a boolean');
     }
 
-    if (this.striped && typeof this.striped !== 'boolean') {
-      this.$log.error('invalid ngbsProgress::striped:', JSON.stringify(this.striped), 'expecting a boolean');
+    if (this.progressStriped && typeof this.progressStriped !== 'boolean') {
+      this.$log.error('invalid ngbsProgress::progressStriped:', JSON.stringify(this.progressStriped), 'expecting a boolean');
     }
 
-    if (this.animatedStripes && typeof this.animatedStripes !== 'boolean') {
-      this.$log.error('invalid ngbsProgress::animatedStripes:', JSON.stringify(this.animatedStripes), 'expecting a boolean');
+    if (this.progressAnimatedStripes && typeof this.progressAnimatedStripes !== 'boolean') {
+      this.$log.error('invalid ngbsProgress::progressAnimatedStripes:', JSON.stringify(this.progressAnimatedStripes), 'expecting a boolean');
     }
 
-    if (this.background && SUPPORTED_BACKGROUNDS.includes(this.background) === false) {
-      this.$log.error('invalid ngbsProgress::background:', JSON.stringify(this.background), 'expecting one of the following', SUPPORTED_BACKGROUNDS);
+    if (this.progressBackground && SUPPORTED_BACKGROUNDS.includes(this.progressBackground) === false) {
+      this.$log.error('invalid ngbsProgress::progressBackground:', JSON.stringify(this.progressBackground), 'expecting one of the following', SUPPORTED_BACKGROUNDS);
     }
 
-    // recalculate percentage if max/value change
-    if (changesObj.value || changesObj.max) {
-      this.percentage = this.value / this.max * 100;
+    // recalculate percentage if progressMax/progressValue change
+    if (changesObj.progressValue || changesObj.progressMax) {
+      this.percentage = this.progressValue / this.progressMax * 100;
       this.roundedPercentage = Math.round(this.percentage);
     }
   }
@@ -55,13 +55,13 @@ class controller {
 // Define and export component
 export default {
   bindings: {
-    animatedProgress: '<',
-    animatedStripes: '<',
-    autoLabel: '<',
-    background: '<',
-    max: '<',
-    striped: '<',
-    value: '<',
+    progressAnimatedProgression: '<',
+    progressAnimatedStripes: '<',
+    progressAutoLabel: '<',
+    progressBackground: '<',
+    progressMax: '<',
+    progressStriped: '<',
+    progressValue: '<',
   },
   transclude: true,
   template,

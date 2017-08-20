@@ -6,13 +6,13 @@
 
 <div class="mb-3">
   <progress ng-attr-value="{{$ctrl.value}}" max="{{$ctrl.max}}" style="height: {{$ctrl.height}}px;">{{$ctrl.value}} perc.</progress>
-  <ngbs-progress ng-attr-value="$ctrl.value"
-                 max="$ctrl.max"
-                 auto-label="$ctrl.label === 'auto'"
-                 animated-progress="$ctrl.animatedProgress"
-                 animated-stripes="$ctrl.animatedStripes"
-                 background="$ctrl.background"
-                 striped="$ctrl.striped"
+  <ngbs-progress progress-value="$ctrl.value"
+                 progress-max="$ctrl.max"
+                 progress-auto-label="$ctrl.label === 'auto'"
+                 progress-animated-progression="$ctrl.animatedProgression"
+                 progress-animated-stripes="$ctrl.animatedStripes"
+                 progress-background="$ctrl.background"
+                 progress-striped="$ctrl.striped"
                  style="height: {{$ctrl.height}}px;">{{$ctrl.label === 'custom' ? $ctrl.value + ' perc.' : ''}}</ngbs-progress>
 </div>
 
@@ -69,7 +69,7 @@
     </div>
     <div class="form-check mr-3">
       <label class="form-check-label pl-0">
-            <input type="checkbox" ng-model="$ctrl.animatedProgress">&nbsp;Animated Progress
+            <input type="checkbox" ng-model="$ctrl.animatedProgression">&nbsp;Animated Progress
       </label>
     </div>
     <div class="form-check mr-3">

@@ -13,29 +13,29 @@ class controller {
 
   $onChanges() {
     // provide defaults for when bad or no data is provided
-    this.currentPage = this.currentPage || 1;
-    this.size = this.size || '';
-    this.visiblePageBuffer = this.visiblePageBuffer || this.visiblePageBuffer === 0 ? this.visiblePageBuffer : 3;
+    this.paginationCurrentPage = this.paginationCurrentPage || 1;
+    this.paginationSize = this.paginationSize || '';
+    this.paginationVisiblePageBuffer = this.paginationVisiblePageBuffer || this.paginationVisiblePageBuffer === 0 ? this.paginationVisiblePageBuffer : 3;
 
     // (re)validate bindings
-    if (typeof this.currentPage !== 'number' || isFinite(this.currentPage) === false) {
-      this.$log.error('invalid ngbsPagination::currentPage:', JSON.stringify(this.currentPage), 'expecting a number');
+    if (typeof this.paginationCurrentPage !== 'number' || isFinite(this.paginationCurrentPage) === false) {
+      this.$log.error('invalid ngbsPagination::paginationCurrentPage:', JSON.stringify(this.paginationCurrentPage), 'expecting a number');
     }
 
-    if (typeof this.itemsPerPage !== 'number' || isFinite(this.itemsPerPage) === false) {
-      this.$log.error('invalid ngbsPagination::itemsPerPage:', JSON.stringify(this.itemsPerPage), 'expecting a number');
+    if (typeof this.paginationItemsPerPage !== 'number' || isFinite(this.paginationItemsPerPage) === false) {
+      this.$log.error('invalid ngbsPagination::paginationItemsPerPage:', JSON.stringify(this.paginationItemsPerPage), 'expecting a number');
     }
 
-    if (this.size && (typeof this.size !== 'string' || ['', 'lg', 'sm'].includes(this.size) === false)) {
-      this.$log.error('invalid ngbsPagination::size:', JSON.stringify(this.size), 'expecting "sm" or "lg"');
+    if (this.paginationSize && (typeof this.paginationSize !== 'string' || ['', 'lg', 'sm'].includes(this.paginationSize) === false)) {
+      this.$log.error('invalid ngbsPagination::paginationSize:', JSON.stringify(this.paginationSize), 'expecting "sm" or "lg"');
     }
 
-    if (typeof this.totalItems !== 'number' || isFinite(this.totalItems) === false) {
-      this.$log.error('invalid ngbsPagination::totalItems:', JSON.stringify(this.totalItems), 'expecting a number');
+    if (typeof this.paginationTotalItems !== 'number' || isFinite(this.paginationTotalItems) === false) {
+      this.$log.error('invalid ngbsPagination::paginationTotalItems:', JSON.stringify(this.paginationTotalItems), 'expecting a number');
     }
 
-    if (typeof this.visiblePageBuffer !== 'number' || isFinite(this.visiblePageBuffer) === false) {
-      this.$log.error('invalid ngbsPagination::visiblePageBuffer:', JSON.stringify(this.visiblePageBuffer), 'expecting a number');
+    if (typeof this.paginationVisiblePageBuffer !== 'number' || isFinite(this.paginationVisiblePageBuffer) === false) {
+      this.$log.error('invalid ngbsPagination::paginationVisiblePageBuffer:', JSON.stringify(this.paginationVisiblePageBuffer), 'expecting a number');
     }
 
     // build pages array
@@ -44,11 +44,11 @@ class controller {
 
   buildPages() {
     // determine the number of pages
-    this.totalPages = Math.ceil(this.totalItems / this.itemsPerPage);
+    this.totalPages = Math.ceil(this.paginationTotalItems / this.paginationItemsPerPage);
 
     // determine where we start and stop the display
-    let startAt = this.currentPage - this.visiblePageBuffer;
-    let stopAt = this.currentPage + this.visiblePageBuffer;
+    let startAt = this.paginationCurrentPage - this.paginationVisiblePageBuffer;
+    let stopAt = this.paginationCurrentPage + this.paginationVisiblePageBuffer;
 
     // if we're not towards the beginning (and ellipsis won't be shown), we need to take into account some padding
     if (startAt <= 0) {
@@ -132,25 +132,25 @@ class controller {
   }
 
   onNextClick() {
-    this.raiseOnPageChange(this.currentPage + 1);
+    this.raisePaginationOnPageChange(this.paginationCurrentPage + 1);
   }
 
   onPageClick(page) {
-    this.raiseOnPageChange(page);
+    this.raisePaginationOnPageChange(page);
   }
 
   onPreviousClick() {
-    this.raiseOnPageChange(this.currentPage - 1);
+    this.raisePaginationOnPageChange(this.paginationCurrentPage - 1);
   }
 
-  raiseOnPageChange(page) {
-    if (this.currentPage !== page) {
-      this.currentPage = page;
-      this.onPageChange({
-        currentPage: this.currentPage
+  raisePaginationOnPageChange(page) {
+    if (this.paginationCurrentPage !== page) {
+      this.paginationCurrentPage = page;
+      this.paginationOnPageChange({
+        paginationCurrentPage: this.paginationCurrentPage
       });
 
-      // $onChanges won't pick up the change to currentPage, so we call this manually
+      // $onChanges won't pick up the change to paginationCurrentPage, so we call this manually
       this.buildPages();
     }
   }
@@ -159,13 +159,13 @@ class controller {
 // Define and export component
 export default {
   bindings: {
-    currentPage: '<',
-    disabled: '<',
-    itemsPerPage: '<',
-    onPageChange: '&',
-    size: '@',
-    totalItems: '<',
-    visiblePageBuffer: '<',
+    paginationCurrentPage: '<',
+    paginationDisabled: '<',
+    paginationItemsPerPage: '<',
+    paginationOnPageChange: '&',
+    paginationSize: '@',
+    paginationTotalItems: '<',
+    paginationVisiblePageBuffer: '<',
   },
   template,
   controller
