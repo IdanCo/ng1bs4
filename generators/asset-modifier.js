@@ -10,7 +10,7 @@ module.exports.addComponentToModule = function(filename, variableSuffix, importP
   let content = fs.readFileSync(filename, 'utf8');
 
   // TODO use this for safety https://github.com/sindresorhus/detect-newline
-  const eol = '\r\n';
+  const eol = '\n';
 
   // find the import statements
   const importMatches = content.match(new RegExp(`(import [A-z]+${variableSuffix} from '.*';${eol})`, 'gm'));
@@ -41,7 +41,7 @@ module.exports.addComponentToDemoHtml = function(componentName, camelName, capit
   console.log('   modify'.green, filename);
   
   // TODO use this for safety https://github.com/sindresorhus/detect-newline
-  const eol = '\r\n';
+  const eol = '\n';
 
   // find the last instance of </demo> and add our stuff after it
   const demoCloser = `</demo>${eol}`;
