@@ -1,6 +1,6 @@
 {
   "name": "ng1bs4",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A Library of AngularJS Components Implementing Boostrap 4",
   "main": "dist/ng1bs4.js",
   "scripts": {
@@ -30,7 +30,9 @@
   "dependencies": {
     "angular": "^1.6.3",
     "angular-sanitize": "^1.6.4",
-    "bootstrap": "4.0.0-alpha.6"
+    "bootstrap": "4.0.0-beta",
+    "jquery": ">=3.0.0",
+    "popper.js": "^1.11.0"
   },
   "devDependencies": {
     "angular-highlightjs": "^0.7.1",

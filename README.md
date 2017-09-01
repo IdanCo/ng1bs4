@@ -22,6 +22,8 @@ See it in action at https://idanco.github.io/ng1bs4/.
 
 ## Install
 
+[Install bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/webpack/) and import it's JS and styling into your project.
+
 Install _ng1bs4_
 
 ```sh

@@ -66,7 +66,7 @@ module.exports = new WebpackConfig().merge({
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
-      Tether: 'tether'
+      Popper: ['popper.js', 'default'],
     })
     // new webpack.optimize.CommonsChunkPlugin({ // seperate vendor chunks
     //   name: ['vendor', 'manifest']
