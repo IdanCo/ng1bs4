@@ -47,7 +47,7 @@ class ModalService {
 
     // instantiate an optional controller
     if (options.controller) {
-        this.$controller(options.controller, {$scope: modalScope, $element: modalElement});
+      this.$controller(options.controller, {$scope: modalScope, $element: modalElement});
     }
 
     // add promise to modalScope
