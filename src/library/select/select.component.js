@@ -8,8 +8,8 @@ const DEFAULT_PLACEHOLDER = 'Select an option...';
 
 // Set up controller
 class controller {
-  constructor($element) {
-    this.$element = $element;
+  constructor($document, $element, $scope, $timeout) {
+    Object.assign(this, { $document, $element, $scope, $timeout });
   }
 
   $onInit() {
@@ -19,9 +19,10 @@ class controller {
     this.selectDirection = this.selectDirection || DEFAULT_DIRECTION;
     this.selectPlaceholder = this.selectPlaceholder || DEFAULT_PLACEHOLDER;
     this.selectQuery = '';
-
-    // Set drop direction
-    this.$element.addClass('drop' + this.selectDirection);
+    this.visible = false;
+    this.dropdownButtonElement = this.$element[0].querySelector('button.dropdown-toggle');
+    this.dropdownMenuElement = this.$element[0].querySelector('.dropdown-menu');
+    this.boundOnDocumentClick = this.onDocumentClick.bind(this); // necessary for unsubscribing
 
     // Tell component how to handle changes in ng-model
     this.ngModel.$render = () => {
@@ -32,11 +33,6 @@ class controller {
 
     // Initialize option list
     this.filterOptions();
-
-    // On open, set focus on search field
-    this.$element.on('shown.bs.dropdown', () => {
-      this.$element.find('.dropdown-header input').focus();
-    });
   }
 
   $onChanges(changesObj) {
@@ -47,11 +43,61 @@ class controller {
     }
   }
 
-  setValue(value) {
-    let newValue = value[this.selectKeyProperty];
+  monitorDocumentClick(start) {
+    const bindFn = this.$document[0][start === true ? 'addEventListener' : 'removeEventListener'];
+    bindFn('click', this.boundOnDocumentClick);
+  }
 
-    this.ngModel.$setViewValue(newValue);
+  onDocumentClick() {
+    // close the dropdown since they clicked outside of it
+    this.$scope.$apply(() => { this.close(); });
+  }
+
+  open() {
+    if (this.visible === false) {
+      // display the dropdown
+      this.visible = true;
+
+      // position the dropdown based on the configured direction
+      const buttonHeight = this.dropdownButtonElement.clientHeight;
+      const [bottom, top, transform] = (this.selectDirection === 'up') ? [0, 'inherit', -buttonHeight] : ['inherit', 0, buttonHeight];
+
+      // bootstrap uses this css technique
+      this.dropdownMenuElement.style.bottom = bottom;
+      this.dropdownMenuElement.style.top = top;
+      this.dropdownMenuElement.style.transform = `translate3d(0px, ${transform}px, 0px)`;
+
+      this.$timeout(() => {
+        // watch for document click, so we can close the dropdown
+        this.monitorDocumentClick(true);
+
+        // auto-focus on the search input if it's enabled
+        if (this.selectEnableSearch === true) {
+          this.$element[0].querySelector('input').focus();
+        }
+      });
+    }
+  }
+
+  close() {
+    // hide dropdown
+    this.visible = false;
+
+    // stop monitoring
+    this.monitorDocumentClick(false);
+
+    // reset filter
+    this.selectQuery = '';
+    this.filterOptions();
+  }
+
+  setValue(value) {
+    // update the model
+    this.ngModel.$setViewValue(value[this.selectKeyProperty]);
     this.ngModel.$render();
+
+    // close the drop down
+    this.close();
   }
 
   filterOptions() {

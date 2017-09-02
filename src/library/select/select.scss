@@ -2,6 +2,12 @@ $dropdown-max-height: 18rem;
 
 ngbs-select {
   display: block;
+  position: relative;
+
+  .dropdown-menu {
+    display: inherit;
+    will-change: top, bottom, transform;
+  }
 
   .dropdown-menu-inner {
     max-height: $dropdown-max-height;

@@ -1,13 +1,14 @@
-<button type="button" data-toggle="dropdown" class="dropdown-toggle btn btn-secondary">
-    <span ng-show="!$ctrl.displayValue" class="placeholder">{{ ::$ctrl.selectPlaceholder }}</span>
-    <span ng-show="!!$ctrl.displayValue" ng-bind-html="$ctrl.displayValue" class="value"></span>
-</button>
+<div ng-class="{ dropup: $ctrl.selectDirection === 'up' }">
+    <button type="button" class="btn btn-secondary dropdown-toggle" ng-click="$ctrl.open()">
+        <span ng-bind-html="$ctrl.displayValue || $ctrl.selectPlaceholder"></span>
+    </button>
 
-<div class="dropdown-menu">
-    <div ng-show="$ctrl.selectEnableSearch" class="dropdown-header">
-        <input type="text" placeholder="Search..." ng-model="$ctrl.selectQuery" ng-change="$ctrl.filterOptions()" class="form-control"/>
+    <div class="dropdown-menu" ng-show="$ctrl.visible">
+        <div ng-if="$ctrl.selectEnableSearch" class="dropdown-header">
+            <input type="text" placeholder="Search..." ng-model="$ctrl.selectQuery" ng-change="$ctrl.filterOptions()" class="form-control" />
+        </div>
+        <div class="dropdown-menu-inner">
+            <a ng-repeat="option in $ctrl.filteredOptions" ng-click="$ctrl.setValue(option)" ng-class="{ 'selected': $ctrl.isSelected(option) }" href="" ng-bind-html="option[$ctrl.selectDisplayProperty]" class="dropdown-item"></a>
+            <a ng-if="!$ctrl.filteredOptions.length" class="dropdown-item">No results found...</a></div>
     </div>
-    <div class="dropdown-menu-inner">
-        <a ng-repeat="option in $ctrl.filteredOptions" ng-click="$ctrl.setValue(option)" ng-class="{ 'selected': $ctrl.isSelected(option) }" href="" ng-bind-html="option[$ctrl.selectDisplayProperty]" class="dropdown-item"></a>
-        <a ng-if="!$ctrl.filteredOptions.length" class="dropdown-item">No results found...</a></div>
 </div>
