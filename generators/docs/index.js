@@ -1,5 +1,6 @@
 'use strict';
 const BaseGenerator = require('../base-generator.class');
+const assetModifier = require('../asset-modifier');
 
 module.exports = class extends BaseGenerator {
   constructor(args, opts) {
@@ -12,7 +13,6 @@ module.exports = class extends BaseGenerator {
   prompting() {
     return this._Base_Prompting();
   }
-
 
   writing() {
 
@@ -43,12 +43,12 @@ module.exports = class extends BaseGenerator {
   }
 
   end() {
+
+    assetModifier.addComponentToModule('./src/docs/docs.module.js', 'Demo', 'demos/', '-demo', this.props.componentName, this.props.camelName, this.props.capitalName);
+    assetModifier.addComponentToDemoHtml(this.props.componentName, this.props.camelName, this.props.capitalName);
+
     this.log([
       'New docs module created!',
-      `Don't forget to manually inject the module into the docs at`,
-      `src/docs/docs.module.js`,
-      `And also at`,
-      `src/docs/docs.html`,
     ].join('\n'));
 
   }
