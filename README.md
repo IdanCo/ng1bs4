@@ -62,11 +62,30 @@ for more details checkout a [sample project with angularJS, bootstrap4 and ng1bs
 
 **Simple Code**. We strive to keep all components as simple yet robust as possible. Hence, rewiring them to fit your needs should be easy peasy.
 
+## Create Components
+
+Development is easy and fun! Just follow these simple steps to get started:
+
+1. Have at least [Node.js 6.x](https://nodejs.org/) installed
+1. Fork [the main repository](https://github.com/IdanCo/ng1bs4)
+1. Git clone the forked repository
+1. Run the following commands
+    1. `npm i`
+    1. `npm run serve`
+1. Open http://localhost:8080 in a browser
+1. Start making amazing changes!
+
+Create new components easily with our generator! simply install [yeoman](http://yeoman.io/), and inside the project folder type
+```sh
+yo ./generators/component
+```
+And follow the on-screen instructions. Created a cool component? Make a pull request and contribute it back.
+
 ## Contribute
 
 §!@#$%^ **HELP NEEDED!** ^%$#@!§
 
-We're a brand new open source project, trying to make our way in this crazy javascript world.
+We're a new open source project, trying to make our way in this crazy javascript world.
 There's tons of work to be done and any effort will be appreciated. 
 
 You can help by:
@@ -79,21 +98,6 @@ You can help by:
 - Setting up coding standards and linting (create a pull request)
 - Stack, build, deploy and all that jazz
 
-Development is easy and fun! Just follow these simple steps to get started:
 
-1. Have at least [Node.js 6.x](https://nodejs.org/) installed
-1. Fork [the main repository](https://github.com/IdanCo/ng1bs4)
-1. Clone the forked repository
-1. Run the following commands
-    1. `npm i`
-    1. `npm run serve`
-1. Open http://localhost:8080 in a browser
-1. Start making amazing changes!
-
-Create new components easily with our generator! simply install [yeoman](http://yeoman.io/), and inside the project folder type
-```sh
-yo ./generators/component
-```
-And follow the on-screen instructions.
 
 Any questions? open an issue or join us on gitter - https://gitter.im/ng1bs4
