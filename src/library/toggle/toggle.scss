@@ -1,0 +1,13 @@
+// setup local variables
+// make sure to use the !default flag so it will be easy to override
+$toggle-variable: 1rem !default;
+
+ngbs-toggle {
+  display: block;
+  margin-bottom: $toggle-variable;
+
+  .active {
+  
+  }
+}
+
