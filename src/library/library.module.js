@@ -14,6 +14,7 @@ import AlertModule from './alert/alert.module';
 import ModalModule from './modal/modal.module';
 import PaginationModule from './pagination/pagination.module';
 import ProgressModule from './progress/progress.module';
+import ToggleModule from './toggle/toggle.module';
 
 // Register module, inject components and export name
 export default angular
@@ -27,6 +28,7 @@ export default angular
     ModalModule,
     PaginationModule,
     ProgressModule,
+    ToggleModule,
   ])
   .config(function ($qProvider) {
     $qProvider.errorOnUnhandledRejections(false);
