@@ -10,10 +10,26 @@
             select-display-property="display"
             select-key-property="id"
             select-enable-search="true"
-            select-direction="down"
+            select-direction="'down'"
     ></ngbs-select>
     <small class="form-text form-control-feedback"> This is some description that no one reads</small>
   </div>
 </form>
-<p class="mt-4">selected value:</p>
-<p>{{ $ctrl.selectValue }}</p>
+
+<form name="form">
+  <div class="form-group">
+    <label>A second one that goes upwards</label>
+    <ngbs-select
+            name="ngbsSelect"
+            ng-model="$ctrl.selectValue"
+            ng-change="$ctrl.valueChanged()"
+            select-placeholder="Choose a death"
+            select-options="$ctrl.selectOptions"
+            select-display-property="display"
+            select-key-property="id"
+            select-enable-search="false"
+            select-direction="'up'"
+    ></ngbs-select>
+  </div>
+</form>
+<p class="mt-4">selected value: {{$ctrl.selectValue}}</p>
