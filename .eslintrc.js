@@ -4,6 +4,12 @@ module.exports = {
     angular: true,
     alert: true,
     console: true,
+    // for tests files:
+    describe: true,
+    beforeEach: true,
+    inject: true,
+    expect: true,
+    it: true,
   },
   parserOptions: {
     "ecmaVersion": 6,
