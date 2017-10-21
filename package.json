@@ -10,7 +10,8 @@
     "docs": "node tasks.js",
     "lint": "eslint --ext .js src/",
     "test": "true",
-    "lint-fix": "eslint --ext .js src/ --fix"
+    "lint-fix": "eslint --ext .js src/ --fix",
+    "new": "yo ./generators/component"
   },
   "repository": {
     "type": "git",
@@ -57,6 +58,7 @@
     "webpack-cleanup-plugin": "^0.5.1",
     "webpack-config": "^7.0.0",
     "webpack-dev-server": "^2.4.2",
-    "yeoman-generator": "^1.0.0"
+    "yeoman-generator": "^1.0.0",
+    "yo": "2.0.0"
   }
 }
