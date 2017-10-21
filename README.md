@@ -62,7 +62,7 @@ for more details checkout a [sample project with angularJS, bootstrap4 and ng1bs
 
 **Simple Code**. We strive to keep all components as simple yet robust as possible. Hence, rewiring them to fit your needs should be easy peasy.
 
-## Create Components
+## Create New Components
 
 Development is easy and fun! Just follow these simple steps to get started:
 
@@ -75,9 +75,9 @@ Development is easy and fun! Just follow these simple steps to get started:
 1. Open http://localhost:8080 in a browser
 1. Start making amazing changes!
 
-Create new components easily with our generator! simply install [yeoman](http://yeoman.io/), and inside the project folder type
+Create new components easily with our generator:
 ```sh
-yo ./generators/component
+npm run new
 ```
 And follow the on-screen instructions. Created a cool component? Make a pull request and contribute it back.
 
