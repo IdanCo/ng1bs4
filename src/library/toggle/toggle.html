@@ -1,6 +1,8 @@
-
-<button type="button" class="btn" ng-click="$ctrl.switchToggle()" 
-	ng-class="{'active':$ctrl.ngModel.$modelValue, 
-	'btn-primary':$ctrl.ngModel.$modelValue, 'btn-secondary':!$ctrl.ngModel.$modelValue}">
-	{{$ctrl.toggleText}}
+<button
+		type="button"
+		class="btn"
+		ng-click="$ctrl.switchToggle()"
+		ng-class="{'btn-primary':$ctrl.ngModel.$modelValue, 'btn-secondary':!$ctrl.ngModel.$modelValue}"
+		ng-bind-html="$ctrl.toggleText"
+>
 </button>
