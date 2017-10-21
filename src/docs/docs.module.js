@@ -19,6 +19,7 @@ import AlertDemo from './demos/alert/alert-demo.module';
 import ModalDemo from './demos/modal/modal-demo.module';
 import PaginationDemo from './demos/pagination/pagination-demo.module';
 import ProgressDemo from './demos/progress/progress-demo.module';
+import BadgeDemo from './demos/badge/badge-demo.module';
 import ToggleDemo from './demos/toggle/toggle-demo.module';
 
 // Register module, define components, configure routes and export name
@@ -35,6 +36,7 @@ export default angular
     ModalDemo,
     PaginationDemo,
     ProgressDemo,
+    BadgeDemo,
     ToggleDemo,
   ])
   .component('docs', Docs)
