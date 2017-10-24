@@ -16,11 +16,12 @@ const DEFAULT_OPTIONS = {
 };
 
 class ModalService {
-  constructor ($document, $compile, $rootScope, $q) {
+  constructor ($document, $compile, $rootScope, $q, $controller) {
     this.$document = $document;
     this.$compile = $compile;
     this.$rootScope = $rootScope;
     this.$q = $q;
+    this.$controller = $controller;
   }
 
   openPrompt(options) {
@@ -29,7 +30,7 @@ class ModalService {
     // new scope for the modal
     const modalScope = this.$rootScope.$new(true);
     // prepare the modal element
-    const modalElement = angular.element(template);
+    const modalElement = angular.element(options.template || template);
     // get the document body
     const body = this.$document.find('body').eq(0);
 
@@ -44,6 +45,14 @@ class ModalService {
     // open the modal
     modalElement.modal();
 
+    // instantiate an optional controller
+    if (options.controller) {
+      this.$controller(options.controller, {$scope: modalScope, $element: modalElement});
+    }
+
+    // add promise to modalScope
+    modalScope.deferred = deferred;
+    
     // handle button click
     modalScope.closeModal = (button) => {
       modalElement.modal('hide');
